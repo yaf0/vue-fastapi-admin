@@ -1,0 +1,34 @@
+
+> vue-fastapi-admin-web@0.0.0 dev /opt/vue-fastapi-admin/web
+> vite
+
+
+ WARN  [unocss] exclude option is deprecated, use content.pipeline.exclude instead.
+
+
+  VITE v4.5.3  ready in 918 ms
+
+  ➜  Local:   http://localhost:3100/
+  ➜  Network: http://172.26.148.122:3100/
+11:41:44 AM [vite] page reload src/router/routes/index.js
+11:42:32 AM [vite] page reload src/router/routes/index.js
+11:43:01 AM [vite] page reload src/router/routes/index.js
+11:44:17 AM [vite] page reload src/router/routes/index.js
+ ELIFECYCLE  Command failed.
+
+> vue-fastapi-admin-web@0.0.0 dev /opt/vue-fastapi-admin/web
+> vite
+
+
+ WARN  [unocss] exclude option is deprecated, use content.pipeline.exclude instead.
+
+
+  VITE v4.5.3  ready in 1027 ms
+
+  ➜  Local:   http://localhost:3100/
+  ➜  Network: http://172.26.148.122:3100/
+12:00:42 PM [vite] hmr update /src/views/curd/index.vue
+12:00:42 PM [vite] ✨ new dependencies optimized: xlsx
+12:00:42 PM [vite] ✨ optimized dependencies changed. reloading
+12:04:14 PM [vite] hmr update /src/views/curd/index.vue
+12:15:19 PM [vite] hmr update /src/views/curd/index.vue

@@ -49,6 +49,7 @@ export const basicRoutes = [
   {
     name: 'ErrorPage',
     path: '/error-page',
+    isHidden: true,
     component: Layout,
     redirect: '/error-page/404',
     meta: {
@@ -119,7 +120,7 @@ export const basicRoutes = [
   {
     name: 'curd',
     path: '/curd',
-    isHidden: false,
+    isHidden: true,
     meta: {
       title: 'CURD示例',
     },

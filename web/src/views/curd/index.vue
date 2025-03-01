@@ -1,6 +1,7 @@
 <script setup>
 import { h, onMounted, ref, resolveDirective, withDirectives } from 'vue'
 import { NButton, NForm, NFormItem, NInput, NPopconfirm } from 'naive-ui'
+import * as XLSX from 'xlsx'
 
 import CommonPage from '@/components/page/CommonPage.vue'
 import QueryBarItem from '@/components/query-bar/QueryBarItem.vue'
@@ -41,6 +42,40 @@ const {
 onMounted(() => {
   $table.value?.handleSearch()
 })
+
+const exportToExcel = async () => {
+  try {
+    // 获取当前查询条件
+    const queryParams = { ...queryItems.value, page: 1, per_page: 99999 }; // 设定一个足够大的 per_page 确保获取所有数据
+
+    // 请求 API 获取所有符合条件的数据
+    const response = await api.getTransactionsList(queryParams);
+
+    // 确保返回的数据正确
+    if (!response || !response.data || response.data.length === 0) {
+      window.$message?.warning('无数据可导出');
+      return;
+    }
+
+    // 处理数据，格式化为 Excel 需要的格式
+    const data = response.data.map(row => ({
+      '支付时间': row.payment_time,
+      '支付金额': row.payment_amount,
+      '收款人': row.recipient
+    }));
+
+    // 创建 Excel 工作表和工作簿
+    const ws = XLSX.utils.json_to_sheet(data);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, '交易记录');
+
+    // 生成并下载 Excel 文件
+    XLSX.writeFile(wb, `交易记录_${new Date().toISOString().slice(0, 10)}.xlsx`);
+  } catch (error) {
+    console.error('导出 Excel 失败:', error);
+    window.$message?.error('导出失败，请检查网络或稍后重试');
+  }
+}
 
 async function handleRefreshApi() {
   $table.value?.handleSearch()
@@ -174,6 +209,10 @@ const columns = [
           @click="handleRefreshApi"
         >
           <TheIcon icon="material-symbols:refresh" :size="18" class="mr-5" />刷新记录
+        </NButton>
+	<NButton type="success" class="float-right mr-15" @click="exportToExcel">
+          <TheIcon icon="material-symbols:download" :size="18" class="mr-5" />
+          导出Excel
         </NButton>
       </div>
     </template>
