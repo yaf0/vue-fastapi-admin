@@ -116,6 +116,27 @@ export const basicRoutes = [
       title: '登录页',
     },
   },
+  {
+    name: 'curd',
+    path: '/curd',
+    isHidden: false,
+    meta: {
+      title: 'CURD示例',
+    },
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/curd/index.vue'),
+        name: `test`,
+        meta: {
+          title: 'CURD示例',
+          icon: 'icon-park-outline:workbench',
+          affix: true,
+        },
+      },
+    ],
+  },
 ]
 
 export const NOT_FOUND_ROUTE = {

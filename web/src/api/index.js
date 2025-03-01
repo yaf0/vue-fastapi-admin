@@ -39,4 +39,10 @@ export default {
   deleteDept: (params = {}) => request.delete('/dept/delete', { params }),
   // auditlog
   getAuditLogList: (params = {}) => request.get('/auditlog/list', { params }),
+  // transactions
+  getTransactionsList: (params = {}) => request.get('/transactions/list', { params }),
+  getTransactionById: (params = {}) => request.get('/transactions/get', { params }),
+  createTransaction: (data = {}) => request.post('/transactions/create', data),
+  updateTransaction: (data = {}) => request.post('/transactions/update', data),
+  deleteTransaction: (params = {}) => request.delete('/transactions/delete', { params }),
 }

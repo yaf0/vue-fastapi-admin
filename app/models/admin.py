@@ -87,3 +87,11 @@ class AuditLog(BaseModel, TimestampMixin):
     response_time = fields.IntField(default=0, description="响应时间(单位ms)", index=True)
     request_args = fields.JSONField(null=True, description="请求参数")
     response_body = fields.JSONField(null=True, description="返回数据")
+
+class TransactionRecord(BaseModel, TimestampMixin):
+    payment_time = fields.DatetimeField(description="支付时间", index=True)
+    payment_amount = fields.DecimalField(max_digits=10, decimal_places=2, description="支付金额", index=True)
+    recipient = fields.CharField(max_length=100, description="收款人", index=True)
+
+    class Meta:
+        table = "transaction_record"
