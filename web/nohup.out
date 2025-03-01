@@ -32,3 +32,6 @@
 12:00:42 PM [vite] ✨ optimized dependencies changed. reloading
 12:04:14 PM [vite] hmr update /src/views/curd/index.vue
 12:15:19 PM [vite] hmr update /src/views/curd/index.vue
+1:45:26 PM [vite] page reload src/views/business/summary/index.vue
+1:46:59 PM [vite] page reload src/views/business/total/index.vue
+1:46:59 PM [vite] page reload src/views/business/summary/index.vue

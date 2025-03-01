@@ -307,3 +307,52 @@
 2025-03-01 12:16:09 - INFO - 127.0.0.1:49182 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
 2025-03-01 12:16:11 - INFO - 127.0.0.1:49196 - "GET /api/v1/transactions/list?recipient=2&page=1&page_size=10 HTTP/1.1" 200 OK
 2025-03-01 12:16:12 - INFO - 127.0.0.1:49204 - "GET /api/v1/transactions/list?recipient=2&page=1&per_page=99999 HTTP/1.1" 200 OK
+2025-03-01 12:24:02 - INFO - 127.0.0.1:43834 - "GET /api/v1/transactions/list?recipient=2&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-01 12:24:03 - INFO - 127.0.0.1:43848 - "GET /api/v1/transactions/list?recipient=2&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-01 12:24:13 - INFO - 127.0.0.1:55972 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-01 12:24:16 - INFO - 127.0.0.1:55978 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-01 12:48:15 - INFO - 127.0.0.1:33416 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-01 12:48:15 - INFO - 127.0.0.1:33420 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-01 12:48:15 - INFO - 127.0.0.1:33430 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-01 12:48:15 - INFO - 127.0.0.1:33432 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-01 12:48:18 - INFO - 127.0.0.1:33446 - "GET /api/v1/api/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-01 13:22:21 - INFO - 127.0.0.1:39158 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-01 13:22:21 - INFO - 127.0.0.1:39164 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-01 13:22:21 - INFO - 127.0.0.1:39172 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-01 13:22:26 - INFO - 127.0.0.1:48704 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-01 13:22:26 - INFO - 127.0.0.1:48716 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-01 13:22:26 - INFO - 127.0.0.1:48732 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-01 13:22:30 - INFO - 127.0.0.1:48736 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-01 13:22:30 - INFO - 127.0.0.1:48752 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-01 13:22:30 - INFO - 127.0.0.1:48758 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-01 13:22:35 - INFO - 127.0.0.1:34544 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-01 13:22:35 - INFO - 127.0.0.1:34552 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-01 13:22:35 - INFO - 127.0.0.1:34558 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-01 13:22:38 - INFO - 127.0.0.1:34572 - "GET /api/v1/api/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-01 13:22:41 - INFO - 127.0.0.1:34580 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-01 13:22:41 - INFO - 127.0.0.1:34582 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-01 13:22:50 - INFO - 127.0.0.1:46306 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-01 13:22:50 - INFO - 127.0.0.1:46294 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-01 13:22:50 - INFO - 127.0.0.1:46278 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-01 13:22:53 - INFO - 127.0.0.1:48888 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-01 13:45:28 - INFO - 127.0.0.1:33720 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-01 13:45:28 - INFO - 127.0.0.1:33726 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-01 13:45:28 - INFO - 127.0.0.1:33728 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-01 13:45:28 - INFO - 127.0.0.1:33738 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-01 13:45:39 - INFO - 127.0.0.1:40598 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-01 13:47:01 - INFO - 127.0.0.1:37790 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-01 13:47:01 - INFO - 127.0.0.1:37806 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-01 13:47:01 - INFO - 127.0.0.1:37808 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-01 13:47:01 - INFO - 127.0.0.1:37820 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-01 14:06:03 - WARNING - WatchFiles detected changes in 'venv/lib64/python3.12/site-packages/svr-tests/trzsz/svr/recv.py', 'venv/lib64/python3.12/site-packages/svr-tests/trzsz/svr/__init__.py', 'venv/lib64/python3.12/site-packages/trzsz/svr/__version__.py', 'venv/lib64/python3.12/site-packages/trzsz/__init__.py', 'venv/lib64/python3.12/site-packages/trzsz/libs/transfer.py', 'venv/lib64/python3.12/site-packages/svr-tests/trzsz/svr/send.py', 'venv/lib64/python3.12/site-packages/svr-tests/trzsz/__init__.py', 'venv/lib64/python3.12/site-packages/trzsz/libs/__version__.py', 'venv/lib64/python3.12/site-packages/svr-tests/test_recv.py', 'venv/lib64/python3.12/site-packages/trzsz/libs/wins.py', 'venv/lib64/python3.12/site-packages/trzsz/svr/__init__.py', 'venv/lib64/python3.12/site-packages/svr-tests/trzsz/svr/__version__.py', 'venv/lib64/python3.12/site-packages/trzsz/libs/utils.py', 'venv/lib64/python3.12/site-packages/trzsz/svr/recv.py', 'venv/lib64/python3.12/site-packages/svr-tests/test_send.py', 'venv/lib64/python3.12/site-packages/trzsz/__version__.py', 'venv/lib64/python3.12/site-packages/svr-tests/__init__.py', 'venv/lib64/python3.12/site-packages/trzsz/svr/send.py'. Reloading...
+2025-03-01 14:06:03 - INFO - Shutting down
+2025-03-01 14:06:04 - INFO - Waiting for application shutdown.
+2025-03-01 14:06:04 - INFO - Application shutdown complete.
+2025-03-01 14:06:04 - INFO - Finished server process [2106]
+2025-03-01 14:06:04 - INFO - Started server process [2789]
+2025-03-01 14:06:04 - INFO - Waiting for application startup.
+2025-03-01 14:06:04 - INFO - Application startup complete.
+2025-03-01 14:07:18 - INFO - 127.0.0.1:40874 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-01 14:07:18 - INFO - 127.0.0.1:40876 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-01 14:07:18 - INFO - 127.0.0.1:40884 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-01 14:07:18 - INFO - 127.0.0.1:40886 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
