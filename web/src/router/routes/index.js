@@ -118,6 +118,24 @@ export const basicRoutes = [
     },
   },
   {
+    path: '/business/total',
+    name: 'TotalManagement',
+    meta: { title: '总表数据管理'},
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/business/total/index.vue'),
+        name: `totaldata`,
+        meta: {
+          title: '总表数据管理',
+          icon: 'icon-park-outline:workbench',
+          affix: true,
+        },
+      },
+    ],
+  },
+  {
     name: 'curd',
     path: '/curd',
     isHidden: true,

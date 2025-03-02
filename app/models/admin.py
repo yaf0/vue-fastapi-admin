@@ -95,3 +95,37 @@ class TransactionRecord(BaseModel, TimestampMixin):
 
     class Meta:
         table = "transaction_record"
+
+class TotalRecord(BaseModel, TimestampMixin):
+    # ID 字段由 BaseModel 中的 pk 自动生成
+    date = fields.DatetimeField(description="日期", index=True)
+    plate = fields.CharField(max_length=50, description="车牌", index=True)
+    region = fields.CharField(max_length=50, description="区域", index=True)
+    company = fields.CharField(max_length=100, description="公司", index=True)
+    field_staff = fields.CharField(max_length=50, description="外勤", index=True)
+    internal_staff = fields.CharField(max_length=50, description="内勤", index=True)
+    platform = fields.CharField(max_length=50, description="平台", index=True)
+    business = fields.CharField(max_length=50, description="业务", index=True)
+    expenditure = fields.IntField(description="支出", index=True)
+    income = fields.IntField(description="收入", index=True)
+    destination = fields.CharField(max_length=100, description="去向", index=True)
+    remark = fields.TextField(null=True, description="备注")
+    handover_time = fields.DatetimeField(null=True, description="交接时间", index=True)
+    is_completed = fields.BooleanField(default=False, description="是否完成", index=True)
+
+    class Meta:
+        table = "total_record"
+
+class FieldWorkRecord(BaseModel, TimestampMixin):
+    # ID 字段由 BaseModel 中的 pk 自动生成
+    name = fields.CharField(max_length=50, description="外勤名称", index=True)
+    number  = fields.IntField(description="台数", index=True)
+    expected_expenditure = fields.IntField(description="预期支出", index=True)
+    actual_expenditure = fields.IntField(description="实际支出", index=True)
+    difference = fields.IntField(description="差额", index=True)
+    remark = fields.TextField(null=True, description="备注")
+    date = fields.DatetimeField(null=True, description="日期", index=True)
+
+    class Meta:
+        table = "field_work_record"
+ 

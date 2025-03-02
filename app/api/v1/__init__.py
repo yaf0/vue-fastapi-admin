@@ -10,6 +10,7 @@ from .menus import menus_router
 from .roles import roles_router
 from .users import users_router
 from .transactions import transactions_router
+from .totals import totals_router  # 新增总表模块
 
 v1_router = APIRouter()
 
@@ -21,3 +22,4 @@ v1_router.include_router(apis_router, prefix="/api", dependencies=[DependPermiss
 v1_router.include_router(depts_router, prefix="/dept", dependencies=[DependPermisson])
 v1_router.include_router(auditlog_router, prefix="/auditlog", dependencies=[DependPermisson])
 v1_router.include_router(transactions_router, prefix="/transactions", dependencies=[DependPermisson])
+v1_router.include_router(totals_router, prefix="/total", dependencies=[DependPermisson])  # 新增路由

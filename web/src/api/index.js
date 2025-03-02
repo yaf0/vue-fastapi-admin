@@ -45,4 +45,9 @@ export default {
   createTransaction: (data = {}) => request.post('/transactions/create', data),
   updateTransaction: (data = {}) => request.post('/transactions/update', data),
   deleteTransaction: (params = {}) => request.delete('/transactions/delete', { params }),
+  //total
+  getTotalList: (params = {}) => request.get('/total/list', { params }),
+  createTotal: (data = {}) => request.post('/total/create', data),
+  updateTotal: (data = {}) => request.post('/total/update', data),
+  deleteTotal: (params = {}) => request.delete('/total/delete', { params }),
 }

@@ -356,3 +356,649 @@
 2025-03-01 14:07:18 - INFO - 127.0.0.1:40876 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
 2025-03-01 14:07:18 - INFO - 127.0.0.1:40884 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
 2025-03-01 14:07:18 - INFO - 127.0.0.1:40886 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 02:46:37 - WARNING - WatchFiles detected changes in 'app/models/admin.py'. Reloading...
+2025-03-02 02:46:37 - INFO - Shutting down
+2025-03-02 02:46:37 - INFO - Waiting for application shutdown.
+2025-03-02 02:46:37 - INFO - Application shutdown complete.
+2025-03-02 02:46:37 - INFO - Finished server process [2789]
+2025-03-02 02:46:38 - INFO - Started server process [4029]
+2025-03-02 02:46:38 - INFO - Waiting for application startup.
+2025-03-02 02:46:38 - WARNING - WatchFiles detected changes in 'migrations/models/1_20250302024638_update.py'. Reloading...
+2025-03-02 02:46:38 - INFO - Application startup complete.
+2025-03-02 02:46:39 - INFO - Started server process [4032]
+2025-03-02 02:46:39 - INFO - Waiting for application startup.
+2025-03-02 02:46:39 - INFO - Application startup complete.
+2025-03-02 02:47:13 - WARNING - WatchFiles detected changes in 'app/schemas/total.py'. Reloading...
+2025-03-02 02:47:13 - INFO - Shutting down
+2025-03-02 02:47:13 - INFO - Waiting for application shutdown.
+2025-03-02 02:47:13 - INFO - Application shutdown complete.
+2025-03-02 02:47:13 - INFO - Finished server process [4032]
+2025-03-02 02:47:14 - INFO - Started server process [4038]
+2025-03-02 02:47:14 - INFO - Waiting for application startup.
+2025-03-02 02:47:14 - INFO - Application startup complete.
+2025-03-02 02:48:58 - WARNING - WatchFiles detected changes in 'app/schemas/__init__.py'. Reloading...
+2025-03-02 02:48:58 - INFO - Shutting down
+2025-03-02 02:48:58 - INFO - Waiting for application shutdown.
+2025-03-02 02:48:58 - INFO - Application shutdown complete.
+2025-03-02 02:48:58 - INFO - Finished server process [4038]
+2025-03-02 02:48:58 - INFO - Started server process [4056]
+2025-03-02 02:48:58 - INFO - Waiting for application startup.
+2025-03-02 02:48:58 - INFO - Application startup complete.
+2025-03-02 02:49:37 - WARNING - WatchFiles detected changes in 'app/controllers/total.py'. Reloading...
+2025-03-02 02:49:37 - INFO - Shutting down
+2025-03-02 02:49:37 - INFO - Waiting for application shutdown.
+2025-03-02 02:49:37 - INFO - Application shutdown complete.
+2025-03-02 02:49:37 - INFO - Finished server process [4056]
+2025-03-02 02:49:37 - INFO - Started server process [4070]
+2025-03-02 02:49:37 - INFO - Waiting for application startup.
+2025-03-02 02:49:37 - INFO - Application startup complete.
+2025-03-02 02:50:23 - WARNING - WatchFiles detected changes in 'app/api/v1/totals/totals.py'. Reloading...
+2025-03-02 02:50:23 - INFO - Shutting down
+2025-03-02 02:50:23 - INFO - Waiting for application shutdown.
+2025-03-02 02:50:23 - INFO - Application shutdown complete.
+2025-03-02 02:50:23 - INFO - Finished server process [4070]
+2025-03-02 02:50:23 - INFO - Started server process [4080]
+2025-03-02 02:50:23 - INFO - Waiting for application startup.
+2025-03-02 02:50:23 - INFO - Application startup complete.
+2025-03-02 02:51:03 - WARNING - WatchFiles detected changes in 'app/api/v1/totals/__init__.py'. Reloading...
+2025-03-02 02:51:03 - INFO - Shutting down
+2025-03-02 02:51:03 - INFO - Waiting for application shutdown.
+2025-03-02 02:51:03 - INFO - Application shutdown complete.
+2025-03-02 02:51:03 - INFO - Finished server process [4080]
+2025-03-02 02:51:03 - INFO - Started server process [4084]
+2025-03-02 02:51:03 - INFO - Waiting for application startup.
+2025-03-02 02:51:03 - INFO - Application startup complete.
+2025-03-02 02:51:30 - WARNING - WatchFiles detected changes in 'app/api/v1/totals/__init__.py'. Reloading...
+2025-03-02 02:51:30 - INFO - Shutting down
+2025-03-02 02:51:30 - INFO - Waiting for application shutdown.
+2025-03-02 02:51:30 - INFO - Application shutdown complete.
+2025-03-02 02:51:30 - INFO - Finished server process [4084]
+2025-03-02 02:51:31 - INFO - Started server process [4089]
+2025-03-02 02:51:31 - INFO - Waiting for application startup.
+2025-03-02 02:51:31 - INFO - Application startup complete.
+2025-03-02 02:53:27 - WARNING - WatchFiles detected changes in 'app/api/v1/__init__.py'. Reloading...
+2025-03-02 02:53:27 - INFO - Shutting down
+2025-03-02 02:53:28 - INFO - Waiting for application shutdown.
+2025-03-02 02:53:28 - INFO - Application shutdown complete.
+2025-03-02 02:53:28 - INFO - Finished server process [4089]
+2025-03-02 02:53:28 - INFO - Started server process [4094]
+2025-03-02 02:53:28 - INFO - Waiting for application startup.
+2025-03-02 02:53:28 - INFO - Application startup complete.
+2025-03-02 03:09:08 - INFO - 127.0.0.1:57940 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:09:08 - INFO - 127.0.0.1:57950 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:09:08 - INFO - 127.0.0.1:57962 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:09:08 - INFO - 127.0.0.1:57966 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:12:35 - INFO - 127.0.0.1:57476 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:12:35 - INFO - 127.0.0.1:57482 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:12:35 - INFO - 127.0.0.1:57498 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:12:35 - INFO - 127.0.0.1:57502 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:12:46 - INFO - 127.0.0.1:44998 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:12:57 - INFO - 127.0.0.1:53670 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:12:59 - INFO - 127.0.0.1:53684 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:13:00 - INFO - 127.0.0.1:53692 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:13:23 - INFO - 127.0.0.1:52104 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:13:23 - INFO - 127.0.0.1:52110 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:13:23 - INFO - 127.0.0.1:52116 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:13:28 - INFO - 127.0.0.1:52128 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:13:35 - INFO - 127.0.0.1:45942 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:16:14 - INFO - 127.0.0.1:39372 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:16:14 - INFO - 127.0.0.1:39376 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:16:14 - INFO - 127.0.0.1:39390 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:16:14 - INFO - 127.0.0.1:39402 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:16:16 - INFO - 127.0.0.1:39414 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:16:18 - INFO - 127.0.0.1:39422 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:16:19 - INFO - 127.0.0.1:39436 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:16:20 - INFO - 127.0.0.1:39444 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:16:21 - INFO - 127.0.0.1:39448 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:16:31 - INFO - 127.0.0.1:46384 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:16:31 - INFO - 127.0.0.1:46386 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:16:31 - INFO - 127.0.0.1:46392 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:16:34 - INFO - 127.0.0.1:34794 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:16:38 - INFO - 127.0.0.1:34802 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:16:40 - INFO - 127.0.0.1:34814 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:16:41 - INFO - 127.0.0.1:34828 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:16:43 - INFO - 127.0.0.1:49940 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:22:15 - INFO - 127.0.0.1:57682 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:22:16 - INFO - 127.0.0.1:57686 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:22:16 - INFO - 127.0.0.1:57698 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:22:16 - INFO - 127.0.0.1:57714 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:22:59 - INFO - 127.0.0.1:57038 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:24:13 - INFO - 127.0.0.1:54576 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:24:13 - INFO - 127.0.0.1:54592 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:24:13 - INFO - 127.0.0.1:54594 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:27:20 - INFO - 127.0.0.1:58290 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:27:20 - INFO - 127.0.0.1:58294 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:27:20 - INFO - 127.0.0.1:58304 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:27:21 - INFO - 127.0.0.1:58320 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:27:24 - INFO - 127.0.0.1:57552 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:27:42 - INFO - 127.0.0.1:60170 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:27:42 - INFO - 127.0.0.1:60178 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:27:42 - INFO - 127.0.0.1:60190 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:27:43 - INFO - 127.0.0.1:56120 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:27:53 - INFO - 127.0.0.1:60080 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:28:02 - INFO - 127.0.0.1:60096 - "GET /api/v1/total/list?date=2025-03-06&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:28:05 - INFO - 127.0.0.1:37064 - "GET /api/v1/total/list?date=2025-03-06&page=1&per_page=99999 HTTP/1.1" 200 OK
+2025-03-02 03:28:06 - INFO - 127.0.0.1:37080 - "GET /api/v1/total/list?date=2025-03-06&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:29:14 - INFO - 127.0.0.1:41918 - "GET /api/v1/total/list?date=2025-03-06&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:29:15 - INFO - 127.0.0.1:41928 - "GET /api/v1/total/list?date=2025-03-06&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:29:18 - INFO - 127.0.0.1:41938 - "GET /api/v1/total/list?date=2025-03-06&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:29:23 - INFO - 127.0.0.1:59414 - "GET /api/v1/total/list?date=2025-03-06&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:29:53 - INFO - 127.0.0.1:47420 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:30:27 - INFO - 127.0.0.1:52572 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:30:27 - INFO - 127.0.0.1:52576 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:30:27 - INFO - 127.0.0.1:52592 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:30:30 - INFO - 127.0.0.1:52618 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-02 03:30:30 - INFO - 127.0.0.1:52606 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 03:30:30 - INFO - 127.0.0.1:52610 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:30:31 - INFO - 127.0.0.1:52632 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:30:32 - INFO - 127.0.0.1:52634 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-02 03:30:32 - INFO - 127.0.0.1:52648 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-02 03:30:33 - INFO - 127.0.0.1:36518 - "GET /api/v1/api/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:30:34 - INFO - 127.0.0.1:36532 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:30:35 - INFO - 127.0.0.1:36534 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:30:36 - INFO - 127.0.0.1:36544 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:30:37 - INFO - 127.0.0.1:36556 - "GET /api/v1/api/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:30:38 - INFO - 127.0.0.1:36562 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:30:39 - INFO - 127.0.0.1:36572 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:30:40 - INFO - 127.0.0.1:36586 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-02 03:30:40 - INFO - 127.0.0.1:36588 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-02 03:30:41 - INFO - 127.0.0.1:36602 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:30:42 - INFO - 127.0.0.1:36616 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:31:15 - INFO - 127.0.0.1:52686 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:31:15 - INFO - 127.0.0.1:52702 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:31:15 - INFO - 127.0.0.1:52712 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:31:15 - INFO - 127.0.0.1:52714 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-02 03:31:15 - INFO - 127.0.0.1:52720 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-02 03:31:23 - INFO - 127.0.0.1:57676 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:31:30 - INFO - 127.0.0.1:57690 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:31:32 - INFO - 127.0.0.1:57706 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:31:34 - INFO - 127.0.0.1:47852 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:31:35 - INFO - 127.0.0.1:47854 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:31:38 - INFO - 127.0.0.1:47862 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:31:39 - INFO - 127.0.0.1:47870 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:31:40 - INFO - 127.0.0.1:47884 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:31:41 - INFO - 127.0.0.1:47886 - "GET /api/v1/total/list?page=1&per_page=99999 HTTP/1.1" 200 OK
+2025-03-02 03:31:43 - INFO - 127.0.0.1:35898 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:31:44 - INFO - 127.0.0.1:35912 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:32:08 - INFO - 127.0.0.1:48958 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:32:08 - INFO - 127.0.0.1:48970 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:32:08 - INFO - 127.0.0.1:48972 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:32:08 - INFO - 127.0.0.1:48988 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:32:15 - INFO - 127.0.0.1:54772 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:32:15 - INFO - 127.0.0.1:54782 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:32:15 - INFO - 127.0.0.1:54784 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:32:15 - INFO - 127.0.0.1:54788 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:36:30 - INFO - 127.0.0.1:43968 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:36:30 - INFO - 127.0.0.1:43972 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:36:30 - INFO - 127.0.0.1:43986 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:36:31 - INFO - 127.0.0.1:43992 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:37:06 - INFO - 127.0.0.1:55490 - "POST /api/v1/total/create HTTP/1.1" 200 OK
+2025-03-02 03:37:06 - INFO - 127.0.0.1:55504 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:37:38 - INFO - 127.0.0.1:47688 - "POST /api/v1/total/create HTTP/1.1" 200 OK
+2025-03-02 03:37:38 - INFO - 127.0.0.1:47698 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:41:17 - INFO - 127.0.0.1:38814 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:41:17 - INFO - 127.0.0.1:38828 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:41:18 - INFO - 127.0.0.1:38832 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:41:18 - INFO - 127.0.0.1:38846 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:41:20 - INFO - 127.0.0.1:38850 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:43:20 - INFO - 127.0.0.1:41128 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:43:20 - INFO - 127.0.0.1:41140 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:43:20 - INFO - 127.0.0.1:41152 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:43:20 - INFO - 127.0.0.1:41168 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:43:23 - INFO - 127.0.0.1:33874 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:43:43 - INFO - 127.0.0.1:47584 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:43:43 - INFO - 127.0.0.1:47588 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:43:43 - INFO - 127.0.0.1:47604 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:43:43 - INFO - 127.0.0.1:47618 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:43:46 - INFO - 127.0.0.1:47628 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:43:51 - INFO - 127.0.0.1:47640 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:43:51 - INFO - 127.0.0.1:47646 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:43:51 - INFO - 127.0.0.1:47658 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:43:51 - INFO - 127.0.0.1:47660 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:43:54 - INFO - 127.0.0.1:48680 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:43:55 - INFO - 127.0.0.1:48696 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:43:58 - INFO - 127.0.0.1:48726 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-02 03:43:58 - INFO - 127.0.0.1:48718 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 03:43:58 - INFO - 127.0.0.1:48702 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:43:59 - INFO - 127.0.0.1:48742 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:44:03 - INFO - 127.0.0.1:42558 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-02 03:44:03 - INFO - 127.0.0.1:42542 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 03:44:03 - INFO - 127.0.0.1:42534 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:44:08 - INFO - 127.0.0.1:42574 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:44:12 - INFO - 127.0.0.1:42584 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:44:26 - INFO - 127.0.0.1:41074 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 03:44:26 - INFO - 127.0.0.1:41078 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 03:44:26 - INFO - 127.0.0.1:41082 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 03:44:27 - INFO - 127.0.0.1:41092 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:44:28 - INFO - 127.0.0.1:41106 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:45:03 - INFO - 127.0.0.1:36668 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-02 03:45:03 - INFO - 127.0.0.1:36660 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 03:45:03 - INFO - 127.0.0.1:36648 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:45:08 - INFO - 127.0.0.1:36680 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:45:08 - INFO - 127.0.0.1:36696 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-02 03:45:09 - INFO - 127.0.0.1:36706 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-02 03:45:09 - INFO - 127.0.0.1:36710 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:45:11 - INFO - 127.0.0.1:36726 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:45:17 - INFO - 127.0.0.1:50924 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:45:19 - INFO - 127.0.0.1:50938 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:45:22 - INFO - 127.0.0.1:50942 - "GET /api/v1/total/list?plate=2&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:45:31 - INFO - 127.0.0.1:32862 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:45:37 - INFO - 127.0.0.1:42000 - "GET /api/v1/total/list?plate=1&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 03:45:38 - INFO - 127.0.0.1:42012 - "GET /api/v1/total/list?plate=1&page=1&per_page=99999 HTTP/1.1" 200 OK
+2025-03-02 04:01:54 - INFO - 127.0.0.1:44268 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 04:01:54 - INFO - 127.0.0.1:44284 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 04:01:54 - INFO - 127.0.0.1:44292 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 04:01:54 - INFO - 127.0.0.1:44298 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 04:01:55 - INFO - 127.0.0.1:44308 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 04:02:05 - INFO - 127.0.0.1:54330 - "POST /api/v1/transactions/update HTTP/1.1" 200 OK
+2025-03-02 04:02:05 - INFO - 127.0.0.1:54334 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 04:02:11 - INFO - 127.0.0.1:54346 - "POST /api/v1/transactions/update HTTP/1.1" 200 OK
+2025-03-02 04:02:11 - INFO - 127.0.0.1:54354 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 04:06:59 - INFO - 172.26.144.1:52372 - "GET / HTTP/1.1" 404 Not Found
+2025-03-02 04:06:59 - INFO - 172.26.144.1:52372 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+2025-03-02 04:07:02 - INFO - 172.26.144.1:52372 - "GET / HTTP/1.1" 404 Not Found
+2025-03-02 04:07:07 - INFO - 172.26.144.1:52372 - "GET /docs HTTP/1.1" 200 OK
+2025-03-02 04:07:08 - INFO - 172.26.144.1:52372 - "GET /openapi.json HTTP/1.1" 200 OK
+2025-03-02 04:07:46 - INFO - 172.26.144.1:52373 - "POST /api/v1/total/create HTTP/1.1" 401 Unauthorized
+2025-03-02 08:08:40 - INFO - 127.0.0.1:44724 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 08:08:40 - INFO - 127.0.0.1:44726 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 08:08:40 - INFO - 127.0.0.1:44732 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 08:08:41 - INFO - 127.0.0.1:44748 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:08:41 - INFO - 127.0.0.1:44758 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:08:44 - INFO - 127.0.0.1:36786 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:14:22 - INFO - 127.0.0.1:36446 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 08:14:22 - INFO - 127.0.0.1:36448 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 08:14:22 - INFO - 127.0.0.1:36454 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 08:14:23 - INFO - 127.0.0.1:57160 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:14:27 - INFO - 127.0.0.1:57170 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:14:29 - INFO - 127.0.0.1:57184 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:14:30 - INFO - 127.0.0.1:57192 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:14:31 - INFO - 127.0.0.1:57208 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:14:32 - INFO - 127.0.0.1:57224 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:14:33 - INFO - 127.0.0.1:45218 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:14:34 - INFO - 127.0.0.1:45222 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:14:37 - INFO - 127.0.0.1:45228 - "DELETE /api/v1/total/delete?id=1 HTTP/1.1" 200 OK
+2025-03-02 08:14:37 - INFO - 127.0.0.1:45238 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:18:59 - INFO - 127.0.0.1:46434 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 08:18:59 - INFO - 127.0.0.1:46440 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 08:18:59 - INFO - 127.0.0.1:46450 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 08:18:59 - INFO - 127.0.0.1:46458 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:45:12 - INFO - 127.0.0.1:44380 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 08:45:12 - INFO - 127.0.0.1:44396 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 08:45:12 - INFO - 127.0.0.1:44406 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 08:45:13 - INFO - 127.0.0.1:44420 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:45:16 - INFO - 127.0.0.1:52198 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:45:24 - INFO - 127.0.0.1:54936 - "POST /api/v1/transactions/update HTTP/1.1" 200 OK
+2025-03-02 08:45:24 - INFO - 127.0.0.1:54938 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:45:26 - INFO - 127.0.0.1:54952 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:45:31 - INFO - 127.0.0.1:54958 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 08:45:31 - INFO - 127.0.0.1:54960 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 08:45:31 - INFO - 127.0.0.1:54972 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 08:45:31 - INFO - 127.0.0.1:54984 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:55:15 - INFO - 127.0.0.1:45746 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:55:18 - INFO - 127.0.0.1:45750 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 08:55:18 - INFO - 127.0.0.1:45752 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 08:55:18 - INFO - 127.0.0.1:45764 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 08:55:18 - INFO - 127.0.0.1:45770 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:55:19 - INFO - 127.0.0.1:45782 - "GET /api/v1/total/list?page=1&per_page=99999 HTTP/1.1" 200 OK
+2025-03-02 08:58:23 - INFO - 127.0.0.1:51018 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:58:34 - INFO - 127.0.0.1:38844 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 08:58:44 - INFO - 127.0.0.1:38250 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 08:58:45 - INFO - 127.0.0.1:38262 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 08:58:45 - INFO - 127.0.0.1:38266 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 08:58:45 - INFO - 127.0.0.1:38274 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:00:49 - INFO - 127.0.0.1:47670 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 09:00:49 - INFO - 127.0.0.1:47680 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 09:00:49 - INFO - 127.0.0.1:47684 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 09:00:49 - INFO - 127.0.0.1:47700 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:01:55 - INFO - 127.0.0.1:48208 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 09:01:55 - INFO - 127.0.0.1:48224 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 09:01:56 - INFO - 127.0.0.1:48226 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 09:01:56 - INFO - 127.0.0.1:48242 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:02:03 - INFO - 127.0.0.1:53704 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:20:59 - INFO - 127.0.0.1:59842 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 09:20:59 - INFO - 127.0.0.1:59850 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 09:20:59 - INFO - 127.0.0.1:59858 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 09:20:59 - INFO - 127.0.0.1:59872 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:21:07 - INFO - 127.0.0.1:54300 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 09:21:07 - INFO - 127.0.0.1:54308 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 09:21:07 - INFO - 127.0.0.1:54320 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 09:21:07 - INFO - 127.0.0.1:54330 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:21:11 - INFO - 127.0.0.1:54332 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:21:20 - INFO - 127.0.0.1:47840 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:21:35 - INFO - 127.0.0.1:60182 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:21:37 - INFO - 127.0.0.1:60194 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 09:21:37 - INFO - 127.0.0.1:60200 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 09:21:37 - INFO - 127.0.0.1:60210 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 09:21:37 - INFO - 127.0.0.1:60224 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:21:40 - INFO - 127.0.0.1:60232 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:24:12 - INFO - 127.0.0.1:37718 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:24:14 - INFO - 127.0.0.1:38668 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 09:24:14 - INFO - 127.0.0.1:38680 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 09:24:14 - INFO - 127.0.0.1:38690 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 09:24:14 - INFO - 127.0.0.1:38700 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:24:20 - INFO - 127.0.0.1:38702 - "POST /api/v1/transactions/update HTTP/1.1" 200 OK
+2025-03-02 09:24:20 - INFO - 127.0.0.1:38714 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:24:26 - INFO - 127.0.0.1:41940 - "POST /api/v1/transactions/update HTTP/1.1" 200 OK
+2025-03-02 09:24:26 - INFO - 127.0.0.1:41944 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:24:35 - INFO - 127.0.0.1:34722 - "POST /api/v1/transactions/create HTTP/1.1" 200 OK
+2025-03-02 09:24:35 - INFO - 127.0.0.1:34726 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:24:48 - INFO - 127.0.0.1:34478 - "POST /api/v1/transactions/update HTTP/1.1" 200 OK
+2025-03-02 09:24:48 - INFO - 127.0.0.1:34486 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:24:51 - INFO - 127.0.0.1:34496 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:25:00 - INFO - 127.0.0.1:49158 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:25:13 - INFO - 127.0.0.1:49166 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 09:25:13 - INFO - 127.0.0.1:32982 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 09:25:13 - INFO - 127.0.0.1:32994 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 09:25:13 - INFO - 127.0.0.1:33008 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:25:16 - INFO - 127.0.0.1:33016 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:25:18 - INFO - 127.0.0.1:33024 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:25:18 - INFO - 127.0.0.1:33038 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:25:46 - INFO - 127.0.0.1:42088 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:25:47 - INFO - 127.0.0.1:42098 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:25:48 - INFO - 127.0.0.1:42114 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:25:49 - INFO - 127.0.0.1:42128 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:25:50 - INFO - 127.0.0.1:42142 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:25:50 - INFO - 127.0.0.1:42144 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:25:51 - INFO - 127.0.0.1:42150 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:25:51 - INFO - 127.0.0.1:42152 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:25:52 - INFO - 127.0.0.1:42154 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:26:09 - INFO - 127.0.0.1:38310 - "POST /api/v1/total/create HTTP/1.1" 200 OK
+2025-03-02 09:26:09 - INFO - 127.0.0.1:38320 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:26:21 - INFO - 127.0.0.1:53884 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 09:26:21 - INFO - 127.0.0.1:53890 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 09:26:22 - INFO - 127.0.0.1:53896 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 09:26:38 - INFO - 127.0.0.1:53644 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:34:18 - INFO - 127.0.0.1:42424 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 09:34:18 - INFO - 127.0.0.1:42432 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 09:34:18 - INFO - 127.0.0.1:42436 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 09:34:19 - INFO - 127.0.0.1:42446 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:34:26 - INFO - 127.0.0.1:58102 - "POST /api/v1/total/update HTTP/1.1" 200 OK
+2025-03-02 09:34:26 - INFO - 127.0.0.1:58108 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:34:31 - INFO - 127.0.0.1:58120 - "POST /api/v1/total/update HTTP/1.1" 200 OK
+2025-03-02 09:34:31 - INFO - 127.0.0.1:58124 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:34:37 - INFO - 127.0.0.1:46872 - "POST /api/v1/total/update HTTP/1.1" 200 OK
+2025-03-02 09:34:37 - INFO - 127.0.0.1:46874 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:34:42 - INFO - 127.0.0.1:46882 - "POST /api/v1/total/update HTTP/1.1" 200 OK
+2025-03-02 09:34:42 - INFO - 127.0.0.1:46890 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:34:47 - INFO - 127.0.0.1:59616 - "POST /api/v1/total/update HTTP/1.1" 200 OK
+2025-03-02 09:34:47 - INFO - 127.0.0.1:59620 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:34:50 - INFO - 127.0.0.1:59632 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:35:03 - INFO - 127.0.0.1:34782 - "POST /api/v1/total/update HTTP/1.1" 200 OK
+2025-03-02 09:35:03 - INFO - 127.0.0.1:34792 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:35:08 - INFO - 127.0.0.1:34800 - "POST /api/v1/total/update HTTP/1.1" 200 OK
+2025-03-02 09:35:08 - INFO - 127.0.0.1:34816 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:35:29 - INFO - 127.0.0.1:49748 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 09:51:30 - WARNING - WatchFiles detected changes in 'app/models/admin.py'. Reloading...
+2025-03-02 09:51:30 - INFO - Shutting down
+2025-03-02 09:51:30 - INFO - Waiting for application shutdown.
+2025-03-02 09:51:30 - INFO - Application shutdown complete.
+2025-03-02 09:51:30 - INFO - Finished server process [4094]
+2025-03-02 09:51:31 - INFO - Started server process [4791]
+2025-03-02 09:51:31 - INFO - Waiting for application startup.
+2025-03-02 09:51:31 - INFO - Application startup complete.
+2025-03-02 09:51:31 - WARNING - WatchFiles detected changes in 'migrations/models/2_20250302095131_update.py'. Reloading...
+2025-03-02 09:51:31 - INFO - Shutting down
+2025-03-02 09:51:31 - INFO - Waiting for application shutdown.
+2025-03-02 09:51:31 - INFO - Application shutdown complete.
+2025-03-02 09:51:31 - INFO - Finished server process [4791]
+2025-03-02 09:51:32 - INFO - Started server process [4794]
+2025-03-02 09:51:32 - INFO - Waiting for application startup.
+2025-03-02 09:51:32 - INFO - Application startup complete.
+2025-03-02 09:54:57 - WARNING - WatchFiles detected changes in 'app/controllers/field_work_record_controller.py'. Reloading...
+2025-03-02 09:54:57 - INFO - Shutting down
+2025-03-02 09:54:57 - INFO - Waiting for application shutdown.
+2025-03-02 09:54:57 - INFO - Application shutdown complete.
+2025-03-02 09:54:57 - INFO - Finished server process [4794]
+2025-03-02 09:54:58 - INFO - Started server process [4814]
+2025-03-02 09:54:58 - INFO - Waiting for application startup.
+2025-03-02 09:54:58 - INFO - Application startup complete.
+2025-03-02 09:57:20 - WARNING - WatchFiles detected changes in 'app/models/admin.py'. Reloading...
+2025-03-02 09:57:20 - INFO - Shutting down
+2025-03-02 09:57:20 - INFO - Waiting for application shutdown.
+2025-03-02 09:57:20 - INFO - Application shutdown complete.
+2025-03-02 09:57:20 - INFO - Finished server process [4814]
+2025-03-02 09:57:21 - INFO - Started server process [4821]
+2025-03-02 09:57:21 - INFO - Waiting for application startup.
+2025-03-02 09:57:21 - INFO - Application startup complete.
+2025-03-02 09:57:21 - WARNING - WatchFiles detected changes in 'migrations/models/3_20250302095721_update.py'. Reloading...
+2025-03-02 09:57:21 - INFO - Shutting down
+2025-03-02 09:57:21 - INFO - Waiting for application shutdown.
+2025-03-02 09:57:21 - INFO - Application shutdown complete.
+2025-03-02 09:57:21 - INFO - Finished server process [4821]
+2025-03-02 09:57:22 - INFO - Started server process [4824]
+2025-03-02 09:57:22 - INFO - Waiting for application startup.
+2025-03-02 09:57:22 - INFO - Application startup complete.
+2025-03-02 09:57:47 - WARNING - WatchFiles detected changes in 'app/schemas/field_work_record.py'. Reloading...
+2025-03-02 09:57:47 - INFO - Shutting down
+2025-03-02 09:57:47 - INFO - Waiting for application shutdown.
+2025-03-02 09:57:47 - INFO - Application shutdown complete.
+2025-03-02 09:57:47 - INFO - Finished server process [4824]
+2025-03-02 09:57:48 - INFO - Started server process [4829]
+2025-03-02 09:57:48 - INFO - Waiting for application startup.
+2025-03-02 09:57:48 - INFO - Application startup complete.
+2025-03-02 10:00:10 - WARNING - WatchFiles detected changes in 'app/schemas/field_work_record.py'. Reloading...
+2025-03-02 10:00:10 - INFO - Shutting down
+2025-03-02 10:00:10 - INFO - Waiting for application shutdown.
+2025-03-02 10:00:10 - INFO - Application shutdown complete.
+2025-03-02 10:00:10 - INFO - Finished server process [4829]
+2025-03-02 10:00:10 - INFO - Started server process [4862]
+2025-03-02 10:00:10 - INFO - Waiting for application startup.
+2025-03-02 10:00:10 - INFO - Application startup complete.
+2025-03-02 10:04:33 - WARNING - WatchFiles detected changes in 'app/schemas/field_work_record.py'. Reloading...
+2025-03-02 10:04:34 - INFO - Shutting down
+2025-03-02 10:04:34 - INFO - Waiting for application shutdown.
+2025-03-02 10:04:34 - INFO - Application shutdown complete.
+2025-03-02 10:04:34 - INFO - Finished server process [4862]
+2025-03-02 10:04:34 - INFO - Started server process [4883]
+2025-03-02 10:04:34 - INFO - Waiting for application startup.
+2025-03-02 10:04:34 - INFO - Application startup complete.
+2025-03-02 10:06:30 - WARNING - WatchFiles detected changes in 'app/api/v1/field_work/__init__.py', 'app/api/v1/field_work/totals.py'. Reloading...
+2025-03-02 10:06:30 - INFO - Shutting down
+2025-03-02 10:06:31 - INFO - Waiting for application shutdown.
+2025-03-02 10:06:31 - INFO - Application shutdown complete.
+2025-03-02 10:06:31 - INFO - Finished server process [4883]
+2025-03-02 10:06:31 - INFO - Started server process [4897]
+2025-03-02 10:06:31 - INFO - Waiting for application startup.
+2025-03-02 10:06:31 - INFO - Application startup complete.
+2025-03-02 10:06:41 - WARNING - WatchFiles detected changes in 'app/api/v1/field_work/field_work.py', 'app/api/v1/field_work/totals.py'. Reloading...
+2025-03-02 10:06:41 - INFO - Shutting down
+2025-03-02 10:06:41 - INFO - Waiting for application shutdown.
+2025-03-02 10:06:41 - INFO - Application shutdown complete.
+2025-03-02 10:06:41 - INFO - Finished server process [4897]
+2025-03-02 10:06:41 - INFO - Started server process [4902]
+2025-03-02 10:06:41 - INFO - Waiting for application startup.
+2025-03-02 10:06:41 - INFO - Application startup complete.
+2025-03-02 10:06:59 - WARNING - WatchFiles detected changes in 'app/api/v1/field_work/__init__.py'. Reloading...
+2025-03-02 10:06:59 - INFO - Shutting down
+2025-03-02 10:06:59 - INFO - Waiting for application shutdown.
+2025-03-02 10:06:59 - INFO - Application shutdown complete.
+2025-03-02 10:06:59 - INFO - Finished server process [4902]
+2025-03-02 10:07:00 - INFO - Started server process [4908]
+2025-03-02 10:07:00 - INFO - Waiting for application startup.
+2025-03-02 10:07:00 - INFO - Application startup complete.
+2025-03-02 10:07:21 - WARNING - WatchFiles detected changes in 'app/api/v1/field_work/__init__.py'. Reloading...
+2025-03-02 10:07:21 - INFO - Shutting down
+2025-03-02 10:07:21 - INFO - Waiting for application shutdown.
+2025-03-02 10:07:21 - INFO - Application shutdown complete.
+2025-03-02 10:07:21 - INFO - Finished server process [4908]
+2025-03-02 10:07:22 - INFO - Started server process [4914]
+2025-03-02 10:07:22 - INFO - Waiting for application startup.
+2025-03-02 10:07:22 - INFO - Application startup complete.
+2025-03-02 10:09:02 - WARNING - WatchFiles detected changes in 'app/api/v1/field_work/field_work.py'. Reloading...
+2025-03-02 10:09:02 - INFO - Shutting down
+2025-03-02 10:09:02 - INFO - Waiting for application shutdown.
+2025-03-02 10:09:02 - INFO - Application shutdown complete.
+2025-03-02 10:09:02 - INFO - Finished server process [4914]
+2025-03-02 10:09:02 - INFO - Started server process [4922]
+2025-03-02 10:09:02 - INFO - Waiting for application startup.
+2025-03-02 10:09:02 - INFO - Application startup complete.
+2025-03-02 10:09:12 - WARNING - WatchFiles detected changes in 'app/api/v1/field_work/field_work.py'. Reloading...
+2025-03-02 10:09:12 - INFO - Shutting down
+2025-03-02 10:09:13 - INFO - Waiting for application shutdown.
+2025-03-02 10:09:13 - INFO - Application shutdown complete.
+2025-03-02 10:09:13 - INFO - Finished server process [4922]
+2025-03-02 10:09:13 - INFO - Started server process [4926]
+2025-03-02 10:09:13 - INFO - Waiting for application startup.
+2025-03-02 10:09:13 - INFO - Application startup complete.
+2025-03-02 11:50:26 - WARNING - WatchFiles detected changes in 'app/api/v1/field_work/field_work.py'. Reloading...
+2025-03-02 11:50:26 - INFO - Shutting down
+2025-03-02 11:50:26 - INFO - Waiting for application shutdown.
+2025-03-02 11:50:26 - INFO - Application shutdown complete.
+2025-03-02 11:50:26 - INFO - Finished server process [4926]
+2025-03-02 11:50:27 - INFO - Started server process [5287]
+2025-03-02 11:50:27 - INFO - Waiting for application startup.
+2025-03-02 11:50:27 - INFO - Application startup complete.
+2025-03-02 11:51:33 - WARNING - WatchFiles detected changes in 'app/api/v1/field_work/field_work.py'. Reloading...
+2025-03-02 11:51:33 - INFO - Shutting down
+2025-03-02 11:51:33 - INFO - Waiting for application shutdown.
+2025-03-02 11:51:33 - INFO - Application shutdown complete.
+2025-03-02 11:51:33 - INFO - Finished server process [5287]
+2025-03-02 11:51:34 - INFO - Started server process [5301]
+2025-03-02 11:51:34 - INFO - Waiting for application startup.
+2025-03-02 11:51:34 - INFO - Application startup complete.
+2025-03-02 11:51:49 - WARNING - WatchFiles detected changes in 'app/api/v1/field_work/field_work.py'. Reloading...
+2025-03-02 11:51:49 - INFO - Shutting down
+2025-03-02 11:51:49 - INFO - Waiting for application shutdown.
+2025-03-02 11:51:49 - INFO - Application shutdown complete.
+2025-03-02 11:51:49 - INFO - Finished server process [5301]
+2025-03-02 11:51:50 - INFO - Started server process [5305]
+2025-03-02 11:51:50 - INFO - Waiting for application startup.
+2025-03-02 11:51:50 - INFO - Application startup complete.
+2025-03-02 11:54:43 - WARNING - WatchFiles detected changes in 'app/api/v1/field_work/field_work.py'. Reloading...
+2025-03-02 11:54:43 - INFO - Shutting down
+2025-03-02 11:54:43 - INFO - Waiting for application shutdown.
+2025-03-02 11:54:43 - INFO - Application shutdown complete.
+2025-03-02 11:54:43 - INFO - Finished server process [5305]
+2025-03-02 11:54:44 - INFO - Started server process [5314]
+2025-03-02 11:54:44 - INFO - Waiting for application startup.
+2025-03-02 11:54:44 - INFO - Application startup complete.
+2025-03-02 11:54:54 - INFO - 127.0.0.1:53856 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 11:54:54 - INFO - 127.0.0.1:53858 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 11:54:54 - INFO - 127.0.0.1:53868 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 11:54:54 - INFO - 127.0.0.1:53872 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 11:54:56 - INFO - 127.0.0.1:53882 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 11:54:59 - INFO - 127.0.0.1:53916 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-02 11:54:59 - INFO - 127.0.0.1:53910 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 11:54:59 - INFO - 127.0.0.1:53898 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 11:55:10 - INFO - 127.0.0.1:39106 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 11:55:14 - INFO - 127.0.0.1:35066 - "GET /api/v1/api/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 11:55:14 - INFO - 127.0.0.1:35070 - "GET /api/v1/role/authorized?id=2 HTTP/1.1" 200 OK
+2025-03-02 11:55:14 - INFO - 127.0.0.1:35056 - "GET /api/v1/menu/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 11:55:51 - INFO - 127.0.0.1:53080 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 11:55:52 - INFO - 127.0.0.1:53096 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 11:55:57 - INFO - 127.0.0.1:38354 - "GET /api/v1/api/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 11:55:57 - INFO - 127.0.0.1:38356 - "GET /api/v1/role/authorized?id=2 HTTP/1.1" 200 OK
+2025-03-02 11:55:58 - INFO - 127.0.0.1:38344 - "GET /api/v1/menu/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 11:56:36 - WARNING - WatchFiles detected changes in 'app/api/v1/field_work/field_work.py'. Reloading...
+2025-03-02 11:56:36 - INFO - Shutting down
+2025-03-02 11:56:37 - INFO - Waiting for application shutdown.
+2025-03-02 11:56:37 - INFO - Application shutdown complete.
+2025-03-02 11:56:37 - INFO - Finished server process [5314]
+2025-03-02 11:56:38 - INFO - Started server process [5325]
+2025-03-02 11:56:38 - INFO - Waiting for application startup.
+2025-03-02 11:56:38 - INFO - Application startup complete.
+2025-03-02 11:58:12 - INFO - 127.0.0.1:55982 - "GET /api/v1/api/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 11:58:12 - INFO - 127.0.0.1:55990 - "GET /api/v1/role/authorized?id=2 HTTP/1.1" 200 OK
+2025-03-02 11:58:12 - INFO - 127.0.0.1:55976 - "GET /api/v1/menu/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 12:00:04 - INFO - 127.0.0.1:36554 - "GET /api/v1/auditlog/list?start_time=2025-03-02+00:00:00&end_time=2025-03-02+23:59:59&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:00:23 - INFO - 127.0.0.1:54844 - "GET /api/v1/auditlog/list?start_time=2025-03-02+00:00:00&end_time=2025-03-02+23:59:59&module=%E8%8F%9C%E5%8D%95&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:00:24 - INFO - 127.0.0.1:54846 - "GET /api/v1/auditlog/list?start_time=2025-03-02+00:00:00&end_time=2025-03-02+23:59:59&module=%E8%8F%9C&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:00:25 - INFO - 127.0.0.1:54854 - "GET /api/v1/auditlog/list?start_time=2025-03-02+00:00:00&end_time=2025-03-02+23:59:59&module=%E8%8F%9C&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:00:27 - INFO - 127.0.0.1:54862 - "GET /api/v1/auditlog/list?start_time=2025-03-02+00:00:00&end_time=2025-03-02+23:59:59&module=&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:00:29 - INFO - 127.0.0.1:54866 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:00:31 - INFO - 127.0.0.1:54868 - "GET /api/v1/auditlog/list?start_time=2025-03-02+00:00:00&end_time=2025-03-02+23:59:59&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:00:35 - INFO - 127.0.0.1:56602 - "GET /api/v1/api/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:00:39 - INFO - 127.0.0.1:56604 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:00:41 - INFO - 127.0.0.1:56608 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-02 12:00:41 - INFO - 127.0.0.1:56620 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-02 12:01:42 - INFO - 127.0.0.1:34538 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:01:44 - INFO - 127.0.0.1:33194 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-02 12:01:44 - INFO - 127.0.0.1:33208 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-02 12:02:26 - INFO - 127.0.0.1:35650 - "GET /api/v1/api/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:02:31 - INFO - 127.0.0.1:35654 - "GET /api/v1/api/list?page=2&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:02:34 - INFO - 127.0.0.1:56108 - "GET /api/v1/api/list?page=3&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:02:38 - INFO - 127.0.0.1:56118 - "GET /api/v1/api/list?page=4&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:02:48.585 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/total/list
+2025-03-02 12:02:48.589 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/total/get
+2025-03-02 12:02:48.594 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/total/create
+2025-03-02 12:02:48.598 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/total/update
+2025-03-02 12:02:48.603 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/total/delete
+2025-03-02 12:02:48 - INFO - 127.0.0.1:58280 - "POST /api/v1/api/refresh HTTP/1.1" 200 OK
+2025-03-02 12:02:48 - INFO - 127.0.0.1:58288 - "GET /api/v1/api/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:02:52 - INFO - 127.0.0.1:58304 - "GET /api/v1/api/list?page=2&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:02:59 - INFO - 127.0.0.1:36192 - "GET /api/v1/api/list?page=3&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:03:01 - INFO - 127.0.0.1:36194 - "GET /api/v1/api/list?page=4&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:03:03 - INFO - 127.0.0.1:49376 - "GET /api/v1/api/list?page=5&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:03:07 - INFO - 127.0.0.1:49382 - "GET /api/v1/api/list?page=2&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:03:17 - INFO - 127.0.0.1:56900 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-02 12:03:17 - INFO - 127.0.0.1:56894 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 12:03:17 - INFO - 127.0.0.1:56884 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:03:18 - INFO - 127.0.0.1:56914 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:03:25 - INFO - 127.0.0.1:55030 - "GET /api/v1/api/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 12:03:25 - INFO - 127.0.0.1:55034 - "GET /api/v1/role/authorized?id=2 HTTP/1.1" 200 OK
+2025-03-02 12:03:25 - INFO - 127.0.0.1:55018 - "GET /api/v1/menu/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 12:03:34 - INFO - 127.0.0.1:33668 - "GET /api/v1/role/authorized?id=1 HTTP/1.1" 200 OK
+2025-03-02 12:03:34 - INFO - 127.0.0.1:33692 - "GET /api/v1/api/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 12:03:34 - INFO - 127.0.0.1:33684 - "GET /api/v1/menu/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 12:03:50 - INFO - 127.0.0.1:50460 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:03:51 - INFO - 127.0.0.1:50470 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:04:38 - INFO - 127.0.0.1:33882 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:04:58 - INFO - 127.0.0.1:50488 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 12:04:58 - INFO - 127.0.0.1:50496 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 12:04:58 - INFO - 127.0.0.1:50508 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 12:05:03 - INFO - 127.0.0.1:34666 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 12:05:03 - INFO - 127.0.0.1:34676 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 12:05:03 - INFO - 127.0.0.1:34690 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 12:05:07 - INFO - 127.0.0.1:34704 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:05:16 - INFO - 127.0.0.1:40122 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:05:17 - INFO - 127.0.0.1:40124 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:05:18 - INFO - 127.0.0.1:40140 - "GET /api/v1/transactions/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:05:20 - INFO - 127.0.0.1:40144 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:05:38 - INFO - 127.0.0.1:55998 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-02 12:05:38 - INFO - 127.0.0.1:56012 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-02 12:05:49 - INFO - 127.0.0.1:59064 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-02 12:05:49 - INFO - 127.0.0.1:59050 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 12:05:49 - INFO - 127.0.0.1:59038 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:05:57 - INFO - 127.0.0.1:38214 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:06:07 - INFO - 127.0.0.1:58128 - "POST /api/v1/role/create HTTP/1.1" 200 OK
+2025-03-02 12:06:07 - INFO - 127.0.0.1:58138 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:06:09 - INFO - 127.0.0.1:58140 - "GET /api/v1/role/authorized?id=3 HTTP/1.1" 200 OK
+2025-03-02 12:06:09 - INFO - 127.0.0.1:58164 - "GET /api/v1/api/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 12:06:09 - INFO - 127.0.0.1:58154 - "GET /api/v1/menu/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 12:08:39 - INFO - 127.0.0.1:48936 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-02 12:08:39 - INFO - 127.0.0.1:48930 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 12:08:39 - INFO - 127.0.0.1:48920 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:09:01 - INFO - 127.0.0.1:40562 - "POST /api/v1/user/create HTTP/1.1" 422 Unprocessable Entity
+2025-03-02 12:09:49 - INFO - 127.0.0.1:34270 - "POST /api/v1/user/create HTTP/1.1" 200 OK
+2025-03-02 12:09:49 - INFO - 127.0.0.1:34282 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:10:06 - INFO - 127.0.0.1:33190 - "POST /api/v1/base/access_token HTTP/1.1" 400 Bad Request
+2025-03-02 12:10:13 - INFO - 127.0.0.1:33196 - "POST /api/v1/base/access_token HTTP/1.1" 200 OK
+2025-03-02 12:10:13 - INFO - 127.0.0.1:56886 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 12:10:13 - INFO - 127.0.0.1:56892 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 12:10:13 - INFO - 127.0.0.1:56906 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 12:10:20 - INFO - 127.0.0.1:56922 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 403 Forbidden
+2025-03-02 12:10:24 - INFO - 127.0.0.1:38518 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 403 Forbidden
+2025-03-02 12:10:25 - INFO - 127.0.0.1:38528 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 403 Forbidden
+2025-03-02 12:10:27 - INFO - 127.0.0.1:38530 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 403 Forbidden
+2025-03-02 12:10:29 - INFO - 127.0.0.1:38546 - "GET /api/v1/total/list?page=1&per_page=99999 HTTP/1.1" 403 Forbidden
+2025-03-02 12:10:33 - INFO - 127.0.0.1:56888 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 403 Forbidden
+2025-03-02 12:10:34 - INFO - 127.0.0.1:56898 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 403 Forbidden
+2025-03-02 12:10:37 - INFO - 127.0.0.1:56908 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 12:10:37 - INFO - 127.0.0.1:56916 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 12:10:37 - INFO - 127.0.0.1:56926 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 12:10:37 - INFO - 127.0.0.1:56930 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 403 Forbidden
+2025-03-02 12:12:43 - INFO - 127.0.0.1:45128 - "POST /api/v1/user/update HTTP/1.1" 403 Forbidden
+2025-03-02 12:12:58 - INFO - 127.0.0.1:46988 - "POST /api/v1/base/update_password HTTP/1.1" 200 OK
+2025-03-02 12:13:09 - INFO - 127.0.0.1:51276 - "POST /api/v1/base/update_password HTTP/1.1" 200 OK
+2025-03-02 12:13:19 - INFO - 127.0.0.1:49872 - "POST /api/v1/base/access_token HTTP/1.1" 200 OK
+2025-03-02 12:13:19 - INFO - 127.0.0.1:49878 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-02 12:13:19 - INFO - 127.0.0.1:49894 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-02 12:13:19 - INFO - 127.0.0.1:49910 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-02 12:13:24 - INFO - 127.0.0.1:44914 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-02 12:13:24 - INFO - 127.0.0.1:44898 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 12:13:24 - INFO - 127.0.0.1:44896 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:13:30 - INFO - 127.0.0.1:44926 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-02 12:13:36 - INFO - 127.0.0.1:41574 - "GET /api/v1/api/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-02 12:13:36 - INFO - 127.0.0.1:41584 - "GET /api/v1/role/authorized?id=3 HTTP/1.1" 200 OK
+2025-03-02 12:13:36 - INFO - 127.0.0.1:41566 - "GET /api/v1/menu/list?page=1&page_size=9999 HTTP/1.1" 200 OK

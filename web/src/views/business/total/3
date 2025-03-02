@@ -36,7 +36,7 @@ const {
   name: '总表数据',
   // 初始化表单数据，字段与后端保持一致
   initForm: {
-    date: null,
+    date: '',
     plate: '',
     region: '',
     company: '',
@@ -48,7 +48,7 @@ const {
     income: 0,
     destination: '',
     remark: '',
-    handover_time: null,
+    handover_time: '',
     is_completed: false,
   },
   doCreate: api.createTotal,
@@ -245,7 +245,7 @@ const columns = [
             type="date"
             clearable
             placeholder="请选择日期"
-            @update="$table?.handleSearch()"
+            @change="$table?.handleSearch()"
           />
         </QueryBarItem>
         <QueryBarItem label="车牌" :label-width="70">
@@ -283,7 +283,7 @@ const columns = [
         :rules="addAPIRules"
       >
         <NFormItem label="日期" path="date">
-          <n-date-picker v-model:formatted-value="modalForm.date" type="date" clearable value-format="yyyy-MM-dd HH:mm:ss"/>
+          <n-date-picker v-model:formatted-value="modalForm.date" type="date" clearable value-format="yyyy-MM-dd"/>
         </NFormItem>
         <NFormItem label="车牌" path="plate">
           <NInput v-model:value="modalForm.plate" clearable placeholder="请输入车牌" />
