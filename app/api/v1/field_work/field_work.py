@@ -17,7 +17,7 @@ async def list_field_works(
     if date:
         q &= Q(date__contains=date)
     if name:
-        q &= Q(plate__contains=plate)
+        q &= Q(plate__contains=name)
     field_work, field_work_objs = await field_work_record_controller.list(page=page, page_size=page_size, search=q)
     data = [await obj.to_dict() for obj in field_work_objs]
     return SuccessExtra(data=data, field_work=field_work, page=page, page_size=page_size)

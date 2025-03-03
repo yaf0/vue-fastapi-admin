@@ -1496,3 +1496,47 @@ NameError: name 'plate' is not defined. Did you mean: 'page'?
 2025-03-03 07:10:25 - INFO - 127.0.0.1:49814 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
 2025-03-03 07:12:47 - INFO - 10.8.0.3:9972 - "GET /docs HTTP/1.1" 200 OK
 2025-03-03 07:12:48 - INFO - 10.8.0.3:9972 - "GET /openapi.json HTTP/1.1" 200 OK
+2025-03-03 09:01:37 - INFO - 127.0.0.1:57450 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-03 09:01:37 - INFO - 127.0.0.1:57456 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-03 09:01:37 - INFO - 127.0.0.1:57466 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-03 09:01:40 - INFO - 127.0.0.1:57470 - "GET /api/v1/auditlog/list?start_time=2025-03-03+00:00:00&end_time=2025-03-03+23:59:59&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-03 09:01:42 - INFO - 127.0.0.1:57476 - "GET /api/v1/auditlog/list?start_time=2025-03-03+00:00:00&end_time=2025-03-03+23:59:59&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-03 09:01:43 - INFO - 127.0.0.1:50042 - "GET /api/v1/auditlog/list?start_time=2025-03-03+00:00:00&end_time=2025-03-03+23:59:59&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-03 09:01:44 - INFO - 127.0.0.1:50054 - "GET /api/v1/auditlog/list?start_time=2025-03-03+00:00:00&end_time=2025-03-03+23:59:59&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-03 09:01:47 - INFO - 127.0.0.1:50062 - "GET /api/v1/auditlog/list?start_time=2025-03-03+00:00:00&end_time=2025-03-03+23:59:59&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-03 09:02:31 - INFO - 127.0.0.1:55626 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-03 09:02:31 - INFO - 127.0.0.1:55616 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-03 09:02:31 - INFO - 127.0.0.1:55628 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-03 09:03:04 - INFO - 127.0.0.1:48476 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-03 09:03:50 - INFO - 127.0.0.1:56104 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-03 09:03:50 - INFO - 127.0.0.1:56112 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-03 09:04:08 - INFO - 127.0.0.1:42930 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-03 09:04:09 - INFO - 127.0.0.1:42934 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-03 09:04:15 - INFO - 127.0.0.1:44664 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-03 09:04:15 - INFO - 127.0.0.1:44674 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-03 09:04:35 - INFO - 127.0.0.1:60710 - "POST /api/v1/menu/update HTTP/1.1" 200 OK
+2025-03-03 09:05:59 - INFO - 127.0.0.1:45782 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-03 09:24:57 - WARNING - WatchFiles detected changes in 'app/__init__.py'. Reloading...
+2025-03-03 09:24:57 - INFO - Shutting down
+2025-03-03 09:24:57 - INFO - Waiting for application shutdown.
+2025-03-03 09:24:57 - INFO - Application shutdown complete.
+2025-03-03 09:24:57 - INFO - Finished server process [10600]
+2025-03-03 09:24:58 - INFO - Started server process [11872]
+2025-03-03 09:24:58 - INFO - Waiting for application startup.
+2025-03-03 09:24:58 - INFO - Application startup complete.
+2025-03-03 09:26:33 - WARNING - WatchFiles detected changes in 'app/api/v1/field_work/field_work.py'. Reloading...
+2025-03-03 09:26:33 - INFO - Shutting down
+2025-03-03 09:26:33 - INFO - Waiting for application shutdown.
+2025-03-03 09:26:33 - INFO - Application shutdown complete.
+2025-03-03 09:26:33 - INFO - Finished server process [11872]
+2025-03-03 09:26:34 - INFO - Started server process [12322]
+2025-03-03 09:26:34 - INFO - Waiting for application startup.
+2025-03-03 09:26:34 - INFO - Application startup complete.
+2025-03-03 09:26:35 - WARNING - WatchFiles detected changes in 'app/api/v1/field_work/field_work.py'. Reloading...
+2025-03-03 09:26:35 - INFO - Shutting down
+2025-03-03 09:26:35 - INFO - Waiting for application shutdown.
+2025-03-03 09:26:35 - INFO - Application shutdown complete.
+2025-03-03 09:26:35 - INFO - Finished server process [12322]
+2025-03-03 09:26:35 - INFO - Started server process [12325]
+2025-03-03 09:26:35 - INFO - Waiting for application startup.
+2025-03-03 09:26:35 - INFO - Application startup complete.

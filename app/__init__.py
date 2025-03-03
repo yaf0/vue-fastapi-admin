@@ -13,6 +13,7 @@ from app.core.init_app import (
 
 try:
     from app.settings.config import settings
+    
 except ImportError:
     raise SettingNotFound("Can not import settings")
 
