@@ -49,3 +49,267 @@
 9:24:11 AM [vite] hmr update /src/views/system/user/index.vue, /src/views/system/menu/index.vue, /src/views/system/api/index.vue, /src/views/curd/index.vue, /src/views/system/role/index.vue, /src/views/business/total/index.vue, /src/views/system/dept/index.vue
 9:29:50 AM [vite] hmr update /src/views/system/user/index.vue, /src/views/system/menu/index.vue, /src/views/system/api/index.vue, /src/views/curd/index.vue, /src/views/system/role/index.vue, /src/views/business/total/index.vue, /src/views/system/dept/index.vue
 9:34:16 AM [vite] hmr update /src/views/business/total/index.vue
+2:19:50 AM [vite] hmr update /src/views/business/total/index.vue
+Killed
+ ELIFECYCLE  Command failed with exit code 137.
+
+> vue-fastapi-admin-web@0.0.0 dev /opt/vue-fastapi-admin/web
+> vite
+
+
+ WARN  [unocss] exclude option is deprecated, use content.pipeline.exclude instead.
+
+
+  VITE v4.5.3  ready in 1090 ms
+
+  ➜  Local:   http://localhost:3100/
+  ➜  Network: http://172.26.148.122:3100/
+  ➜  Network: http://10.8.0.28:3100/
+2:38:38 AM [vite] hmr update /src/views/business/total/index.vue
+2:39:50 AM [vite] hmr update /src/views/business/total/index.vue
+3:22:23 AM [vite] hmr update /src/views/business/total/index.vue
+3:24:52 AM [vite] hmr update /src/views/business/total/index.vue
+3:25:52 AM [vite] hmr update /src/views/business/total/index.vue
+3:27:39 AM [vite] hmr update /src/views/business/total/index.vue
+3:28:52 AM [vite] hmr update /src/views/business/total/index.vue
+3:30:04 AM [vite] hmr update /src/views/business/total/index.vue
+3:30:27 AM [vite] hmr update /src/views/business/total/index.vue
+3:34:54 AM [vite] hmr update /src/views/business/total/index.vue
+3:37:52 AM [vite] hmr update /src/views/business/total/index.vue
+3:38:42 AM [vite] hmr update /src/views/business/total/index.vue
+3:47:08 AM [vite] hmr update /src/views/business/total/index.vue
+3:47:47 AM [vite] hmr update /src/views/business/total/index.vue
+3:57:09 AM [vite] hmr update /src/views/business/total/index.vue
+
+ ERROR  3:57:09 AM [vite] Internal server error: [vue/compiler-sfc] Unexpected token, expected "," (2:61)
+
+/opt/vue-fastapi-admin/web/src/views/business/total/index.vue
+1  |  <script setup>
+2  |  import { h, onMounted, ref, resolveDirective, withDirectives watch} from 'vue'
+   |                                                               ^
+3  |  import { NButton, NForm, NFormItem, NInput, NPopconfirm, NInputNumber, NSwitch } from 'naive-ui'
+4  |  import * as XLSX from 'xlsx'
+  Plugin: vite:vue
+  File: /opt/vue-fastapi-admin/web/src/views/business/total/index.vue:2:61
+  1  |  <script setup>
+  2  |  import { h, onMounted, ref, resolveDirective, withDirectives watch} from 'vue'
+     |                                                 ^
+  3  |  import { NButton, NForm, NFormItem, NInput, NPopconfirm, NInputNumber, NSwitch } from 'naive-ui'
+  4  |  import * as XLSX from 'xlsx'
+      at constructor (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:352:19)
+      at Parser.raise (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:3250:19)
+      at Parser.unexpected (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:3270:16)
+      at Parser.expect (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:3580:12)
+      at Parser.parseNamedImportSpecifiers (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:13844:14)
+      at Parser.parseImportSpecifiersAndAfter (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:13688:37)
+      at Parser.parseImport (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:13681:17)
+      at Parser.parseStatementContent (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12328:27)
+      at Parser.parseStatementLike (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12220:17)
+      at Parser.parseModuleItem (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12197:17)
+      at Parser.parseBlockOrModuleBlockBody (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12773:36)
+      at Parser.parseBlockBody (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12766:10)
+      at Parser.parseProgram (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12094:10)
+      at Parser.parseTopLevel (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12084:25)
+      at Parser.parse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:13896:10)
+      at Object.parse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:13930:38)
+      at parse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-sfc@3.4.34/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:15669:25)
+      at new ScriptCompileContext (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-sfc@3.4.34/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:15686:53)
+      at Object.compileScript (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-sfc@3.4.34/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:20081:15)
+      at resolveScript (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:349:31)
+      at genScriptCode (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:2545:18)
+      at transformMain (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:2355:54)
+      at TransformContext.transform (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:2881:16)
+      at Object.transform (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:44352:62)
+      at async loadAndTransform (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:55026:29)
+      at async viteTransformMiddleware (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:64430:32)
+
+3:58:00 AM [vite] hmr update /src/views/business/total/index.vue
+
+ ERROR  3:58:01 AM [vite] Internal server error: [vue/compiler-sfc] Unexpected token, expected "," (2:61)
+
+/opt/vue-fastapi-admin/web/src/views/business/total/index.vue
+1  |  <script setup>
+2  |  import { h, onMounted, ref, resolveDirective, withDirectives watch} from 'vue'
+   |                                                               ^
+3  |  import { NButton, NForm, NFormItem, NInput, NPopconfirm, NInputNumber, NSwitch } from 'naive-ui'
+4  |  import * as XLSX from 'xlsx'
+  Plugin: vite:vue
+  File: /opt/vue-fastapi-admin/web/src/views/business/total/index.vue:2:61
+  1  |  <script setup>
+  2  |  import { h, onMounted, ref, resolveDirective, withDirectives watch} from 'vue'
+     |                                                 ^
+  3  |  import { NButton, NForm, NFormItem, NInput, NPopconfirm, NInputNumber, NSwitch } from 'naive-ui'
+  4  |  import * as XLSX from 'xlsx'
+      at constructor (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:352:19)
+      at Parser.raise (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:3250:19)
+      at Parser.unexpected (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:3270:16)
+      at Parser.expect (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:3580:12)
+      at Parser.parseNamedImportSpecifiers (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:13844:14)
+      at Parser.parseImportSpecifiersAndAfter (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:13688:37)
+      at Parser.parseImport (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:13681:17)
+      at Parser.parseStatementContent (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12328:27)
+      at Parser.parseStatementLike (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12220:17)
+      at Parser.parseModuleItem (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12197:17)
+      at Parser.parseBlockOrModuleBlockBody (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12773:36)
+      at Parser.parseBlockBody (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12766:10)
+      at Parser.parseProgram (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12094:10)
+      at Parser.parseTopLevel (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12084:25)
+      at Parser.parse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:13896:10)
+      at Object.parse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:13930:38)
+      at parse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-sfc@3.4.34/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:15669:25)
+      at new ScriptCompileContext (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-sfc@3.4.34/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:15686:53)
+      at Object.compileScript (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-sfc@3.4.34/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:20081:15)
+      at resolveScript (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:349:31)
+      at genScriptCode (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:2545:18)
+      at transformMain (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:2355:54)
+      at TransformContext.transform (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:2881:16)
+      at Object.transform (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:44352:62)
+      at async loadAndTransform (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:55026:29)
+      at async viteTransformMiddleware (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:64430:32)
+
+
+ ERROR  3:58:04 AM [vite] Internal server error: [vue/compiler-sfc] Unexpected token, expected "," (2:61)
+
+/opt/vue-fastapi-admin/web/src/views/business/total/index.vue
+1  |  <script setup>
+2  |  import { h, onMounted, ref, resolveDirective, withDirectives watch} from 'vue'
+   |                                                               ^
+3  |  import { NButton, NForm, NFormItem, NInput, NPopconfirm, NInputNumber, NSwitch } from 'naive-ui'
+4  |  import * as XLSX from 'xlsx'
+  Plugin: vite:vue
+  File: /opt/vue-fastapi-admin/web/src/views/business/total/index.vue:2:61
+  1  |  <script setup>
+  2  |  import { h, onMounted, ref, resolveDirective, withDirectives watch} from 'vue'
+     |                                                 ^
+  3  |  import { NButton, NForm, NFormItem, NInput, NPopconfirm, NInputNumber, NSwitch } from 'naive-ui'
+  4  |  import * as XLSX from 'xlsx'
+      at constructor (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:352:19)
+      at Parser.raise (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:3250:19)
+      at Parser.unexpected (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:3270:16)
+      at Parser.expect (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:3580:12)
+      at Parser.parseNamedImportSpecifiers (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:13844:14)
+      at Parser.parseImportSpecifiersAndAfter (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:13688:37)
+      at Parser.parseImport (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:13681:17)
+      at Parser.parseStatementContent (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12328:27)
+      at Parser.parseStatementLike (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12220:17)
+      at Parser.parseModuleItem (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12197:17)
+      at Parser.parseBlockOrModuleBlockBody (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12773:36)
+      at Parser.parseBlockBody (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12766:10)
+      at Parser.parseProgram (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12094:10)
+      at Parser.parseTopLevel (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:12084:25)
+      at Parser.parse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:13896:10)
+      at Object.parse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@babel+parser@7.25.0/node_modules/@babel/parser/lib/index.js:13930:38)
+      at parse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-sfc@3.4.34/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:15669:25)
+      at new ScriptCompileContext (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-sfc@3.4.34/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:15686:53)
+      at Object.compileScript (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-sfc@3.4.34/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:20081:15)
+      at resolveScript (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:349:31)
+      at genScriptCode (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:2545:18)
+      at transformMain (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:2355:54)
+      at TransformContext.transform (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:2881:16)
+      at Object.transform (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:44352:62)
+      at async loadAndTransform (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:55026:29)
+      at async viteTransformMiddleware (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:64430:32)
+
+3:58:25 AM [vite] hmr update /src/views/business/total/index.vue
+3:59:19 AM [vite] hmr update /src/views/business/total/index.vue
+3:59:39 AM [vite] hmr update /src/views/business/total/index.vue
+4:02:17 AM [vite] hmr update /src/components/table/CrudTable.vue
+5:07:38 AM [vite] hmr update /src/components/table/CrudTable.vue
+5:08:29 AM [vite] hmr update /src/views/business/total/index.vue
+5:14:48 AM [vite] hmr update /src/views/business/total/index.vue
+5:15:14 AM [vite] hmr update /src/views/business/total/index.vue
+5:15:26 AM [vite] hmr update /src/views/business/total/index.vue
+5:16:20 AM [vite] hmr update /src/views/business/total/index.vue
+5:22:32 AM [vite] hmr update /src/views/business/total/index.vue
+5:22:46 AM [vite] hmr update /src/views/business/total/index.vue
+5:22:52 AM [vite] hmr update /src/views/business/total/index.vue
+5:22:57 AM [vite] hmr update /src/views/business/total/index.vue
+5:23:04 AM [vite] hmr update /src/views/business/total/index.vue
+5:23:29 AM [vite] hmr update /src/views/business/total/index.vue
+5:23:38 AM [vite] hmr update /src/views/business/total/index.vue
+5:23:43 AM [vite] hmr update /src/views/business/total/index.vue
+5:23:49 AM [vite] hmr update /src/views/business/total/index.vue
+5:23:55 AM [vite] hmr update /src/views/business/total/index.vue
+5:23:59 AM [vite] hmr update /src/views/business/total/index.vue
+5:46:57 AM [vite] page reload src/api/index.js
+6:06:20 AM [vite] page reload src/router/routes/index.js
+6:06:57 AM [vite] page reload src/views/business/filed_work/index.vue
+6:10:10 AM [vite] page reload src/views/business/field_work/index.vue
+6:10:10 AM [vite] page reload src/views/business/filed_work/index.vue
+6:38:34 AM [vite] hmr update /src/components/common/AppProvider.vue, /src/layout/index.vue
+6:38:36 AM [vite] page reload src/router/guard/page-title-guard.js
+6:38:36 AM [vite] page reload src/router/guard/page-loading-guard.js
+6:38:36 AM [vite] page reload src/router/guard/auth-guard.js
+6:38:36 AM [vite] page reload src/router/guard/index.js
+6:38:36 AM [vite] page reload src/router/index.js
+6:38:36 AM [vite] page reload src/router/routes/index.js
+6:38:36 AM [vite] page reload src/store/modules/tags/helpers.js
+6:38:36 AM [vite] page reload src/store/modules/tags/index.js
+6:38:36 AM [vite] page reload src/store/modules/permission/index.js
+6:38:36 AM [vite] page reload src/store/modules/index.js
+6:38:36 AM [vite] page reload src/store/modules/user/index.js
+6:38:36 AM [vite] page reload src/store/modules/app/index.js
+6:38:36 AM [vite] page reload src/store/index.js
+6:38:36 AM [vite] page reload src/api/index.js
+6:38:36 AM [vite] page reload src/main.js
+6:38:36 AM [vite] hmr update /src/components/icon/IconPicker.vue
+6:38:36 AM [vite] hmr update /src/views/business/total/index.vue, /src/views/curd/index.vue, /src/views/system/api/index.vue, /src/views/system/user/index.vue, /src/views/system/role/index.vue, /src/views/business/field_work/index.vue, /src/views/system/menu/index.vue, /src/views/system/dept/index.vue
+6:38:36 AM [vite] hmr update /src/views/business/total/index.vue, /src/views/curd/index.vue, /src/views/system/api/index.vue, /src/views/system/user/index.vue, /src/views/system/role/index.vue, /src/views/business/field_work/index.vue, /src/views/system/menu/index.vue, /src/views/system/dept/index.vue
+6:38:36 AM [vite] page reload src/utils/http/helpers.js
+6:38:36 AM [vite] page reload src/utils/http/interceptors.js
+6:38:36 AM [vite] page reload src/utils/http/index.js
+6:38:36 AM [vite] page reload src/utils/auth/auth.js
+6:38:36 AM [vite] page reload src/utils/auth/index.js
+6:38:36 AM [vite] page reload src/utils/auth/token.js
+6:38:36 AM [vite] page reload src/utils/common/icon.js
+6:38:36 AM [vite] page reload src/utils/common/is.js
+6:38:36 AM [vite] page reload src/utils/common/common.js
+6:38:36 AM [vite] page reload src/utils/common/index.js
+6:38:36 AM [vite] page reload src/utils/common/useResize.js
+6:38:36 AM [vite] page reload src/utils/common/naiveTools.js
+6:38:36 AM [vite] page reload src/utils/storage/storage.js
+6:38:36 AM [vite] page reload src/utils/storage/index.js
+6:38:36 AM [vite] page reload src/utils/index.js
+6:38:36 AM [vite] page reload src/directives/permission.js
+6:38:36 AM [vite] page reload src/directives/index.js
+6:38:36 AM [vite] vite.config.js changed, restarting server...
+6:38:36 AM [vite] build/config/define.js changed, restarting server...
+6:38:36 AM [vite] build/config/index.js changed, restarting server...
+6:38:36 AM [vite] build/constant.js changed, restarting server...
+6:38:36 AM [vite] build/utils.js changed, restarting server...
+6:38:36 AM [vite] build/plugin/html.js changed, restarting server...
+6:38:36 AM [vite] build/plugin/unplugin.js changed, restarting server...
+6:38:36 AM [vite] build/plugin/index.js changed, restarting server...
+6:38:36 AM [vite] page reload i18n/messages/index.js
+6:38:36 AM [vite] page reload i18n/index.js
+6:38:36 AM [vite] hmr update /src/views/business/total/index.vue
+
+ WARN  [unocss] exclude option is deprecated, use content.pipeline.exclude instead.
+
+
+ WARN  [unocss] exclude option is deprecated, use content.pipeline.exclude instead.
+
+
+ ERROR  6:38:37 AM [vite] Internal server error: The server is being restarted or closed. Request is outdated
+      at throwClosedServerError (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:43868:17)
+      at transformRequest (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:54858:9)
+      at Object.transformRequest (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:65087:20)
+      at preTransformRequest (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:64723:12)
+      at processNodeUrl (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:64543:13)
+      at file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:64626:17
+      at traverseNodes (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:37435:5)
+      at file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:37439:48
+      at Array.forEach (<anonymous>)
+      at traverseNodes (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:37439:25)
+      at file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:37439:48
+      at Array.forEach (<anonymous>)
+      at traverseNodes (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:37439:25)
+      at file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:37439:48
+      at Array.forEach (<anonymous>)
+      at traverseNodes (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:37439:25)
+      at traverseHtml (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:37452:5)
+      at async devHtmlHook (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:64618:5)
+      at async applyHtmlTransforms (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:38049:21)
+      at async viteIndexHtmlMiddleware (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:64699:28)
+
+6:38:37 AM [vite] server restarted.

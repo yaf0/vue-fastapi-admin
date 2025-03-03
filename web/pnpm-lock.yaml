@@ -27,7 +27,7 @@ importers:
         specifier: ^1.4.0
         version: 1.7.2
       dayjs:
-        specifier: ^1.11.9
+        specifier: ^1.11.12
         version: 1.11.12
       dotenv:
         specifier: ^16.3.1

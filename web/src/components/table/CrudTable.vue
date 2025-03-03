@@ -19,6 +19,7 @@
 </template>
 
 <script setup>
+import dayjs from 'dayjs'; // 导入 dayjs
 const props = defineProps({
   /**
    * @remote true: 后端分页  false： 前端分页
@@ -107,7 +108,17 @@ async function handleQuery() {
       ...props.extraParams,
       ...paginationParams,
     })
-    tableData.value = data
+
+    // 格式化日期字段
+    const formattedData = data.map((item) => {
+      if (item.date) {
+        return { ...item, date: dayjs(item.date).format('YYYY-MM-DD') }; // 格式化日期
+      }
+      return item;
+    })
+
+    //tableData.value = data
+    tableData.value = formattedData
     pagination.itemCount = total || 0
   } catch (error) {
     tableData.value = []

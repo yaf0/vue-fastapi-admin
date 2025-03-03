@@ -1,2 +1,2 @@
 from .base import *
-from .total import TotalRecordBase, TotalRecordCreate, TotalRecordUpdate
+# from .total import TotalRecordBase, TotalRecordCreate, TotalRecordUpdate

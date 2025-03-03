@@ -120,7 +120,7 @@ export const basicRoutes = [
   {
     path: '/business/total',
     name: 'TotalManagement',
-    meta: { title: '总表数据管理'},
+    meta: { title: 'YY网页'},
     component: Layout,
     children: [
       {
@@ -128,7 +128,25 @@ export const basicRoutes = [
         component: () => import('@/views/business/total/index.vue'),
         name: `totaldata`,
         meta: {
-          title: '总表数据管理',
+          title: 'YY网页',
+          icon: 'icon-park-outline:workbench',
+          affix: true,
+        },
+      },
+    ],
+  },
+  {
+    path: '/business/field_work',
+    name: 'FieldWorkManagement',
+    meta: { title: '外勤管理'},
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/business/field_work/index.vue'),
+        name: `field_work_data`,
+        meta: {
+          title: '外勤管理',
           icon: 'icon-park-outline:workbench',
           affix: true,
         },

@@ -1,8 +1,8 @@
 from fastapi import APIRouter
-from .totals import router
+from .field_work import router
 
-totals_router = APIRouter()
-totals_router.include_router(router, tags=["外勤模块"])
+field_work_router = APIRouter()
+field_work_router.include_router(router, tags=["外勤模块"])
 
 __all__ = ["field_work_router"]
 

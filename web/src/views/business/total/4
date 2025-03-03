@@ -1,5 +1,5 @@
 <script setup>
-import { h, onMounted, ref, resolveDirective, withDirectives, watch} from 'vue'
+import { h, onMounted, ref, resolveDirective, withDirectives } from 'vue'
 import { NButton, NForm, NFormItem, NInput, NPopconfirm, NInputNumber, NSwitch } from 'naive-ui'
 import * as XLSX from 'xlsx'
 
@@ -13,7 +13,7 @@ import { renderIcon } from '@/utils'
 import { useCRUD } from '@/composables'
 import api from '@/api'
 
-defineOptions({ name: 'YY网页' })
+defineOptions({ name: '总表数据管理' })
 
 const $table = ref(null)
 const queryItems = ref({})
@@ -142,7 +142,7 @@ const addAPIRules = {
 
 // 表格列配置，增加内勤、平台、支出列
 const columns = [
-  { title: '日期', key: 'date', width: 110, align: 'center', ellipsis: { tooltip: true } },
+  { title: '日期', key: 'date', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '车牌', key: 'plate', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '区域', key: 'region', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '公司', key: 'company', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
@@ -154,7 +154,7 @@ const columns = [
   { title: '收入', key: 'income', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '去向', key: 'destination', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '备注', key: 'remark', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
-  { title: '交接时间', key: 'handover_time', width: 180, align: 'center', ellipsis: { tooltip: true } },
+  { title: '交接时间', key: 'handover_time', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { 
     title: '是否完成', key: 'is_completed', width: 'auto', align: 'center',
     render(row) { return row.is_completed ? '是' : '否' }
@@ -206,7 +206,7 @@ const columns = [
 </script>
 
 <template>
-  <CommonPage show-footer title="YY网页">
+  <CommonPage show-footer title="总表数据管理">
     <template #action>
       <div>
         <NButton

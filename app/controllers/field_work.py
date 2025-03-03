@@ -1,6 +1,6 @@
 from app.core.crud import CRUDBase
 from app.models.admin import FieldWorkRecord
-from app.schemas.field_work_record import FieldWorkRecordCreate, FieldWorkRecordUpdate
+from app.schemas.field_work import FieldWorkRecordCreate, FieldWorkRecordUpdate
 
 class FieldWorkRecordController(CRUDBase[FieldWorkRecord, FieldWorkRecordCreate, FieldWorkRecordUpdate]):
     def __init__(self):
