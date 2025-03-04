@@ -1540,3 +1540,794 @@ NameError: name 'plate' is not defined. Did you mean: 'page'?
 2025-03-03 09:26:35 - INFO - Started server process [12325]
 2025-03-03 09:26:35 - INFO - Waiting for application startup.
 2025-03-03 09:26:35 - INFO - Application startup complete.
+2025-03-04 01:39:23 - INFO - 127.0.0.1:49368 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 01:39:23 - INFO - 127.0.0.1:49384 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 01:39:23 - INFO - 127.0.0.1:49396 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 01:39:33 - INFO - 127.0.0.1:32808 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 01:39:37 - INFO - 127.0.0.1:32810 - "GET /api/v1/field_work/list?name=1&page=1&page_size=10 HTTP/1.1" 500 Internal Server Error
+2025-03-04 01:39:37 - ERROR - Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+  |     yield
+  |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 190, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 767, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    |     result = await app(  # type: ignore[func-returns-value]
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    |     return await self.app(scope, receive, send)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/applications.py", line 123, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    |     raise exc
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/app/core/middlewares.py", line 31, in __call__
+    |     await response(request.scope, request.receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 189, in __call__
+    |     with collapse_excgroups():
+    |   File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+    |     raise exc
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 191, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/app/core/middlewares.py", line 171, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 165, in call_next
+    |     raise app_exc
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 151, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    |     raise exc
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    |     raise exc
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    |     response = await func(request)
+    |                ^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    |     raw_response = await run_endpoint_function(
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    |     return await dependant.call(**values)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/app/api/v1/field_work/field_work.py", line 21, in list_field_works
+    |     field_work, field_work_objs = await field_work_record_controller.list(page=page, page_size=page_size, search=q)
+    |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/app/core/crud.py", line 22, in list
+    |     return await query.count(), await query.offset((page - 1) * page_size).limit(page_size).order_by(*order)
+    |            ^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 1391, in __await__
+    |     self._make_query()
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 1373, in _make_query
+    |     self.resolve_filters()
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 141, in resolve_filters
+    |     modifier &= node.resolve(
+    |                 ^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 479, in resolve
+    |     return self._resolve_children(resolve_context)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 456, in _resolve_children
+    |     node_modifier = node.resolve(resolve_context)
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 478, in resolve
+    |     return self._resolve_kwargs(resolve_context)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 435, in _resolve_kwargs
+    |     key, value = self._get_actual_filter_params(resolve_context, raw_key, raw_value)
+    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 425, in _get_actual_filter_params
+    |     raise FieldError(f"Unknown filter param '{key}'. Allowed base values are {allowed}")
+    | tortoise.exceptions.FieldError: Unknown filter param 'plate__contains'. Allowed base values are ['actual_expenditure', 'created_at', 'date', 'difference', 'expected_expenditure', 'id', 'name', 'number', 'remark', 'updated_at']
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/opt/vue-fastapi-admin/app/core/middlewares.py", line 31, in __call__
+    await response(request.scope, request.receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/core/middlewares.py", line 171, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/api/v1/field_work/field_work.py", line 21, in list_field_works
+    field_work, field_work_objs = await field_work_record_controller.list(page=page, page_size=page_size, search=q)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/core/crud.py", line 22, in list
+    return await query.count(), await query.offset((page - 1) * page_size).limit(page_size).order_by(*order)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 1391, in __await__
+    self._make_query()
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 1373, in _make_query
+    self.resolve_filters()
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 141, in resolve_filters
+    modifier &= node.resolve(
+                ^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 479, in resolve
+    return self._resolve_children(resolve_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 456, in _resolve_children
+    node_modifier = node.resolve(resolve_context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 478, in resolve
+    return self._resolve_kwargs(resolve_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 435, in _resolve_kwargs
+    key, value = self._get_actual_filter_params(resolve_context, raw_key, raw_value)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 425, in _get_actual_filter_params
+    raise FieldError(f"Unknown filter param '{key}'. Allowed base values are {allowed}")
+tortoise.exceptions.FieldError: Unknown filter param 'plate__contains'. Allowed base values are ['actual_expenditure', 'created_at', 'date', 'difference', 'expected_expenditure', 'id', 'name', 'number', 'remark', 'updated_at']
+2025-03-04 01:39:42 - INFO - 127.0.0.1:32824 - "GET /api/v1/field_work/list?name=&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 01:39:44 - INFO - 127.0.0.1:46734 - "GET /api/v1/field_work/list?name=1&page=1&page_size=10 HTTP/1.1" 500 Internal Server Error
+2025-03-04 01:39:44 - ERROR - Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+  |     yield
+  |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 190, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 767, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    |     result = await app(  # type: ignore[func-returns-value]
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    |     return await self.app(scope, receive, send)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/applications.py", line 123, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    |     raise exc
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/app/core/middlewares.py", line 31, in __call__
+    |     await response(request.scope, request.receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 189, in __call__
+    |     with collapse_excgroups():
+    |   File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+    |     raise exc
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 191, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/app/core/middlewares.py", line 171, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 165, in call_next
+    |     raise app_exc
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 151, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    |     raise exc
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    |     raise exc
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    |     response = await func(request)
+    |                ^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    |     raw_response = await run_endpoint_function(
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    |     return await dependant.call(**values)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/app/api/v1/field_work/field_work.py", line 21, in list_field_works
+    |     field_work, field_work_objs = await field_work_record_controller.list(page=page, page_size=page_size, search=q)
+    |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/app/core/crud.py", line 22, in list
+    |     return await query.count(), await query.offset((page - 1) * page_size).limit(page_size).order_by(*order)
+    |            ^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 1391, in __await__
+    |     self._make_query()
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 1373, in _make_query
+    |     self.resolve_filters()
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 141, in resolve_filters
+    |     modifier &= node.resolve(
+    |                 ^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 479, in resolve
+    |     return self._resolve_children(resolve_context)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 456, in _resolve_children
+    |     node_modifier = node.resolve(resolve_context)
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 478, in resolve
+    |     return self._resolve_kwargs(resolve_context)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 435, in _resolve_kwargs
+    |     key, value = self._get_actual_filter_params(resolve_context, raw_key, raw_value)
+    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 425, in _get_actual_filter_params
+    |     raise FieldError(f"Unknown filter param '{key}'. Allowed base values are {allowed}")
+    | tortoise.exceptions.FieldError: Unknown filter param 'plate__contains'. Allowed base values are ['actual_expenditure', 'created_at', 'date', 'difference', 'expected_expenditure', 'id', 'name', 'number', 'remark', 'updated_at']
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/opt/vue-fastapi-admin/app/core/middlewares.py", line 31, in __call__
+    await response(request.scope, request.receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/core/middlewares.py", line 171, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/api/v1/field_work/field_work.py", line 21, in list_field_works
+    field_work, field_work_objs = await field_work_record_controller.list(page=page, page_size=page_size, search=q)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/core/crud.py", line 22, in list
+    return await query.count(), await query.offset((page - 1) * page_size).limit(page_size).order_by(*order)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 1391, in __await__
+    self._make_query()
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 1373, in _make_query
+    self.resolve_filters()
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 141, in resolve_filters
+    modifier &= node.resolve(
+                ^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 479, in resolve
+    return self._resolve_children(resolve_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 456, in _resolve_children
+    node_modifier = node.resolve(resolve_context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 478, in resolve
+    return self._resolve_kwargs(resolve_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 435, in _resolve_kwargs
+    key, value = self._get_actual_filter_params(resolve_context, raw_key, raw_value)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 425, in _get_actual_filter_params
+    raise FieldError(f"Unknown filter param '{key}'. Allowed base values are {allowed}")
+tortoise.exceptions.FieldError: Unknown filter param 'plate__contains'. Allowed base values are ['actual_expenditure', 'created_at', 'date', 'difference', 'expected_expenditure', 'id', 'name', 'number', 'remark', 'updated_at']
+2025-03-04 01:40:06 - INFO - 127.0.0.1:58656 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 01:40:08 - INFO - 127.0.0.1:58658 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 01:40:11 - INFO - 127.0.0.1:58662 - "GET /api/v1/field_work/list?name=1&page=1&page_size=10 HTTP/1.1" 500 Internal Server Error
+2025-03-04 01:40:11 - ERROR - Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+  |     yield
+  |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 190, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 767, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    |     result = await app(  # type: ignore[func-returns-value]
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    |     return await self.app(scope, receive, send)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/applications.py", line 123, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    |     raise exc
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/app/core/middlewares.py", line 31, in __call__
+    |     await response(request.scope, request.receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 189, in __call__
+    |     with collapse_excgroups():
+    |   File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+    |     raise exc
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 191, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/app/core/middlewares.py", line 171, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 165, in call_next
+    |     raise app_exc
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 151, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    |     raise exc
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    |     raise exc
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    |     response = await func(request)
+    |                ^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    |     raw_response = await run_endpoint_function(
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    |     return await dependant.call(**values)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/app/api/v1/field_work/field_work.py", line 21, in list_field_works
+    |     field_work, field_work_objs = await field_work_record_controller.list(page=page, page_size=page_size, search=q)
+    |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/app/core/crud.py", line 22, in list
+    |     return await query.count(), await query.offset((page - 1) * page_size).limit(page_size).order_by(*order)
+    |            ^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 1391, in __await__
+    |     self._make_query()
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 1373, in _make_query
+    |     self.resolve_filters()
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 141, in resolve_filters
+    |     modifier &= node.resolve(
+    |                 ^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 479, in resolve
+    |     return self._resolve_children(resolve_context)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 456, in _resolve_children
+    |     node_modifier = node.resolve(resolve_context)
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 478, in resolve
+    |     return self._resolve_kwargs(resolve_context)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 435, in _resolve_kwargs
+    |     key, value = self._get_actual_filter_params(resolve_context, raw_key, raw_value)
+    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 425, in _get_actual_filter_params
+    |     raise FieldError(f"Unknown filter param '{key}'. Allowed base values are {allowed}")
+    | tortoise.exceptions.FieldError: Unknown filter param 'plate__contains'. Allowed base values are ['actual_expenditure', 'created_at', 'date', 'difference', 'expected_expenditure', 'id', 'name', 'number', 'remark', 'updated_at']
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/opt/vue-fastapi-admin/app/core/middlewares.py", line 31, in __call__
+    await response(request.scope, request.receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/core/middlewares.py", line 171, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/api/v1/field_work/field_work.py", line 21, in list_field_works
+    field_work, field_work_objs = await field_work_record_controller.list(page=page, page_size=page_size, search=q)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/core/crud.py", line 22, in list
+    return await query.count(), await query.offset((page - 1) * page_size).limit(page_size).order_by(*order)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 1391, in __await__
+    self._make_query()
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 1373, in _make_query
+    self.resolve_filters()
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/queryset.py", line 141, in resolve_filters
+    modifier &= node.resolve(
+                ^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 479, in resolve
+    return self._resolve_children(resolve_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 456, in _resolve_children
+    node_modifier = node.resolve(resolve_context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 478, in resolve
+    return self._resolve_kwargs(resolve_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 435, in _resolve_kwargs
+    key, value = self._get_actual_filter_params(resolve_context, raw_key, raw_value)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/expressions.py", line 425, in _get_actual_filter_params
+    raise FieldError(f"Unknown filter param '{key}'. Allowed base values are {allowed}")
+tortoise.exceptions.FieldError: Unknown filter param 'plate__contains'. Allowed base values are ['actual_expenditure', 'created_at', 'date', 'difference', 'expected_expenditure', 'id', 'name', 'number', 'remark', 'updated_at']
+2025-03-04 01:41:43 - WARNING - WatchFiles detected changes in 'app/api/v1/field_work/field_work.py'. Reloading...
+2025-03-04 01:41:43 - INFO - Shutting down
+2025-03-04 01:41:43 - INFO - Waiting for application shutdown.
+2025-03-04 01:41:43 - INFO - Application shutdown complete.
+2025-03-04 01:41:43 - INFO - Finished server process [12325]
+2025-03-04 01:41:44 - INFO - Started server process [13509]
+2025-03-04 01:41:44 - INFO - Waiting for application startup.
+2025-03-04 01:41:44 - INFO - Application startup complete.
+2025-03-04 01:41:59 - INFO - 127.0.0.1:39154 - "GET /api/v1/field_work/list?name=1&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 01:42:03 - INFO - 127.0.0.1:39168 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 01:42:04 - INFO - 127.0.0.1:38708 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 01:42:07 - INFO - 127.0.0.1:38710 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 01:42:09 - INFO - 127.0.0.1:38722 - "GET /api/v1/field_work/list?date=2025-03-04&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 01:42:12 - INFO - 127.0.0.1:38724 - "GET /api/v1/field_work/list?date=2025-02-26&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 01:42:37 - INFO - 127.0.0.1:38518 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 01:43:25 - INFO - 127.0.0.1:55918 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 01:43:42 - INFO - 127.0.0.1:33014 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 01:43:43 - INFO - 127.0.0.1:46452 - "GET /api/v1/field_work/list?name=1&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 01:44:28 - INFO - 127.0.0.1:55200 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 01:44:28 - INFO - 127.0.0.1:55208 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 01:44:28 - INFO - 127.0.0.1:55222 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 01:44:29 - INFO - 127.0.0.1:55228 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 01:45:40 - INFO - 127.0.0.1:42518 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 01:45:40 - INFO - 127.0.0.1:42530 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 01:45:40 - INFO - 127.0.0.1:42542 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 01:45:40 - INFO - 127.0.0.1:42556 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 01:45:44 - INFO - 127.0.0.1:38210 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 01:47:35 - INFO - 127.0.0.1:39158 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 01:47:35 - INFO - 127.0.0.1:39162 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 01:47:35 - INFO - 127.0.0.1:39164 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 01:50:11 - INFO - 127.0.0.1:49552 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 01:50:11 - INFO - 127.0.0.1:49562 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 01:50:11 - INFO - 127.0.0.1:49572 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 01:50:38 - INFO - 127.0.0.1:60392 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 01:50:38 - INFO - 127.0.0.1:60404 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 01:50:38 - INFO - 127.0.0.1:60414 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 01:50:45 - INFO - 127.0.0.1:51380 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:01:41 - INFO - 127.0.0.1:33286 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 02:01:41 - INFO - 127.0.0.1:33288 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 02:01:41 - INFO - 127.0.0.1:33298 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 02:11:00 - INFO - 127.0.0.1:39474 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:11:00 - INFO - 127.0.0.1:39478 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:32:45 - INFO - 127.0.0.1:52492 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 02:32:45 - INFO - 127.0.0.1:52496 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 02:32:45 - INFO - 127.0.0.1:52512 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 02:32:45 - INFO - 127.0.0.1:52516 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:32:45 - INFO - 127.0.0.1:52518 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:35:50 - INFO - 127.0.0.1:37110 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 02:35:50 - INFO - 127.0.0.1:37122 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 02:35:50 - INFO - 127.0.0.1:37132 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 02:35:51 - INFO - 127.0.0.1:37148 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:35:51 - INFO - 127.0.0.1:37162 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:36:21 - INFO - 127.0.0.1:34106 - "POST /api/v1/menu/update HTTP/1.1" 200 OK
+2025-03-04 02:36:21 - INFO - 127.0.0.1:34110 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:36:21 - INFO - 127.0.0.1:34124 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:36:34 - INFO - 127.0.0.1:56214 - "POST /api/v1/menu/update HTTP/1.1" 200 OK
+2025-03-04 02:36:34 - INFO - 127.0.0.1:56226 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:36:34 - INFO - 127.0.0.1:56232 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:37:10 - INFO - 127.0.0.1:47046 - "POST /api/v1/menu/create HTTP/1.1" 200 OK
+2025-03-04 02:37:10 - INFO - 127.0.0.1:47062 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:37:10 - INFO - 127.0.0.1:47066 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:37:25 - INFO - 127.0.0.1:53126 - "POST /api/v1/menu/create HTTP/1.1" 200 OK
+2025-03-04 02:37:25 - INFO - 127.0.0.1:53136 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:37:25 - INFO - 127.0.0.1:53138 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:37:27 - INFO - 127.0.0.1:53148 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 02:37:28 - INFO - 127.0.0.1:53152 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 02:37:28 - INFO - 127.0.0.1:53166 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 02:37:28 - INFO - 127.0.0.1:53172 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:37:28 - INFO - 127.0.0.1:53182 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:37:30 - INFO - 127.0.0.1:53186 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:37:30 - INFO - 127.0.0.1:53190 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:37:35 - INFO - 127.0.0.1:47300 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:37:39 - INFO - 127.0.0.1:47316 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:37:39 - INFO - 127.0.0.1:47332 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:38:13 - INFO - 127.0.0.1:47566 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 02:38:13 - INFO - 127.0.0.1:47568 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 02:38:13 - INFO - 127.0.0.1:47574 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 02:38:13 - INFO - 127.0.0.1:47586 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:38:13 - INFO - 127.0.0.1:47588 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:38:15 - INFO - 127.0.0.1:47590 - "GET /api/v1/api/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:38:18 - INFO - 127.0.0.1:47592 - "GET /api/v1/api/list?page=2&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:38:21 - INFO - 127.0.0.1:47598 - "GET /api/v1/api/list?page=3&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:38:31 - INFO - 127.0.0.1:46696 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-04 02:38:31 - INFO - 127.0.0.1:46692 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:38:31 - INFO - 127.0.0.1:46702 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-04 02:38:32 - INFO - 127.0.0.1:46718 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:38:33 - INFO - 127.0.0.1:40870 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:38:36 - INFO - 127.0.0.1:40886 - "GET /api/v1/total/list?page=1&per_page=99999 HTTP/1.1" 200 OK
+2025-03-04 02:39:32 - INFO - 127.0.0.1:52210 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 02:39:32 - INFO - 127.0.0.1:52220 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 02:39:32 - INFO - 127.0.0.1:52232 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 02:39:33 - INFO - 127.0.0.1:52242 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:39:59 - INFO - 127.0.0.1:43894 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:40:04 - INFO - 127.0.0.1:39758 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 02:40:04 - INFO - 127.0.0.1:39764 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 02:40:04 - INFO - 127.0.0.1:39778 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 02:40:05 - INFO - 127.0.0.1:39790 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:40:31 - INFO - 127.0.0.1:57236 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:40:37 - INFO - 127.0.0.1:46404 - "GET /api/v1/auditlog/list?start_time=2025-03-04+00:00:00&end_time=2025-03-04+23:59:59&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:40:43 - INFO - 127.0.0.1:39728 - "GET /api/v1/auditlog/list?start_time=2025-03-04+00:00:00&end_time=2025-03-04+23:59:59&username=admin&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:40:45 - INFO - 127.0.0.1:39740 - "GET /api/v1/auditlog/list?start_time=2025-03-04+00:00:00&end_time=2025-03-04+23:59:59&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:40:47 - INFO - 127.0.0.1:39752 - "GET /api/v1/auditlog/list?start_time=2025-03-04+00:00:00&end_time=2025-03-04+23:59:59&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:40:48 - INFO - 127.0.0.1:39760 - "GET /api/v1/auditlog/list?start_time=2025-03-04+00:00:00&end_time=2025-03-04+23:59:59&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:40:50 - INFO - 127.0.0.1:39764 - "GET /api/v1/auditlog/list?start_time=2025-03-04+00:00:00&end_time=2025-03-04+23:59:59&page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:41:13 - INFO - 127.0.0.1:58916 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:41:14 - INFO - 127.0.0.1:60640 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:45:03 - INFO - 127.0.0.1:42130 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:45:03 - INFO - 127.0.0.1:42134 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-04 02:45:03 - INFO - 127.0.0.1:42148 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-04 02:45:04 - INFO - 127.0.0.1:42160 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:45:04 - INFO - 127.0.0.1:42170 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:45:16 - INFO - 127.0.0.1:55548 - "POST /api/v1/menu/update HTTP/1.1" 200 OK
+2025-03-04 02:45:16 - INFO - 127.0.0.1:55558 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:45:16 - INFO - 127.0.0.1:55572 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:45:23 - INFO - 127.0.0.1:46420 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 02:45:23 - INFO - 127.0.0.1:46422 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 02:45:23 - INFO - 127.0.0.1:46432 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 02:45:23 - INFO - 127.0.0.1:46436 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:45:23 - INFO - 127.0.0.1:46440 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:45:29 - INFO - 127.0.0.1:46444 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:45:29 - INFO - 127.0.0.1:46456 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:45:33 - INFO - 127.0.0.1:58880 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:45:33 - INFO - 127.0.0.1:58892 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:45:49 - INFO - 127.0.0.1:45572 - "POST /api/v1/menu/update HTTP/1.1" 200 OK
+2025-03-04 02:45:49 - INFO - 127.0.0.1:45586 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:45:49 - INFO - 127.0.0.1:45602 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:46:48 - INFO - 127.0.0.1:55308 - "POST /api/v1/menu/update HTTP/1.1" 200 OK
+2025-03-04 02:46:48 - INFO - 127.0.0.1:55318 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:46:48 - INFO - 127.0.0.1:55324 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:47:19 - INFO - 127.0.0.1:50452 - "POST /api/v1/menu/create HTTP/1.1" 200 OK
+2025-03-04 02:47:19 - INFO - 127.0.0.1:50458 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:47:19 - INFO - 127.0.0.1:50460 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:47:33 - INFO - 127.0.0.1:53666 - "POST /api/v1/menu/update HTTP/1.1" 200 OK
+2025-03-04 02:47:33 - INFO - 127.0.0.1:53676 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:47:33 - INFO - 127.0.0.1:53680 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:48:08 - INFO - 127.0.0.1:33830 - "POST /api/v1/menu/update HTTP/1.1" 200 OK
+2025-03-04 02:48:08 - INFO - 127.0.0.1:33836 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:48:08 - INFO - 127.0.0.1:33840 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:48:15 - INFO - 127.0.0.1:46242 - "POST /api/v1/menu/update HTTP/1.1" 200 OK
+2025-03-04 02:48:15 - INFO - 127.0.0.1:46246 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:48:15 - INFO - 127.0.0.1:46262 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:48:18 - INFO - 127.0.0.1:46272 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 02:48:18 - INFO - 127.0.0.1:46282 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 02:48:18 - INFO - 127.0.0.1:46298 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 02:48:19 - INFO - 127.0.0.1:46304 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:48:19 - INFO - 127.0.0.1:46312 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:48:22 - INFO - 127.0.0.1:46318 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:48:22 - INFO - 127.0.0.1:46324 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:48:23 - INFO - 127.0.0.1:46338 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:48:27 - INFO - 127.0.0.1:54552 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:48:29 - INFO - 127.0.0.1:54554 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:48:30 - INFO - 127.0.0.1:54560 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:48:30 - INFO - 127.0.0.1:54574 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-04 02:48:30 - INFO - 127.0.0.1:54566 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-04 02:48:32 - INFO - 127.0.0.1:54586 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:48:35 - INFO - 127.0.0.1:53522 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:48:37 - INFO - 127.0.0.1:53536 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:48:43 - INFO - 127.0.0.1:54794 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:48:43 - INFO - 127.0.0.1:54806 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:49:20 - INFO - 127.0.0.1:59572 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 02:49:20 - INFO - 127.0.0.1:59582 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 02:49:20 - INFO - 127.0.0.1:59598 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 02:49:21 - INFO - 127.0.0.1:59614 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:49:21 - INFO - 127.0.0.1:59628 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:49:30 - INFO - 127.0.0.1:43794 - "POST /api/v1/menu/update HTTP/1.1" 200 OK
+2025-03-04 02:49:30 - INFO - 127.0.0.1:43808 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:49:30 - INFO - 127.0.0.1:43812 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:49:37 - INFO - 127.0.0.1:47232 - "POST /api/v1/menu/update HTTP/1.1" 200 OK
+2025-03-04 02:49:37 - INFO - 127.0.0.1:47240 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:49:37 - INFO - 127.0.0.1:47244 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:49:43 - INFO - 127.0.0.1:40580 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 02:49:43 - INFO - 127.0.0.1:40596 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 02:49:43 - INFO - 127.0.0.1:40598 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 02:49:43 - INFO - 127.0.0.1:40612 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:49:43 - INFO - 127.0.0.1:40618 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:49:46 - INFO - 127.0.0.1:40628 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:49:47 - INFO - 127.0.0.1:40642 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:50:25 - INFO - 127.0.0.1:35090 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 02:50:25 - INFO - 127.0.0.1:35098 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 02:50:25 - INFO - 127.0.0.1:35106 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 02:50:26 - INFO - 127.0.0.1:35122 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:50:26 - INFO - 127.0.0.1:35130 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:50:57 - INFO - 127.0.0.1:34692 - "POST /api/v1/menu/update HTTP/1.1" 200 OK
+2025-03-04 02:50:57 - INFO - 127.0.0.1:34706 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:50:57 - INFO - 127.0.0.1:34714 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:51:05 - INFO - 127.0.0.1:33214 - "POST /api/v1/menu/update HTTP/1.1" 200 OK
+2025-03-04 02:51:05 - INFO - 127.0.0.1:33216 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:51:05 - INFO - 127.0.0.1:33218 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:51:09 - INFO - 127.0.0.1:33226 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 02:51:09 - INFO - 127.0.0.1:33232 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 02:51:09 - INFO - 127.0.0.1:33236 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 02:51:10 - INFO - 127.0.0.1:33244 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:51:10 - INFO - 127.0.0.1:33256 - "GET /api/v1/menu/list HTTP/1.1" 200 OK
+2025-03-04 02:51:11 - INFO - 127.0.0.1:33264 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:51:12 - INFO - 127.0.0.1:33276 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:51:13 - INFO - 127.0.0.1:40782 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:51:15 - INFO - 127.0.0.1:40796 - "GET /api/v1/total/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:52:53 - INFO - 127.0.0.1:36652 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 02:57:06 - INFO - 127.0.0.1:33452 - "GET /api/v1/field_work/list?page=1&page_size=10 HTTP/1.1" 200 OK

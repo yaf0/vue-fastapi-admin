@@ -313,3 +313,25 @@ Killed
       at async viteIndexHtmlMiddleware (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:64699:28)
 
 6:38:37 AM [vite] server restarted.
+1:45:36 AM [vite] hmr update /src/views/workbench/index.vue
+1:47:32 AM [vite] .env changed, restarting server...
+
+ WARN  [unocss] exclude option is deprecated, use content.pipeline.exclude instead.
+
+1:47:32 AM [vite] server restarted.
+1:49:43 AM [vite] hmr update /src/views/workbench/index.vue
+1:50:07 AM [vite] hmr update /src/views/workbench/index.vue
+2:01:20 AM [vite] hmr update /src/layout/components/header/components/GithubSite.vue
+2:01:35 AM [vite] hmr update /src/layout/components/header/components/GithubSite.vue
+2:02:35 AM [vite] hmr update /src/layout/components/header/index.vue
+2:07:55 AM [vite] hmr update /src/layout/components/header/index.vue
+2:08:05 AM [vite] hmr update /src/layout/components/header/index.vue
+2:08:11 AM [vite] hmr update /src/layout/components/header/index.vue
+2:08:25 AM [vite] hmr update /src/layout/components/header/index.vue
+2:08:31 AM [vite] hmr update /src/layout/components/header/index.vue
+2:09:02 AM [vite] hmr update /src/layout/components/header/index.vue
+2:09:11 AM [vite] hmr update /src/layout/components/header/index.vue
+2:09:52 AM [vite] hmr update /src/layout/components/header/index.vue
+2:10:26 AM [vite] hmr update /src/layout/components/header/index.vue
+2:10:34 AM [vite] hmr update /src/layout/components/header/index.vue
+2:35:49 AM [vite] page reload src/router/routes/index.js

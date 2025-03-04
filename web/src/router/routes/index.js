@@ -121,6 +121,7 @@ export const basicRoutes = [
     path: '/business/total',
     name: 'TotalManagement',
     meta: { title: 'YY网页'},
+    isHidden: true,
     component: Layout,
     children: [
       {
@@ -140,6 +141,7 @@ export const basicRoutes = [
     name: 'FieldWorkManagement',
     meta: { title: '外勤管理'},
     component: Layout,
+    isHidden: true,
     children: [
       {
         path: '',
