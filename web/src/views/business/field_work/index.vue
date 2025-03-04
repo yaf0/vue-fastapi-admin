@@ -181,6 +181,33 @@ watch(
 
 <template>
   <CommonPage show-footer title="外勤数据管理">
+    <div flex flex-wrap >
+      <n-card
+        class="mb-10 mt-10 w-300"
+        hover:card-shadow
+        title="台数"
+        size="small"
+      >
+        <p op-60>123</p> 
+      </n-card>
+      <n-card
+        class="mb-10 mt-10 w-300"
+        hover:card-shadow
+        title="应支出总计"
+        size="small"
+      >
+        <p op-60>123</p> 
+      </n-card>
+      <n-card
+        class="mb-10 mt-10 w-300"
+        hover:card-shadow
+        title="实际支出总计"
+        size="small"
+      >
+        <p op-60>123</p> 
+      </n-card>
+    </div>
+   
     <template #action>
       <div>
         <NButton

@@ -206,7 +206,7 @@ const columns = [
 </script>
 
 <template>
-  <CommonPage show-footer title="YY网页">
+  <CommonPage show-footer title="数据展示">
     <template #action>
       <div>
         <NButton

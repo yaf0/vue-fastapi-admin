@@ -60,7 +60,7 @@ class Menu(BaseModel, TimestampMixin):
 
 
 class Dept(BaseModel, TimestampMixin):
-    name = fields.CharField(max_length=20, unique=True, description="部门名称", index=True)
+    name = fields.CharField(max_length=40, unique=False, description="部门名称", index=True)
     desc = fields.CharField(max_length=500, null=True, description="备注")
     is_deleted = fields.BooleanField(default=False, description="软删除标记", index=True)
     order = fields.IntField(default=0, description="排序", index=True)

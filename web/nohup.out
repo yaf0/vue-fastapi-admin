@@ -335,3 +335,176 @@ Killed
 2:10:26 AM [vite] hmr update /src/layout/components/header/index.vue
 2:10:34 AM [vite] hmr update /src/layout/components/header/index.vue
 2:35:49 AM [vite] page reload src/router/routes/index.js
+3:48:20 AM [vite] hmr update /src/views/business/field_work/index.vue
+3:49:32 AM [vite] hmr update /src/views/business/field_work/index.vue
+3:49:59 AM [vite] hmr update /src/views/business/field_work/index.vue
+3:50:10 AM [vite] hmr update /src/views/business/field_work/index.vue
+3:51:15 AM [vite] hmr update /src/views/business/field_work/index.vue
+3:51:26 AM [vite] hmr update /src/views/business/field_work/index.vue
+3:51:42 AM [vite] hmr update /src/views/business/field_work/index.vue
+3:54:31 AM [vite] hmr update /src/views/business/field_work/index.vue
+3:55:14 AM [vite] hmr update /src/views/business/field_work/index.vue
+3:58:38 AM [vite] hmr update /src/views/business/field_work/index.vue
+3:58:56 AM [vite] hmr update /src/views/business/field_work/index.vue
+3:59:07 AM [vite] hmr update /src/views/business/field_work/index.vue
+3:59:22 AM [vite] hmr update /src/views/business/field_work/index.vue
+4:31:23 AM [vite] hmr update /src/views/business/field_work/index.vue
+4:32:03 AM [vite] hmr update /src/views/business/field_work/index.vue
+4:32:37 AM [vite] hmr update /src/views/business/field_work/index.vue
+4:32:49 AM [vite] hmr update /src/views/business/field_work/index.vue
+4:33:10 AM [vite] hmr update /src/views/business/field_work/index.vue
+4:33:15 AM [vite] hmr update /src/views/business/field_work/index.vue
+4:33:19 AM [vite] hmr update /src/views/business/field_work/index.vue
+
+ ERROR  4:33:19 AM [vite] Internal server error: Error parsing JavaScript expression: Identifier directly after number. (1:7)
+  Plugin: vite:vue
+  File: /opt/vue-fastapi-admin/web/src/views/business/field_work/index.vue:185:15
+  183|    <CommonPage show-footer title="外勤数据管理">
+  184|    <n-card
+  185|        :title="123312d"
+     |                 ^
+  186|        size="small"
+  187|        :segmented="true"
+      at createCompilerError (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1328:17)
+      at emitError (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2812:5)
+      at createExp (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2805:7)
+      at Object.onattribend (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2329:29)
+      at Tokenizer.handleInAttrValue (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:909:16)
+      at Tokenizer.stateInAttrValueDoubleQuotes (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:919:10)
+      at Tokenizer.parse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1063:16)
+      at Object.baseParse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2851:13)
+      at Object.parse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-dom@3.4.34/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:706:23)
+      at Object.parse$2 [as parse] (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-sfc@3.4.34/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1850:24)
+      at createDescriptor (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:86:43)
+      at handleHotUpdate (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:2167:26)
+      at async handleHMRUpdate (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:41307:33)
+      at async onHMRUpdate (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:65213:17)
+      at async FSWatcher.<anonymous> (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:65232:9)
+
+
+ ERROR  4:33:22 AM [vite] Internal server error: Error parsing JavaScript expression: Identifier directly after number. (1:7)
+  Plugin: vite:vue
+  File: /opt/vue-fastapi-admin/web/src/views/business/field_work/index.vue:185:15
+  183|    <CommonPage show-footer title="外勤数据管理">
+  184|    <n-card
+  185|        :title="123312d"
+     |                 ^
+  186|        size="small"
+  187|        :segmented="true"
+      at createCompilerError (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1328:17)
+      at emitError (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2812:5)
+      at createExp (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2805:7)
+      at Object.onattribend (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2329:29)
+      at Tokenizer.handleInAttrValue (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:909:16)
+      at Tokenizer.stateInAttrValueDoubleQuotes (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:919:10)
+      at Tokenizer.parse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1063:16)
+      at Object.baseParse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2851:13)
+      at Object.parse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-dom@3.4.34/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:706:23)
+      at Object.parse$2 [as parse] (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-sfc@3.4.34/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1850:24)
+      at createDescriptor (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:86:43)
+      at handleHotUpdate (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:2167:26)
+      at async handleHMRUpdate (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:41307:33)
+      at async onHMRUpdate (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:65213:17)
+      at async FSWatcher.<anonymous> (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:65232:9)
+
+4:33:39 AM [vite] hmr update /src/views/business/field_work/index.vue
+4:33:50 AM [vite] hmr update /src/views/business/field_work/index.vue
+4:33:57 AM [vite] hmr update /src/views/business/field_work/index.vue
+4:34:05 AM [vite] hmr update /src/views/business/field_work/index.vue
+4:34:18 AM [vite] hmr update /src/views/business/field_work/index.vue
+4:34:28 AM [vite] hmr update /src/views/business/field_work/index.vue
+4:34:44 AM [vite] hmr update /src/views/business/field_work/index.vue
+4:35:01 AM [vite] hmr update /src/views/business/field_work/index.vue
+4:35:09 AM [vite] hmr update /src/views/business/field_work/index.vue
+4:35:24 AM [vite] hmr update /src/views/business/field_work/index.vue
+5:45:24 AM [vite] hmr update /src/views/workbench/index.vue
+5:49:24 AM [vite] hmr update /src/views/workbench/index.vue
+5:50:11 AM [vite] hmr update /src/views/workbench/index.vue
+5:50:14 AM [vite] hmr update /src/views/workbench/index.vue
+5:50:18 AM [vite] hmr update /src/views/workbench/index.vue
+5:50:25 AM [vite] hmr update /src/views/workbench/index.vue
+5:50:51 AM [vite] hmr update /src/views/workbench/index.vue
+5:51:21 AM [vite] hmr update /src/views/workbench/index.vue
+5:51:30 AM [vite] hmr update /src/views/workbench/index.vue
+5:51:38 AM [vite] hmr update /src/views/workbench/index.vue
+5:51:45 AM [vite] hmr update /src/views/workbench/index.vue
+5:51:59 AM [vite] hmr update /src/views/workbench/index.vue
+5:52:05 AM [vite] hmr update /src/views/workbench/index.vue
+6:05:13 AM [vite] hmr update /src/views/workbench/index.vue
+6:05:19 AM [vite] hmr update /src/views/workbench/index.vue
+6:05:24 AM [vite] hmr update /src/views/workbench/index.vue
+6:05:47 AM [vite] hmr update /src/views/workbench/index.vue
+6:05:51 AM [vite] hmr update /src/views/workbench/index.vue
+6:05:56 AM [vite] hmr update /src/views/workbench/index.vue
+6:06:04 AM [vite] hmr update /src/views/workbench/index.vue
+6:23:52 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:24:16 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:24:24 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:24:33 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:24:40 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:24:47 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:24:51 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:24:57 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:25:05 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:25:46 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:25:51 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:26:05 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:26:06 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:26:48 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:27:35 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:28:07 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:28:23 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:32:03 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:32:40 AM [vite] hmr update /src/views/business/field_work/index.vue
+
+ ERROR  6:32:40 AM [vite] Internal server error: Attribute name cannot contain U+0022 ("), U+0027 ('), and U+003C (<).
+  Plugin: vite:vue
+  File: /opt/vue-fastapi-admin/web/src/views/business/field_work/index.vue:186:33
+  184|      <div flex flex-wrap style="margin-bottom: 20px;>
+  185|        <n-card
+  186|          class="mb-10 mt-10 w-200"
+     |                                   ^
+  187|          hover:card-shadow
+  188|          title="台数"
+      at createCompilerError (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1328:17)
+      at Object.emitError [as onerr] (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2812:5)
+      at Tokenizer.stateInAttrName (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:818:16)
+      at Tokenizer.parse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1067:16)
+      at Object.baseParse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2851:13)
+      at Object.parse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-dom@3.4.34/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:706:23)
+      at Object.parse$2 [as parse] (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-sfc@3.4.34/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1850:24)
+      at createDescriptor (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:86:43)
+      at handleHotUpdate (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:2167:26)
+      at async handleHMRUpdate (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:41307:33)
+      at async onHMRUpdate (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:65213:17)
+      at async FSWatcher.<anonymous> (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:65232:9)
+
+
+ ERROR  6:32:50 AM [vite] Internal server error: Attribute name cannot contain U+0022 ("), U+0027 ('), and U+003C (<).
+  Plugin: vite:vue
+  File: /opt/vue-fastapi-admin/web/src/views/business/field_work/index.vue:186:33
+  184|      <div flex flex-wrap style="margin-bottom: 20px;>
+  185|        <n-card
+  186|          class="mb-10 mt-10 w-200"
+     |                                   ^
+  187|          hover:card-shadow
+  188|          title="台数"
+      at createCompilerError (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1328:17)
+      at Object.emitError [as onerr] (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2812:5)
+      at Tokenizer.stateInAttrName (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:818:16)
+      at Tokenizer.parse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1067:16)
+      at Object.baseParse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-core@3.4.34/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2851:13)
+      at Object.parse (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-dom@3.4.34/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:706:23)
+      at Object.parse$2 [as parse] (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vue+compiler-sfc@3.4.34/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1850:24)
+      at createDescriptor (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:86:43)
+      at handleHotUpdate (/opt/vue-fastapi-admin/web/node_modules/.pnpm/@vitejs+plugin-vue@4.6.2_vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3__vue@3.4.34_typescript@5.5.4_/node_modules/@vitejs/plugin-vue/dist/index.cjs:2167:26)
+      at async handleHMRUpdate (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:41307:33)
+      at async onHMRUpdate (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:65213:17)
+      at async FSWatcher.<anonymous> (file:///opt/vue-fastapi-admin/web/node_modules/.pnpm/vite@4.5.3_@types+node@22.0.0_sass@1.77.8_terser@5.31.3/node_modules/vite/dist/node/chunks/dep-41cf5ffd.js:65232:9)
+
+6:33:06 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:34:38 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:35:04 AM [vite] hmr update /src/views/business/field_work/index.vue
+6:47:25 AM [vite] hmr update /src/views/business/total/index.vue
+6:47:56 AM [vite] hmr update /src/views/business/total/index.vue
+6:48:45 AM [vite] hmr update /src/views/business/total/index.vue

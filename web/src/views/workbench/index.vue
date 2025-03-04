@@ -1,7 +1,7 @@
 <template>
   <AppPage :show-footer="false">
     <div flex-1>
-      <n-card rounded-10>
+      <n-card rounded-30 items-left>
         <div flex items-center justify-between>
           <div flex items-center>
             <img rounded-full width="60" :src="userStore.avatar" />
@@ -9,16 +9,16 @@
               <p text-20 font-semibold>
                 {{ $t('views.workbench.text_hello', { username: userStore.name }) }}
               </p>
-              <p mt-5 text-14 op-60>{{ $t('views.workbench.text_welcome') }}</p>
+              <p mt-5 text-15 op-60>{{ $t('views.workbench.text_welcome') }}</p>
             </div>
           </div>
-          <n-space :size="12" :wrap="false">
+          <!-- <n-space :size="12" :wrap="false">
             <n-statistic v-for="item in statisticData" :key="item.id" v-bind="item"></n-statistic>
-          </n-space>
+          </n-space> -->
         </div>
       </n-card>
 
-      <n-card
+      <!-- <n-card
         :title="$t('views.workbench.label_project')"
         size="small"
         :segmented="true"
@@ -40,7 +40,7 @@
             <p op-60>{{ dummyText }}</p>
           </n-card>
         </div>
-      </n-card>
+      </n-card> -->
     </div>
   </AppPage>
 </template>
