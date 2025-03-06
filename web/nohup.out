@@ -508,3 +508,23 @@ Killed
 6:47:25 AM [vite] hmr update /src/views/business/total/index.vue
 6:47:56 AM [vite] hmr update /src/views/business/total/index.vue
 6:48:45 AM [vite] hmr update /src/views/business/total/index.vue
+
+ ERROR  8:16:07 AM [vite] http proxy error at /api/v1/base/userinfo:
+Error: connect ECONNREFUSED 127.0.0.1:9988
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1549:16)
+
+
+ ERROR  8:16:07 AM [vite] http proxy error at /api/v1/base/usermenu:
+Error: connect ECONNREFUSED 127.0.0.1:9988
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1549:16)
+
+
+ ERROR  8:16:10 AM [vite] http proxy error at /api/v1/base/access_token:
+Error: connect ECONNREFUSED 127.0.0.1:9988
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1549:16)
+
+
+ ERROR  8:26:19 AM [vite] http proxy error at /api/v1/base/access_token:
+Error: connect ECONNREFUSED 127.0.0.1:9988
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1549:16)
+

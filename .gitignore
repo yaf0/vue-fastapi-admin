@@ -1,6 +1,7 @@
 __pycache__/
 .idea/
 venv/
+.venv
 .mypy_cache/
 .vscode
 .ruff_cache/
@@ -14,3 +15,6 @@ db.sqlite3-wal
 
 .DS_Store
 ._.DS_Store
+
+nohup.out
+*.log

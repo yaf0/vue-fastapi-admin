@@ -9,6 +9,7 @@ from tortoise.expressions import Q
 from app.api import api_router
 from app.controllers.api import api_controller
 from app.controllers.user import UserCreate, user_controller
+from app.controllers.dept import dept_controller, DeptCreate
 from app.core.exceptions import (
     DoesNotExist,
     DoesNotExistHandle,
@@ -77,6 +78,65 @@ async def init_superuser():
             )
         )
 
+async def init_dept():
+    ''' 
+    初始化部门
+    管理层  系统管理人员
+            YY管理人员
+    业务层  业务人员
+            内勤
+            外勤
+    '''
+    dept = await dept_controller.model.exists()
+    if not dept:
+        top_dept = await dept_controller.create_dept(
+            DeptCreate(
+                name="管理层",
+                desc="管理层",
+                order=0,
+                parent_id=0,
+            )
+        )
+        await dept_controller.create_dept(
+            DeptCreate(
+                name="系统管理人员",
+                desc="系统管理人员",
+                order=0,
+                parent_id=1,
+            )
+        )
+        await dept_controller.create_dept(
+            DeptCreate(
+                name="YY管理人员",
+                desc="YY管理人员",
+                order=0,
+                parent_id=1,
+            )
+        )
+        await dept_controller.create_dept(
+            DeptCreate(
+                name="业务层",
+                desc="业务人员",
+                order=0,
+                parent_id=0,
+            )
+        )
+        await dept_controller.create_dept(
+            DeptCreate(
+                name="内勤",
+                desc="内勤",
+                order=0,
+                parent_id=4,
+            )
+        )
+        await dept_controller.create_dept(
+            DeptCreate(
+                name="外勤",
+                desc="外勤",
+                order=0,
+                parent_id=4,
+            )
+        )
 
 async def init_menus():
     menus = await Menu.exists()
@@ -228,6 +288,7 @@ async def init_roles():
 async def init_data():
     await init_db()
     await init_superuser()
+    await init_dept()
     await init_menus()
     await init_apis()
     await init_roles()

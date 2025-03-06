@@ -2788,3 +2788,851 @@ aerich.exceptions.NotSupportError: Modify column is unsupported in SQLite.
 2025-03-04 07:55:58 - INFO - 127.0.0.1:34388 - "GET /api/v1/dept/list?page=1&page_size=10 HTTP/1.1" 200 OK
 2025-03-04 07:55:58 - INFO - 127.0.0.1:34398 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
 2025-03-04 07:56:00 - INFO - 127.0.0.1:34412 - "GET /api/v1/dept/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 07:59:57 - INFO - 127.0.0.1:33558 - "GET /api/v1/dept/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 08:15:24 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:15:24 - INFO - Shutting down
+2025-03-04 08:15:24 - INFO - Waiting for application shutdown.
+2025-03-04 08:15:24 - INFO - Application shutdown complete.
+2025-03-04 08:15:24 - INFO - Finished server process [21746]
+2025-03-04 08:15:25 - INFO - Started server process [22572]
+2025-03-04 08:15:25 - INFO - Waiting for application startup.
+2025-03-04 08:15:25 - INFO - Application startup complete.
+2025-03-04 08:15:46 - INFO - Will watch for changes in these directories: ['/opt/vue-fastapi-admin']
+2025-03-04 08:15:46 - INFO - Uvicorn running on http://0.0.0.0:9988 (Press CTRL+C to quit)
+2025-03-04 08:15:46 - INFO - Started reloader process [22660] using WatchFiles
+2025-03-04 08:15:47 - INFO - Started server process [22663]
+2025-03-04 08:15:47 - INFO - Waiting for application startup.
+2025-03-04 08:15:47 - INFO - Application startup complete.
+2025-03-04 08:16:00 - INFO - Will watch for changes in these directories: ['/opt/vue-fastapi-admin']
+2025-03-04 08:16:00 - INFO - Uvicorn running on http://0.0.0.0:9988 (Press CTRL+C to quit)
+2025-03-04 08:16:00 - INFO - Started reloader process [22753] using WatchFiles
+2025-03-04 08:16:00 - INFO - Started server process [22756]
+2025-03-04 08:16:00 - INFO - Waiting for application startup.
+2025-03-04 08:16:00.865 | WARNING  | app.core.init_app:init_db:208 - unable to retrieve model history from database, model history will be created from scratch
+2025-03-04 08:16:00 - WARNING - WatchFiles detected changes in 'migrations/models/0_20250304075420_init.py'. Reloading...
+2025-03-04 08:16:01 - ERROR - Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 732, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/__init__.py", line 23, in lifespan
+    await init_data()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 243, in init_data
+    await init_dept()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 84, in init_dept
+    await dept_controller.create_dept(
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/transactions.py", line 58, in wrapped
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: DeptController.create_dept() takes 2 positional arguments but 7 were given
+
+2025-03-04 08:16:01 - ERROR - Application startup failed. Exiting.
+2025-03-04 08:16:01 - WARNING - WatchFiles detected changes in 'migrations/models/0_20250304081601_init.py'. Reloading...
+2025-03-04 08:16:01 - INFO - Started server process [22811]
+2025-03-04 08:16:01 - INFO - Waiting for application startup.
+2025-03-04 08:16:01 - ERROR - Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 732, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/__init__.py", line 23, in lifespan
+    await init_data()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 243, in init_data
+    await init_dept()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 84, in init_dept
+    await dept_controller.create_dept(
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/transactions.py", line 58, in wrapped
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: DeptController.create_dept() takes 2 positional arguments but 7 were given
+
+2025-03-04 08:16:01 - ERROR - Application startup failed. Exiting.
+2025-03-04 08:16:02 - INFO - Started server process [22816]
+2025-03-04 08:16:02 - INFO - Waiting for application startup.
+2025-03-04 08:16:02 - ERROR - Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 732, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/__init__.py", line 23, in lifespan
+    await init_data()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 243, in init_data
+    await init_dept()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 84, in init_dept
+    await dept_controller.create_dept(
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/transactions.py", line 58, in wrapped
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: DeptController.create_dept() takes 2 positional arguments but 7 were given
+
+2025-03-04 08:16:02 - ERROR - Application startup failed. Exiting.
+2025-03-04 08:16:44 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:16:44 - INFO - Started server process [22954]
+2025-03-04 08:16:44 - INFO - Waiting for application startup.
+2025-03-04 08:16:44 - ERROR - Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 732, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/__init__.py", line 23, in lifespan
+    await init_data()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 238, in init_data
+    await init_dept()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 84, in init_dept
+    await dept_controller.create_dept(
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/transactions.py", line 58, in wrapped
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/controllers/dept.py", line 59, in create_dept
+    if obj_in.parent_id != 0:
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'parent_id'
+
+2025-03-04 08:16:44 - ERROR - Application startup failed. Exiting.
+2025-03-04 08:16:53 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:16:53 - INFO - Started server process [23009]
+2025-03-04 08:16:53 - INFO - Waiting for application startup.
+2025-03-04 08:16:53 - ERROR - Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 732, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/__init__.py", line 23, in lifespan
+    await init_data()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 238, in init_data
+    await init_dept()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 84, in init_dept
+    await dept_controller.create_dept(
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/transactions.py", line 58, in wrapped
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/controllers/dept.py", line 59, in create_dept
+    if obj_in.parent_id != 0:
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'parent_id'
+
+2025-03-04 08:16:53 - ERROR - Application startup failed. Exiting.
+2025-03-04 08:18:48 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:18:49 - INFO - Started server process [23182]
+2025-03-04 08:18:49 - INFO - Waiting for application startup.
+2025-03-04 08:18:49 - ERROR - Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 732, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/__init__.py", line 23, in lifespan
+    await init_data()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 238, in init_data
+    await init_dept()
+          ^^^^^^^^^
+NameError: name 'init_dept' is not defined. Did you mean: 'init_db'?
+
+2025-03-04 08:18:49 - ERROR - Application startup failed. Exiting.
+2025-03-04 08:19:10 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:19:11 - INFO - Started server process [23237]
+2025-03-04 08:19:11 - INFO - Waiting for application startup.
+2025-03-04 08:19:11.127 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/base/userinfo
+2025-03-04 08:19:11.131 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/base/usermenu
+2025-03-04 08:19:11.134 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/base/userapi
+2025-03-04 08:19:11.138 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/base/update_password
+2025-03-04 08:19:11.141 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/user/list
+2025-03-04 08:19:11.145 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/user/get
+2025-03-04 08:19:11.148 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/user/create
+2025-03-04 08:19:11.151 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/user/update
+2025-03-04 08:19:11.154 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/user/delete
+2025-03-04 08:19:11.157 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/user/reset_password
+2025-03-04 08:19:11.160 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/role/list
+2025-03-04 08:19:11.164 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/role/get
+2025-03-04 08:19:11.168 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/role/create
+2025-03-04 08:19:11.171 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/role/update
+2025-03-04 08:19:11.174 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/role/delete
+2025-03-04 08:19:11.178 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/role/authorized
+2025-03-04 08:19:11.181 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/role/authorized
+2025-03-04 08:19:11.184 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/menu/list
+2025-03-04 08:19:11.187 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/menu/get
+2025-03-04 08:19:11.191 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/menu/create
+2025-03-04 08:19:11.195 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/menu/update
+2025-03-04 08:19:11.199 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/menu/delete
+2025-03-04 08:19:11.202 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/api/list
+2025-03-04 08:19:11.205 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/api/get
+2025-03-04 08:19:11.209 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/api/create
+2025-03-04 08:19:11.213 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/api/update
+2025-03-04 08:19:11.216 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/api/delete
+2025-03-04 08:19:11.220 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/api/refresh
+2025-03-04 08:19:11.223 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/dept/list
+2025-03-04 08:19:11.227 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/dept/get
+2025-03-04 08:19:11.230 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/dept/create
+2025-03-04 08:19:11.234 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/dept/update
+2025-03-04 08:19:11.237 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/dept/delete
+2025-03-04 08:19:11.240 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/auditlog/list
+2025-03-04 08:19:11.243 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/transactions/list
+2025-03-04 08:19:11.246 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/transactions/get
+2025-03-04 08:19:11.250 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/transactions/create
+2025-03-04 08:19:11.252 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/transactions/update
+2025-03-04 08:19:11.256 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/transactions/delete
+2025-03-04 08:19:11.261 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/total/list
+2025-03-04 08:19:11.264 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/total/get
+2025-03-04 08:19:11.268 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/total/create
+2025-03-04 08:19:11.271 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/total/update
+2025-03-04 08:19:11.275 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/total/delete
+2025-03-04 08:19:11.278 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/field_work/list
+2025-03-04 08:19:11.281 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/field_work/get
+2025-03-04 08:19:11.284 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/field_work/create
+2025-03-04 08:19:11.288 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/field_work/update
+2025-03-04 08:19:11.292 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/field_work/delete
+2025-03-04 08:19:11 - INFO - Application startup complete.
+2025-03-04 08:21:02 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:21:02 - INFO - Shutting down
+2025-03-04 08:21:02 - INFO - Waiting for application shutdown.
+2025-03-04 08:21:02 - INFO - Application shutdown complete.
+2025-03-04 08:21:02 - INFO - Finished server process [23237]
+2025-03-04 08:21:03 - INFO - Started server process [23308]
+2025-03-04 08:21:03 - INFO - Waiting for application startup.
+2025-03-04 08:21:03 - ERROR - Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 732, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/__init__.py", line 23, in lifespan
+    await init_data()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 242, in init_data
+    await init_dept()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 84, in init_dept
+    await dept_controller.create_dept(
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/transactions.py", line 58, in wrapped
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/controllers/dept.py", line 59, in create_dept
+    if obj_in.parent_id != 0:
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'parent_id'
+
+2025-03-04 08:21:03 - ERROR - Application startup failed. Exiting.
+2025-03-04 08:21:14 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:21:15 - INFO - Started server process [23363]
+2025-03-04 08:21:15 - INFO - Waiting for application startup.
+2025-03-04 08:21:15 - ERROR - Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 732, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/__init__.py", line 23, in lifespan
+    await init_data()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 243, in init_data
+    await init_dept()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 84, in init_dept
+    await dept_controller.create_dept(
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/transactions.py", line 58, in wrapped
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/controllers/dept.py", line 59, in create_dept
+    if obj_in.parent_id != 0:
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'parent_id'
+
+2025-03-04 08:21:15 - ERROR - Application startup failed. Exiting.
+2025-03-04 08:21:45 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:21:46 - INFO - Started server process [23418]
+2025-03-04 08:21:46 - INFO - Waiting for application startup.
+2025-03-04 08:21:46 - ERROR - Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 732, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/__init__.py", line 23, in lifespan
+    await init_data()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 243, in init_data
+    await init_dept()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 84, in init_dept
+    await dept_controller.create_dept(
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/transactions.py", line 58, in wrapped
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/controllers/dept.py", line 59, in create_dept
+    if obj_in.parent_id != 0:
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'parent_id'
+
+2025-03-04 08:21:46 - ERROR - Application startup failed. Exiting.
+2025-03-04 08:22:00 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:22:00 - INFO - Started server process [23473]
+2025-03-04 08:22:00 - INFO - Waiting for application startup.
+2025-03-04 08:22:00 - ERROR - Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 732, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/__init__.py", line 23, in lifespan
+    await init_data()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 243, in init_data
+    await init_dept()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 84, in init_dept
+    await dept_controller.create_dept(
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/transactions.py", line 58, in wrapped
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/controllers/dept.py", line 59, in create_dept
+    if obj_in.parent_id != 0:
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'parent_id'
+
+2025-03-04 08:22:00 - ERROR - Application startup failed. Exiting.
+2025-03-04 08:22:05 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:22:05 - INFO - Started server process [23504]
+2025-03-04 08:22:05 - INFO - Waiting for application startup.
+2025-03-04 08:22:05 - ERROR - Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 732, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/__init__.py", line 23, in lifespan
+    await init_data()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 243, in init_data
+    await init_dept()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 84, in init_dept
+    await dept_controller.create_dept(
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/transactions.py", line 58, in wrapped
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/controllers/dept.py", line 59, in create_dept
+    if obj_in.parent_id != 0:
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'parent_id'
+
+2025-03-04 08:22:05 - ERROR - Application startup failed. Exiting.
+2025-03-04 08:23:33 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:23:33 - INFO - Started server process [23560]
+2025-03-04 08:23:33 - INFO - Waiting for application startup.
+2025-03-04 08:23:33 - ERROR - Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 732, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/__init__.py", line 23, in lifespan
+    await init_data()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 240, in init_data
+    await init_dept()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 84, in init_dept
+    await dept_controller.create_dept(
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/transactions.py", line 58, in wrapped
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/controllers/dept.py", line 59, in create_dept
+    if obj_in.parent_id != 0:
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'parent_id'
+
+2025-03-04 08:23:33 - ERROR - Application startup failed. Exiting.
+2025-03-04 08:24:20 - INFO - Will watch for changes in these directories: ['/opt/vue-fastapi-admin']
+2025-03-04 08:24:20 - INFO - Uvicorn running on http://0.0.0.0:9988 (Press CTRL+C to quit)
+2025-03-04 08:24:20 - INFO - Started reloader process [23720] using WatchFiles
+2025-03-04 08:24:21 - INFO - Started server process [23723]
+2025-03-04 08:24:21 - INFO - Waiting for application startup.
+2025-03-04 08:24:21.569 | WARNING  | app.core.init_app:init_db:208 - unable to retrieve model history from database, model history will be created from scratch
+2025-03-04 08:24:21 - WARNING - WatchFiles detected changes in 'migrations/models/0_20250304081601_init.py'. Reloading...
+2025-03-04 08:24:21 - ERROR - Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 732, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/__init__.py", line 23, in lifespan
+    await init_data()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 243, in init_data
+    await init_dept()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 84, in init_dept
+    await dept_controller.create_dept(
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/transactions.py", line 58, in wrapped
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/controllers/dept.py", line 59, in create_dept
+    if obj_in.parent_id != 0:
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'parent_id'
+
+2025-03-04 08:24:21 - ERROR - Application startup failed. Exiting.
+2025-03-04 08:24:22 - WARNING - WatchFiles detected changes in 'migrations/models/0_20250304082421_init.py'. Reloading...
+2025-03-04 08:24:22 - INFO - Started server process [23785]
+2025-03-04 08:24:22 - INFO - Waiting for application startup.
+2025-03-04 08:24:22 - ERROR - Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 732, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/__init__.py", line 23, in lifespan
+    await init_data()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 243, in init_data
+    await init_dept()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 84, in init_dept
+    await dept_controller.create_dept(
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/transactions.py", line 58, in wrapped
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/controllers/dept.py", line 59, in create_dept
+    if obj_in.parent_id != 0:
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'parent_id'
+
+2025-03-04 08:24:22 - ERROR - Application startup failed. Exiting.
+2025-03-04 08:24:23 - INFO - Started server process [23788]
+2025-03-04 08:24:23 - INFO - Waiting for application startup.
+2025-03-04 08:24:23 - ERROR - Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 732, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/__init__.py", line 23, in lifespan
+    await init_data()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 243, in init_data
+    await init_dept()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 84, in init_dept
+    await dept_controller.create_dept(
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/transactions.py", line 58, in wrapped
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/controllers/dept.py", line 59, in create_dept
+    if obj_in.parent_id != 0:
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'parent_id'
+
+2025-03-04 08:24:23 - ERROR - Application startup failed. Exiting.
+2025-03-04 08:26:50 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:26:50 - INFO - Started server process [23896]
+2025-03-04 08:26:50 - INFO - Waiting for application startup.
+2025-03-04 08:26:50.741 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/base/userinfo
+2025-03-04 08:26:50.745 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/base/usermenu
+2025-03-04 08:26:50.748 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/base/userapi
+2025-03-04 08:26:50.751 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/base/update_password
+2025-03-04 08:26:50.755 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/user/list
+2025-03-04 08:26:50.758 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/user/get
+2025-03-04 08:26:50.762 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/user/create
+2025-03-04 08:26:50.766 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/user/update
+2025-03-04 08:26:50.770 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/user/delete
+2025-03-04 08:26:50.773 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/user/reset_password
+2025-03-04 08:26:50.776 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/role/list
+2025-03-04 08:26:50.780 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/role/get
+2025-03-04 08:26:50.783 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/role/create
+2025-03-04 08:26:50.787 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/role/update
+2025-03-04 08:26:50.791 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/role/delete
+2025-03-04 08:26:50.795 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/role/authorized
+2025-03-04 08:26:50.799 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/role/authorized
+2025-03-04 08:26:50.802 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/menu/list
+2025-03-04 08:26:50.805 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/menu/get
+2025-03-04 08:26:50.809 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/menu/create
+2025-03-04 08:26:50.812 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/menu/update
+2025-03-04 08:26:50.816 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/menu/delete
+2025-03-04 08:26:50.820 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/api/list
+2025-03-04 08:26:50.823 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/api/get
+2025-03-04 08:26:50.827 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/api/create
+2025-03-04 08:26:50.830 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/api/update
+2025-03-04 08:26:50.834 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/api/delete
+2025-03-04 08:26:50.837 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/api/refresh
+2025-03-04 08:26:50.841 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/dept/list
+2025-03-04 08:26:50.845 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/dept/get
+2025-03-04 08:26:50.849 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/dept/create
+2025-03-04 08:26:50.852 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/dept/update
+2025-03-04 08:26:50.855 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/dept/delete
+2025-03-04 08:26:50.860 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/auditlog/list
+2025-03-04 08:26:50.864 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/transactions/list
+2025-03-04 08:26:50.868 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/transactions/get
+2025-03-04 08:26:50.872 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/transactions/create
+2025-03-04 08:26:50.876 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/transactions/update
+2025-03-04 08:26:50.879 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/transactions/delete
+2025-03-04 08:26:50.882 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/total/list
+2025-03-04 08:26:50.886 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/total/get
+2025-03-04 08:26:50.891 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/total/create
+2025-03-04 08:26:50.895 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/total/update
+2025-03-04 08:26:50.898 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/total/delete
+2025-03-04 08:26:50.902 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/field_work/list
+2025-03-04 08:26:50.905 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/field_work/get
+2025-03-04 08:26:50.909 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/field_work/create
+2025-03-04 08:26:50.912 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/field_work/update
+2025-03-04 08:26:50.915 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/field_work/delete
+2025-03-04 08:26:50 - INFO - Application startup complete.
+2025-03-04 08:27:00 - INFO - 127.0.0.1:37384 - "POST /api/v1/base/access_token HTTP/1.1" 200 OK
+2025-03-04 08:27:00 - INFO - 127.0.0.1:37388 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 08:27:00 - INFO - 127.0.0.1:37390 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 08:27:01 - INFO - 127.0.0.1:37402 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 08:27:01 - INFO - 127.0.0.1:37408 - "GET /api/v1/dept/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 08:27:01 - INFO - 127.0.0.1:37412 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-04 08:28:14 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:28:14 - INFO - Shutting down
+2025-03-04 08:28:14 - INFO - Waiting for application shutdown.
+2025-03-04 08:28:14 - INFO - Application shutdown complete.
+2025-03-04 08:28:14 - INFO - Finished server process [23896]
+2025-03-04 08:28:15 - INFO - Started server process [24125]
+2025-03-04 08:28:15 - INFO - Waiting for application startup.
+2025-03-04 08:28:15 - ERROR - Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 732, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/__init__.py", line 23, in lifespan
+    await init_data()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 243, in init_data
+    await init_dept()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 84, in init_dept
+    await dept_controller.create_dept(
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/tortoise/transactions.py", line 58, in wrapped
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/controllers/dept.py", line 59, in create_dept
+    if obj_in.parent_id != 0:
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'parent_id'
+
+2025-03-04 08:28:15 - ERROR - Application startup failed. Exiting.
+2025-03-04 08:29:20 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:29:20 - INFO - Started server process [24190]
+2025-03-04 08:29:20 - INFO - Waiting for application startup.
+2025-03-04 08:29:20 - INFO - Application startup complete.
+2025-03-04 08:29:29 - INFO - 127.0.0.1:53842 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 08:29:29 - INFO - 127.0.0.1:53844 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 08:29:29 - INFO - 127.0.0.1:53850 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 08:29:29 - INFO - 127.0.0.1:53860 - "GET /api/v1/dept/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 08:29:29 - INFO - 127.0.0.1:53864 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-04 08:29:42 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:29:42 - INFO - Shutting down
+2025-03-04 08:29:42 - INFO - Waiting for application shutdown.
+2025-03-04 08:29:42 - INFO - Application shutdown complete.
+2025-03-04 08:29:42 - INFO - Finished server process [24190]
+2025-03-04 08:29:43 - INFO - Started server process [24274]
+2025-03-04 08:29:43 - INFO - Waiting for application startup.
+2025-03-04 08:29:43 - INFO - Application startup complete.
+2025-03-04 08:31:45 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:31:45 - INFO - Shutting down
+2025-03-04 08:31:45 - INFO - Waiting for application shutdown.
+2025-03-04 08:31:45 - INFO - Application shutdown complete.
+2025-03-04 08:31:45 - INFO - Finished server process [24274]
+2025-03-04 08:31:46 - INFO - Started server process [24345]
+2025-03-04 08:31:46 - INFO - Waiting for application startup.
+2025-03-04 08:31:46 - INFO - Application startup complete.
+2025-03-04 08:31:49 - INFO - 127.0.0.1:53436 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 08:31:49 - INFO - 127.0.0.1:53438 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 08:31:49 - INFO - 127.0.0.1:53446 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 08:31:49 - INFO - 127.0.0.1:53458 - "GET /api/v1/dept/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 08:31:49 - INFO - 127.0.0.1:53472 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-04 08:32:14 - INFO - Will watch for changes in these directories: ['/opt/vue-fastapi-admin']
+2025-03-04 08:32:14 - INFO - Uvicorn running on http://0.0.0.0:9988 (Press CTRL+C to quit)
+2025-03-04 08:32:14 - INFO - Started reloader process [24502] using WatchFiles
+2025-03-04 08:32:14 - INFO - Started server process [24505]
+2025-03-04 08:32:14 - INFO - Waiting for application startup.
+2025-03-04 08:32:14.782 | WARNING  | app.core.init_app:init_db:224 - unable to retrieve model history from database, model history will be created from scratch
+2025-03-04 08:32:14 - WARNING - WatchFiles detected changes in 'migrations/models/0_20250304082421_init.py'. Reloading...
+1 1
+1 1
+2025-03-04 08:32:15.182 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/base/userinfo
+2025-03-04 08:32:15.185 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/base/usermenu
+2025-03-04 08:32:15.189 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/base/userapi
+2025-03-04 08:32:15.193 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/base/update_password
+2025-03-04 08:32:15.196 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/user/list
+2025-03-04 08:32:15.200 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/user/get
+2025-03-04 08:32:15.203 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/user/create
+2025-03-04 08:32:15.206 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/user/update
+2025-03-04 08:32:15.210 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/user/delete
+2025-03-04 08:32:15.213 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/user/reset_password
+2025-03-04 08:32:15.216 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/role/list
+2025-03-04 08:32:15.219 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/role/get
+2025-03-04 08:32:15.222 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/role/create
+2025-03-04 08:32:15.226 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/role/update
+2025-03-04 08:32:15.229 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/role/delete
+2025-03-04 08:32:15.232 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/role/authorized
+2025-03-04 08:32:15.235 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/role/authorized
+2025-03-04 08:32:15.238 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/menu/list
+2025-03-04 08:32:15.241 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/menu/get
+2025-03-04 08:32:15.244 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/menu/create
+2025-03-04 08:32:15.248 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/menu/update
+2025-03-04 08:32:15.251 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/menu/delete
+2025-03-04 08:32:15.255 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/api/list
+2025-03-04 08:32:15.260 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/api/get
+2025-03-04 08:32:15.263 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/api/create
+2025-03-04 08:32:15.266 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/api/update
+2025-03-04 08:32:15.269 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/api/delete
+2025-03-04 08:32:15.272 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/api/refresh
+2025-03-04 08:32:15.276 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/dept/list
+2025-03-04 08:32:15.279 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/dept/get
+2025-03-04 08:32:15.283 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/dept/create
+2025-03-04 08:32:15.287 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/dept/update
+2025-03-04 08:32:15.291 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/dept/delete
+2025-03-04 08:32:15.294 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/auditlog/list
+2025-03-04 08:32:15.299 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/transactions/list
+2025-03-04 08:32:15.302 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/transactions/get
+2025-03-04 08:32:15.306 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/transactions/create
+2025-03-04 08:32:15.310 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/transactions/update
+2025-03-04 08:32:15.313 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/transactions/delete
+2025-03-04 08:32:15.318 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/total/list
+2025-03-04 08:32:15.322 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/total/get
+2025-03-04 08:32:15.325 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/total/create
+2025-03-04 08:32:15.328 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/total/update
+2025-03-04 08:32:15.332 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/total/delete
+2025-03-04 08:32:15.336 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/field_work/list
+2025-03-04 08:32:15.339 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/field_work/get
+2025-03-04 08:32:15.342 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/field_work/create
+2025-03-04 08:32:15.346 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/field_work/update
+2025-03-04 08:32:15.350 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/field_work/delete
+2025-03-04 08:32:15 - INFO - Application startup complete.
+2025-03-04 08:32:15 - WARNING - WatchFiles detected changes in 'migrations/models/0_20250304083215_init.py'. Reloading...
+2025-03-04 08:32:16 - INFO - Started server process [24558]
+2025-03-04 08:32:16 - INFO - Waiting for application startup.
+2025-03-04 08:32:16 - INFO - Application startup complete.
+2025-03-04 08:32:16 - INFO - Started server process [24561]
+2025-03-04 08:32:16 - INFO - Waiting for application startup.
+2025-03-04 08:32:16 - INFO - Application startup complete.
+2025-03-04 08:32:18 - INFO - 127.0.0.1:57786 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 08:32:18 - INFO - 127.0.0.1:57796 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 08:32:18 - INFO - 127.0.0.1:57804 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 08:32:19 - INFO - 127.0.0.1:57818 - "GET /api/v1/dept/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 08:32:19 - INFO - 127.0.0.1:57830 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-04 08:37:03 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:37:03 - INFO - Shutting down
+2025-03-04 08:37:03 - INFO - Waiting for application shutdown.
+2025-03-04 08:37:03 - INFO - Application shutdown complete.
+2025-03-04 08:37:03 - INFO - Finished server process [24561]
+2025-03-04 08:37:03 - INFO - Started server process [24730]
+2025-03-04 08:37:03 - INFO - Waiting for application startup.
+2025-03-04 08:37:03 - INFO - Application startup complete.
+2025-03-04 08:38:38 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:38:38 - INFO - Shutting down
+2025-03-04 08:38:38 - INFO - Waiting for application shutdown.
+2025-03-04 08:38:38 - INFO - Application shutdown complete.
+2025-03-04 08:38:38 - INFO - Finished server process [24730]
+2025-03-04 08:38:39 - INFO - Started server process [24787]
+2025-03-04 08:38:39 - INFO - Waiting for application startup.
+2025-03-04 08:38:39 - INFO - Application startup complete.
+2025-03-04 08:38:49 - INFO - Will watch for changes in these directories: ['/opt/vue-fastapi-admin']
+2025-03-04 08:38:49 - INFO - Uvicorn running on http://0.0.0.0:9988 (Press CTRL+C to quit)
+2025-03-04 08:38:49 - INFO - Started reloader process [24859] using WatchFiles
+2025-03-04 08:38:50 - INFO - Started server process [24862]
+2025-03-04 08:38:50 - INFO - Waiting for application startup.
+2025-03-04 08:38:50.472 | WARNING  | app.core.init_app:init_db:256 - unable to retrieve model history from database, model history will be created from scratch
+2025-03-04 08:38:50 - WARNING - WatchFiles detected changes in 'migrations/models/0_20250304083215_init.py'. Reloading...
+2025-03-04 08:38:50 - ERROR - Traceback (most recent call last):
+  File "/opt/vue-fastapi-admin/venv/lib/python3.12/site-packages/starlette/routing.py", line 732, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/vue-fastapi-admin/app/__init__.py", line 23, in lifespan
+    await init_data()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 291, in init_data
+    await init_dept()
+  File "/opt/vue-fastapi-admin/app/core/init_app.py", line 105, in init_dept
+    parent_id=top_dept.id,
+              ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+
+2025-03-04 08:38:50 - ERROR - Application startup failed. Exiting.
+2025-03-04 08:38:51 - WARNING - WatchFiles detected changes in 'migrations/models/0_20250304083850_init.py'. Reloading...
+2025-03-04 08:38:51 - INFO - Started server process [24923]
+2025-03-04 08:38:51 - INFO - Waiting for application startup.
+2025-03-04 08:38:51.517 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/base/userinfo
+2025-03-04 08:38:51.521 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/base/usermenu
+2025-03-04 08:38:51.525 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/base/userapi
+2025-03-04 08:38:51.530 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/base/update_password
+2025-03-04 08:38:51.535 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/user/list
+2025-03-04 08:38:51.540 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/user/get
+2025-03-04 08:38:51.544 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/user/create
+2025-03-04 08:38:51.548 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/user/update
+2025-03-04 08:38:51.552 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/user/delete
+2025-03-04 08:38:51.555 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/user/reset_password
+2025-03-04 08:38:51.559 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/role/list
+2025-03-04 08:38:51.562 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/role/get
+2025-03-04 08:38:51.565 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/role/create
+2025-03-04 08:38:51.569 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/role/update
+2025-03-04 08:38:51.573 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/role/delete
+2025-03-04 08:38:51.576 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/role/authorized
+2025-03-04 08:38:51.581 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/role/authorized
+2025-03-04 08:38:51.586 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/menu/list
+2025-03-04 08:38:51.590 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/menu/get
+2025-03-04 08:38:51.594 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/menu/create
+2025-03-04 08:38:51.598 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/menu/update
+2025-03-04 08:38:51.604 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/menu/delete
+2025-03-04 08:38:51.609 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/api/list
+2025-03-04 08:38:51.614 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/api/get
+2025-03-04 08:38:51.618 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/api/create
+2025-03-04 08:38:51.622 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/api/update
+2025-03-04 08:38:51.626 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/api/delete
+2025-03-04 08:38:51.630 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/api/refresh
+2025-03-04 08:38:51.634 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/dept/list
+2025-03-04 08:38:51.638 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/dept/get
+2025-03-04 08:38:51.641 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/dept/create
+2025-03-04 08:38:51.644 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/dept/update
+2025-03-04 08:38:51.647 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/dept/delete
+2025-03-04 08:38:51.650 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/auditlog/list
+2025-03-04 08:38:51.655 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/transactions/list
+2025-03-04 08:38:51.658 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/transactions/get
+2025-03-04 08:38:51.661 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/transactions/create
+2025-03-04 08:38:51.671 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/transactions/update
+2025-03-04 08:38:51.674 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/transactions/delete
+2025-03-04 08:38:51.678 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/total/list
+2025-03-04 08:38:51.682 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/total/get
+2025-03-04 08:38:51.685 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/total/create
+2025-03-04 08:38:51.688 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/total/update
+2025-03-04 08:38:51.692 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/total/delete
+2025-03-04 08:38:51.697 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/field_work/list
+2025-03-04 08:38:51.700 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/field_work/get
+2025-03-04 08:38:51.703 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/field_work/create
+2025-03-04 08:38:51.707 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/field_work/update
+2025-03-04 08:38:51.712 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/field_work/delete
+2025-03-04 08:38:51 - INFO - Application startup complete.
+2025-03-04 08:38:52 - INFO - Started server process [24926]
+2025-03-04 08:38:52 - INFO - Waiting for application startup.
+2025-03-04 08:38:52 - INFO - Application startup complete.
+2025-03-04 08:38:52 - INFO - 127.0.0.1:45520 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 08:38:52 - INFO - 127.0.0.1:45528 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 08:38:52 - INFO - 127.0.0.1:45530 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 08:38:52 - INFO - 127.0.0.1:45538 - "GET /api/v1/dept/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 08:38:52 - INFO - 127.0.0.1:45550 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-04 08:38:54 - INFO - 127.0.0.1:41462 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 08:38:54 - INFO - 127.0.0.1:41464 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 08:38:54 - INFO - 127.0.0.1:41474 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 08:38:55 - INFO - 127.0.0.1:41486 - "GET /api/v1/dept/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 08:38:55 - INFO - 127.0.0.1:41494 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-04 08:39:27 - INFO - 127.0.0.1:57852 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 08:39:27 - INFO - 127.0.0.1:57856 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 08:39:27 - INFO - 127.0.0.1:57864 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 08:39:27 - INFO - 127.0.0.1:57870 - "GET /api/v1/dept/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 08:39:27 - INFO - 127.0.0.1:57876 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-04 08:39:28 - INFO - 127.0.0.1:57884 - "GET /api/v1/dept/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 08:39:29 - INFO - 127.0.0.1:57890 - "GET /api/v1/dept/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 08:39:29 - INFO - 127.0.0.1:57906 - "GET /api/v1/dept/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 08:40:20 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:40:20 - INFO - Shutting down
+2025-03-04 08:40:20 - INFO - Waiting for application shutdown.
+2025-03-04 08:40:20 - INFO - Application shutdown complete.
+2025-03-04 08:40:20 - INFO - Finished server process [24926]
+2025-03-04 08:40:21 - INFO - Started server process [25164]
+2025-03-04 08:40:21 - INFO - Waiting for application startup.
+2025-03-04 08:40:21 - INFO - Application startup complete.
+2025-03-04 08:51:40 - INFO - 127.0.0.1:36232 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 08:51:40 - INFO - 127.0.0.1:36236 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 08:51:40 - INFO - 127.0.0.1:36240 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 08:51:40 - INFO - 127.0.0.1:36250 - "GET /api/v1/dept/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 08:51:40 - INFO - 127.0.0.1:36252 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-04 08:52:06 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:52:06 - INFO - Shutting down
+2025-03-04 08:52:06 - INFO - Waiting for application shutdown.
+2025-03-04 08:52:06 - INFO - Application shutdown complete.
+2025-03-04 08:52:06 - INFO - Finished server process [25164]
+2025-03-04 08:52:07 - INFO - Started server process [25265]
+2025-03-04 08:52:07 - INFO - Waiting for application startup.
+2025-03-04 08:52:07 - INFO - Application startup complete.
+2025-03-04 08:52:26 - WARNING - WatchFiles detected changes in 'app/core/init_app.py'. Reloading...
+2025-03-04 08:52:26 - INFO - Shutting down
+2025-03-04 08:52:26 - INFO - Waiting for application shutdown.
+2025-03-04 08:52:26 - INFO - Application shutdown complete.
+2025-03-04 08:52:26 - INFO - Finished server process [25265]
+2025-03-04 08:52:27 - INFO - Started server process [25272]
+2025-03-04 08:52:27 - INFO - Waiting for application startup.
+2025-03-04 08:52:27 - INFO - Application startup complete.
+2025-03-04 08:52:41 - INFO - Will watch for changes in these directories: ['/opt/vue-fastapi-admin']
+2025-03-04 08:52:41 - INFO - Uvicorn running on http://0.0.0.0:9988 (Press CTRL+C to quit)
+2025-03-04 08:52:41 - INFO - Started reloader process [25343] using WatchFiles
+2025-03-04 08:52:42 - INFO - Started server process [25346]
+2025-03-04 08:52:42 - INFO - Waiting for application startup.
+2025-03-04 08:52:42.050 | WARNING  | app.core.init_app:init_db:256 - unable to retrieve model history from database, model history will be created from scratch
+2025-03-04 08:52:42 - WARNING - WatchFiles detected changes in 'migrations/models/0_20250304083850_init.py'. Reloading...
+1 1
+1 1
+4 4
+4 4
+2025-03-04 08:52:42.427 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/base/userinfo
+2025-03-04 08:52:42.431 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/base/usermenu
+2025-03-04 08:52:42.434 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/base/userapi
+2025-03-04 08:52:42.437 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/base/update_password
+2025-03-04 08:52:42.440 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/user/list
+2025-03-04 08:52:42.443 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/user/get
+2025-03-04 08:52:42.446 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/user/create
+2025-03-04 08:52:42.450 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/user/update
+2025-03-04 08:52:42.453 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/user/delete
+2025-03-04 08:52:42.456 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/user/reset_password
+2025-03-04 08:52:42.460 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/role/list
+2025-03-04 08:52:42.463 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/role/get
+2025-03-04 08:52:42.467 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/role/create
+2025-03-04 08:52:42.470 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/role/update
+2025-03-04 08:52:42.473 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/role/delete
+2025-03-04 08:52:42.477 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/role/authorized
+2025-03-04 08:52:42.480 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/role/authorized
+2025-03-04 08:52:42.484 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/menu/list
+2025-03-04 08:52:42.487 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/menu/get
+2025-03-04 08:52:42.490 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/menu/create
+2025-03-04 08:52:42.494 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/menu/update
+2025-03-04 08:52:42.497 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/menu/delete
+2025-03-04 08:52:42.500 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/api/list
+2025-03-04 08:52:42.503 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/api/get
+2025-03-04 08:52:42.506 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/api/create
+2025-03-04 08:52:42.510 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/api/update
+2025-03-04 08:52:42.514 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/api/delete
+2025-03-04 08:52:42.517 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/api/refresh
+2025-03-04 08:52:42.520 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/dept/list
+2025-03-04 08:52:42.523 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/dept/get
+2025-03-04 08:52:42.527 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/dept/create
+2025-03-04 08:52:42.529 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/dept/update
+2025-03-04 08:52:42.533 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/dept/delete
+2025-03-04 08:52:42.536 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/auditlog/list
+2025-03-04 08:52:42.539 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/transactions/list
+2025-03-04 08:52:42.543 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/transactions/get
+2025-03-04 08:52:42.547 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/transactions/create
+2025-03-04 08:52:42.550 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/transactions/update
+2025-03-04 08:52:42.554 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/transactions/delete
+2025-03-04 08:52:42.558 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/total/list
+2025-03-04 08:52:42.561 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/total/get
+2025-03-04 08:52:42.564 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/total/create
+2025-03-04 08:52:42.567 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/total/update
+2025-03-04 08:52:42.570 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/total/delete
+2025-03-04 08:52:42.572 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/field_work/list
+2025-03-04 08:52:42.576 | DEBUG    | app.controllers.api:refresh_api:41 - API Created GET /api/v1/field_work/get
+2025-03-04 08:52:42.579 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/field_work/create
+2025-03-04 08:52:42.582 | DEBUG    | app.controllers.api:refresh_api:41 - API Created POST /api/v1/field_work/update
+2025-03-04 08:52:42.585 | DEBUG    | app.controllers.api:refresh_api:41 - API Created DELETE /api/v1/field_work/delete
+2025-03-04 08:52:42 - INFO - Application startup complete.
+2025-03-04 08:52:42 - WARNING - WatchFiles detected changes in 'migrations/models/0_20250304085242_init.py'. Reloading...
+2025-03-04 08:52:43 - INFO - Started server process [25406]
+2025-03-04 08:52:43 - INFO - Waiting for application startup.
+2025-03-04 08:52:43 - INFO - Application startup complete.
+2025-03-04 08:52:44 - INFO - Started server process [25409]
+2025-03-04 08:52:44 - INFO - Waiting for application startup.
+2025-03-04 08:52:44 - INFO - Application startup complete.
+2025-03-04 08:52:52 - INFO - 127.0.0.1:39854 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-04 08:52:52 - INFO - 127.0.0.1:39858 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-04 08:52:52 - INFO - 127.0.0.1:39870 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-04 08:52:53 - INFO - 127.0.0.1:39884 - "GET /api/v1/dept/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 08:52:53 - INFO - 127.0.0.1:39900 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-04 08:53:13 - INFO - 127.0.0.1:58532 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-04 08:53:13 - INFO - 127.0.0.1:58546 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-04 08:53:13 - INFO - 127.0.0.1:58556 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-05 03:34:34 - INFO - 127.0.0.1:38310 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-05 03:34:34 - INFO - 127.0.0.1:38312 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-05 03:34:34 - INFO - 127.0.0.1:38324 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-05 03:34:34 - INFO - 127.0.0.1:38348 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-05 03:34:34 - INFO - 127.0.0.1:38346 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-05 03:34:34 - INFO - 127.0.0.1:38330 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-05 08:02:25 - INFO - 127.0.0.1:47278 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-05 08:02:25 - INFO - 127.0.0.1:47282 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-05 08:02:25 - INFO - 127.0.0.1:47290 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-05 08:02:25 - INFO - 127.0.0.1:47322 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-05 08:02:25 - INFO - 127.0.0.1:47318 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
+2025-03-05 08:02:25 - INFO - 127.0.0.1:47306 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-05 10:06:31 - INFO - 127.0.0.1:60414 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-05 10:06:31 - INFO - 127.0.0.1:60420 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-05 10:06:31 - INFO - 127.0.0.1:60426 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-05 10:06:32 - INFO - 127.0.0.1:60438 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-05 10:06:41 - INFO - 127.0.0.1:56582 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-05 10:06:41 - INFO - 127.0.0.1:56594 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-05 10:06:41 - INFO - 127.0.0.1:56598 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-05 10:06:41 - INFO - 127.0.0.1:56610 - "GET /api/v1/role/list?page=1&page_size=10 HTTP/1.1" 200 OK
