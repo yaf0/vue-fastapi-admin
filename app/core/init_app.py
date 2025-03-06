@@ -141,6 +141,19 @@ async def init_dept():
 async def init_menus():
     menus = await Menu.exists()
     if not menus:
+        business_parent_menu = await Menu.create(
+            menu_type=MenuType.CATALOG,
+            name="系统管理",
+            path="/system",
+            order=1,
+            parent_id=0,
+            icon="carbon:gui-management",
+            is_hidden=False,
+            component="Layout",
+            keepalive=False,
+            redirect="/system/user",
+        )
+        
         parent_menu = await Menu.create(
             menu_type=MenuType.CATALOG,
             name="系统管理",
