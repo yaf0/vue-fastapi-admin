@@ -18,3 +18,12 @@
 2025-03-06 11:11:16 - INFO - 127.0.0.1:60802 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
 2025-03-06 11:11:16 - INFO - 127.0.0.1:60786 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
 2025-03-06 11:11:16 - INFO - 127.0.0.1:60776 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-06 15:51:23 - INFO - 127.0.0.1:39026 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-06 15:51:23 - INFO - 127.0.0.1:39028 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-06 15:51:23 - INFO - 127.0.0.1:39042 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-06 15:51:27 - INFO - 127.0.0.1:39050 - "GET /api/v1/base/userinfo HTTP/1.1" 200 OK
+2025-03-06 15:51:27 - INFO - 127.0.0.1:39064 - "GET /api/v1/base/usermenu HTTP/1.1" 200 OK
+2025-03-06 15:51:27 - INFO - 127.0.0.1:39076 - "GET /api/v1/base/userapi HTTP/1.1" 200 OK
+2025-03-06 15:52:05 - INFO - 127.0.0.1:38052 - "GET /api/v1/user/list?page=1&page_size=10 HTTP/1.1" 200 OK
+2025-03-06 15:52:05 - INFO - 127.0.0.1:38070 - "GET /api/v1/dept/list HTTP/1.1" 200 OK
+2025-03-06 15:52:05 - INFO - 127.0.0.1:38068 - "GET /api/v1/role/list?page=1&page_size=9999 HTTP/1.1" 200 OK
