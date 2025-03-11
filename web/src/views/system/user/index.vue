@@ -300,21 +300,21 @@ const validateAddUser = {
   ],
   email: [
     {
-      required: true,
+      required: false,
       message: '请输入邮箱地址',
       trigger: ['input', 'change'],
     },
-    {
-      trigger: ['blur'],
-      validator: (rule, value, callback) => {
-        const re = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
-        if (!re.test(modalForm.value.email)) {
-          callback('邮箱格式错误')
-          return
-        }
-        callback()
-      },
-    },
+    // {
+    //   trigger: ['blur'],
+    //   validator: (rule, value, callback) => {
+    //     const re = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+    //     if (!re.test(modalForm.value.email)) {
+    //       callback('邮箱格式错误')
+    //       return
+    //     }
+    //     callback()
+    //   },
+    // },
   ],
   password: [
     {

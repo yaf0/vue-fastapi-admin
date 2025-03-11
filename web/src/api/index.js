@@ -56,4 +56,10 @@ export default {
   createFieldWork: (data = {}) => request.post('/field_work/create', data),
   updateFieldWork: (data = {}) => request.post('/field_work/update', data),
   deleteFieldWork: (params = {}) => request.delete('/field_work/delete', { params }),
+  // duty_staff
+  getDutyStaffList: (params = {}) => request.get('/duty_staff/list', { params }),
+  getDutyStaffById: (params = {}) => request.get('/duty_staff/get', { params }),
+  createDutyStaff: (data = {}) => request.post('/duty_staff/create', data),
+  updateDutyStaff: (data = {}) => request.post('/duty_staff/update', data),
+  deleteDutyStaff: (params = {}) => request.delete('/duty_staff/delete', { params }),
 }

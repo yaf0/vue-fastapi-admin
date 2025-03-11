@@ -12,6 +12,7 @@ from .users import users_router
 from .transactions import transactions_router
 from .totals import totals_router
 from .field_work import field_work_router
+from .duty_staff import duty_staff_router
 
 v1_router = APIRouter()
 
@@ -24,4 +25,5 @@ v1_router.include_router(depts_router, prefix="/dept", dependencies=[DependPermi
 v1_router.include_router(auditlog_router, prefix="/auditlog", dependencies=[DependPermisson])
 v1_router.include_router(transactions_router, prefix="/transactions", dependencies=[DependPermisson])
 v1_router.include_router(totals_router, prefix="/total", dependencies=[DependPermisson]) 
-v1_router.include_router(field_work_router, prefix="/field_work", dependencies=[DependPermisson]) 
+v1_router.include_router(field_work_router, prefix="/field_work", dependencies=[DependPermisson])
+v1_router.include_router(duty_staff_router, prefix="/duty_staff", dependencies=[DependPermisson])

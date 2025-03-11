@@ -17,7 +17,7 @@ class BaseUser(BaseModel):
 
 
 class UserCreate(BaseModel):
-    email: EmailStr = Field(example="admin@qq.com")
+    email: Optional[str] = Field(None, example="admin@qq.com")
     username: str = Field(example="admin")
     password: str = Field(example="123456")
     is_active: Optional[bool] = True

@@ -17,8 +17,8 @@ router = APIRouter()
 async def list_user(
     page: int = Query(1, description="页码"),
     page_size: int = Query(10, description="每页数量"),
-    username: str = Query("", description="用户名称，用于搜索"),
-    email: str = Query("", description="邮箱地址"),
+    username: str = Query(None, description="用户名称，用于搜索"),
+    email: str = Query(None, description="邮箱地址"),
     dept_id: int = Query(None, description="部门ID"),
 ):
     q = Q()
@@ -50,9 +50,9 @@ async def get_user(
 async def create_user(
     user_in: UserCreate,
 ):
-    user = await user_controller.get_by_email(user_in.email)
-    if user:
-        return Fail(code=400, msg="The user with this email already exists in the system.")
+    # user = await user_controller.get_by_email(user_in.email)
+    # if user:
+    #     return Fail(code=400, msg="The user with this email already exists in the system.")
     new_user = await user_controller.create_user(obj_in=user_in)
     await user_controller.update_roles(new_user, user_in.role_ids)
     return Success(msg="Created Successfully")
@@ -78,4 +78,4 @@ async def delete_user(
 @router.post("/reset_password", summary="重置密码")
 async def reset_password(user_id: int = Body(..., description="用户ID", embed=True)):
     await user_controller.reset_password(user_id)
-    return Success(msg="密码已重置为123456")
+    return Success(msg="密码已重置为123456, 请尽快修改密码")

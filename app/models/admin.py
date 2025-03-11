@@ -9,7 +9,7 @@ from .enums import MethodType
 class User(BaseModel, TimestampMixin):
     username = fields.CharField(max_length=20, unique=True, description="用户名称", index=True)
     alias = fields.CharField(max_length=30, null=True, description="姓名", index=True)
-    email = fields.CharField(max_length=255, unique=True, description="邮箱", index=True)
+    email = fields.CharField(max_length=255, null=True, description="邮箱", index=True)
     phone = fields.CharField(max_length=20, null=True, description="电话", index=True)
     password = fields.CharField(max_length=128, null=True, description="密码")
     is_active = fields.BooleanField(default=True, description="是否激活", index=True)
@@ -60,7 +60,7 @@ class Menu(BaseModel, TimestampMixin):
 
 
 class Dept(BaseModel, TimestampMixin):
-    name = fields.CharField(max_length=40, unique=False, description="部门名称", index=True)
+    name = fields.CharField(max_length=40, description="部门名称", index=True)
     desc = fields.CharField(max_length=500, null=True, description="备注")
     is_deleted = fields.BooleanField(default=False, description="软删除标记", index=True)
     order = fields.IntField(default=0, description="排序", index=True)
@@ -100,15 +100,16 @@ class TotalRecord(BaseModel, TimestampMixin):
     # ID 字段由 BaseModel 中的 pk 自动生成
     date = fields.DatetimeField(description="日期", index=True)
     plate = fields.CharField(max_length=50, description="车牌", index=True)
-    region = fields.CharField(max_length=50, description="区域", index=True)
-    company = fields.CharField(max_length=100, description="公司", index=True)
+    region = fields.CharField(max_length=50, description="区域")
+    company = fields.CharField(max_length=100, description="公司")
     field_staff = fields.CharField(max_length=50, description="外勤", index=True)
     internal_staff = fields.CharField(max_length=50, description="内勤", index=True)
-    platform = fields.CharField(max_length=50, description="平台", index=True)
+    platform = fields.CharField(max_length=50, description="平台")
     business = fields.CharField(max_length=50, description="业务", index=True)
-    expenditure = fields.IntField(description="支出", index=True)
-    income = fields.IntField(description="收入", index=True)
-    destination = fields.CharField(max_length=100, description="去向", index=True)
+    expected_expenditure = fields.IntField(description="预期支出")
+    actual_expenditure = fields.IntField(description="实际支出")
+    income = fields.IntField(description="收入")
+    destination = fields.CharField(max_length=100, description="去向")
     remark = fields.TextField(null=True, description="备注")
     handover_time = fields.DatetimeField(null=True, description="交接时间", index=True)
     is_completed = fields.BooleanField(default=False, description="是否完成", index=True)
@@ -129,3 +130,10 @@ class FieldWorkRecord(BaseModel, TimestampMixin):
     class Meta:
         table = "field_work_record"
  
+class DutyStaff(BaseModel, TimestampMixin):
+    name = fields.CharField(max_length=255, unique=True, description="人员名称")
+    type = fields.CharField(max_length=50, description="人员类型", index=True)
+    created_at = fields.DatetimeField(auto_now_add=True)
+    
+    class Meta:
+        table = "duty_staff"

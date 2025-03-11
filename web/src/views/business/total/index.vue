@@ -1,6 +1,6 @@
 <script setup>
-import { h, onMounted, ref, resolveDirective, withDirectives, watch} from 'vue'
-import { NButton, NForm, NFormItem, NInput, NPopconfirm, NInputNumber, NSwitch } from 'naive-ui'
+import { h, onMounted, ref, resolveDirective, withDirectives, watch } from 'vue'
+import { NButton, NForm, NFormItem, NInput, NPopconfirm, NInputNumber, NSwitch, NSelect } from 'naive-ui'
 import * as XLSX from 'xlsx'
 
 import CommonPage from '@/components/page/CommonPage.vue'
@@ -44,7 +44,8 @@ const {
     internal_staff: '',   // 内勤
     platform: '',         // 平台
     business: '',
-    expenditure: 0,       // 支出
+    expected_expenditure: 0,
+    actural_expenditure: 0,
     income: 0,
     destination: '',
     remark: '',
@@ -57,7 +58,24 @@ const {
   refresh: () => $table.value?.handleSearch(),
 })
 
-onMounted(() => {
+const internalStaffOptions = ref([])
+const fieldStaffOptions = ref([])
+const businessUserOptions = ref([])
+
+const fetchDutyStaffOptions = async (type) => {
+  const response = await api.getDutyStaffList({ type })
+  return response.data.map(staff => ({ label: staff.name, value: staff.name }))
+}
+
+const fetchBusinessUserOptions = async () => {
+  const response = await api.getUserList({ dept_id: 5 })
+  return response.data.map(user => ({ label: user.username, value: user.username }))
+}
+
+onMounted(async () => {
+  internalStaffOptions.value = await fetchDutyStaffOptions('内勤人员')
+  fieldStaffOptions.value = await fetchDutyStaffOptions('外勤人员')
+  businessUserOptions.value = await fetchBusinessUserOptions()
   $table.value?.handleSearch()
 })
 
@@ -79,7 +97,8 @@ const exportToExcel = async () => {
       '内勤': row.internal_staff,
       '平台': row.platform,
       '业务': row.business,
-      '支出': row.expenditure,
+      '预期支出': row.expected_expenditure,
+      '实际支出': row.actural_expenditure,
       '收入': row.income,
       '去向': row.destination,
       '备注': row.remark,
@@ -115,19 +134,22 @@ const addAPIRules = {
     { required: true, message: '请输入公司', trigger: ['input', 'blur', 'change'] },
   ],
   field_staff: [
-    { required: true, message: '请输入外勤人员', trigger: ['input', 'blur', 'change'] },
+    { required: true, message: '请选择外勤人员', trigger: ['input', 'blur', 'change'] },
   ],
   internal_staff: [
-    { required: true, message: '请输入内勤人员', trigger: ['input', 'blur', 'change'] },
+    { required: true, message: '请选择内勤人员', trigger: ['input', 'blur', 'change'] },
   ],
   platform: [
     { required: true, message: '请输入平台', trigger: ['input', 'blur', 'change'] },
   ],
   business: [
-    { required: true, message: '请输入业务名称', trigger: ['input', 'blur', 'change'] },
+    { required: true, message: '请选择业务名称', trigger: ['input', 'blur', 'change'] },
   ],
-  expenditure: [
-    { required: true, message: '请输入支出', trigger: ['input', 'blur', 'change'], type: 'number' },
+  expected_expenditure: [
+    { required: true, message: '请输入预期支出', trigger: ['input', 'blur', 'change'], type: 'number' },
+  ],
+  actural_expenditure: [
+    { required: true, message: '请输入实际支出', trigger: ['input', 'blur', 'change'], type: 'number' },
   ],
   income: [
     { required: true, message: '请输入收入', trigger: ['input', 'blur', 'change'], type: 'number' },
@@ -150,7 +172,8 @@ const columns = [
   { title: '内勤', key: 'internal_staff', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '平台', key: 'platform', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '业务', key: 'business', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
-  { title: '支出', key: 'expenditure', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
+  { title: '预期支出', key: 'expected_expenditure', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
+  { title: '实际支出', key: 'actural_expenditure', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '收入', key: 'income', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '去向', key: 'destination', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '备注', key: 'remark', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
@@ -295,19 +318,40 @@ const columns = [
           <NInput v-model:value="modalForm.company" clearable placeholder="请输入公司" />
         </NFormItem>
         <NFormItem label="外勤" path="field_staff">
-          <NInput v-model:value="modalForm.field_staff" clearable placeholder="请输入外勤人员" />
+          <NSelect
+            v-model:value="modalForm.field_staff"
+            clearable
+            placeholder="请选择外勤人员"
+            :options="fieldStaffOptions"
+            filterable
+          />
         </NFormItem>
         <NFormItem label="内勤" path="internal_staff">
-          <NInput v-model:value="modalForm.internal_staff" clearable placeholder="请输入内勤人员" />
+          <NSelect
+            v-model:value="modalForm.internal_staff"
+            clearable
+            placeholder="请选择内勤人员"
+            :options="internalStaffOptions"
+            filterable
+          />
         </NFormItem>
         <NFormItem label="平台" path="platform">
           <NInput v-model:value="modalForm.platform" clearable placeholder="请输入平台" />
         </NFormItem>
         <NFormItem label="业务" path="business">
-          <NInput v-model:value="modalForm.business" clearable placeholder="请输入业务名称" />
+          <NSelect
+            v-model:value="modalForm.business"
+            clearable
+            placeholder="请选择业务名称"
+            :options="businessUserOptions"
+            filterable
+          />
         </NFormItem>
-        <NFormItem label="支出" path="expenditure">
-          <NInputNumber v-model:value="modalForm.expenditure" placeholder="请输入支出"/>
+        <NFormItem label="预期支出" path="expected_expenditure">
+          <NInputNumber v-model:value="modalForm.expected_expenditure" placeholder="请输入预期支出"/>
+        </NFormItem>
+        <NFormItem label="实际支出" path="actural_expenditure">
+          <NInputNumber v-model:value="modalForm.actural_expenditure" placeholder="请输入实际支出"/>
         </NFormItem>
         <NFormItem label="收入" path="income">
           <NInputNumber v-model:value="modalForm.income" placeholder="请输入收入">

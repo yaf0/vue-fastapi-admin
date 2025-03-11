@@ -116,23 +116,15 @@ async def init_dept():
         await dept_controller.create_dept(
             DeptCreate(
                 name="业务层",
-                desc="业务人员",
+                desc="",
                 order=0,
                 parent_id=0,
             )
         )
         await dept_controller.create_dept(
             DeptCreate(
-                name="内勤",
-                desc="内勤",
-                order=0,
-                parent_id=4,
-            )
-        )
-        await dept_controller.create_dept(
-            DeptCreate(
-                name="外勤",
-                desc="外勤",
+                name="业务部",
+                desc="业务人员",
                 order=0,
                 parent_id=4,
             )
@@ -141,19 +133,6 @@ async def init_dept():
 async def init_menus():
     menus = await Menu.exists()
     if not menus:
-        business_parent_menu = await Menu.create(
-            menu_type=MenuType.CATALOG,
-            name="系统管理",
-            path="/system",
-            order=1,
-            parent_id=0,
-            icon="carbon:gui-management",
-            is_hidden=False,
-            component="Layout",
-            keepalive=False,
-            redirect="/system/user",
-        )
-        
         parent_menu = await Menu.create(
             menu_type=MenuType.CATALOG,
             name="系统管理",
