@@ -29,10 +29,17 @@ class TotalRecordUpdateActualExpenditure(BaseModel):
     id: int = Field(..., description="记录ID")
     actual_expenditure: int = Field(..., description="实际支出")
     
-class TotalRecordListYyfs(BaseModel):
+class TotalRecordYyfs(BaseModel):
     id: int = Field(..., description="记录ID")
     field_staff: str = Field(..., description="外勤")
     plate: str = Field(..., description="车牌")
     business: str = Field(..., description="业务")
     expected_expenditure: int = Field(..., description="预期支出")
+    actual_expenditure: int = Field(..., description="实际支出")
+
+class TotalRecordYyfsCreate():
+    pass
+
+class TotalRecordYyfsUpdate(BaseModel):
+    id: int = Field(..., description="记录ID")
     actual_expenditure: int = Field(..., description="实际支出")

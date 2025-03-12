@@ -2,7 +2,7 @@ from fastapi import APIRouter, Query
 from tortoise.expressions import Q
 from app.controllers.total import total_record_controller
 from app.schemas import Success, SuccessExtra
-from app.schemas.total import TotalRecordCreate, TotalRecordUpdate, TotalRecordUpdateActualExpenditure, TotalRecordListYyfs
+from app.schemas.total import TotalRecordCreate, TotalRecordUpdate, TotalRecordUpdateActualExpenditure, TotalRecordYyfs
 
 router = APIRouter()
 
@@ -41,14 +41,14 @@ async def list_totals_yyfs(
         q &= Q(field_staff__contains=field_staff)
 
     total, total_objs = await total_record_controller.list(page=page, page_size=page_size, search=q)
-    data = [TotalRecordListYyfs(**await obj.to_dict()) for obj in total_objs]
+    data = [TotalRecordYyfs(**await obj.to_dict()) for obj in total_objs]
 
     # 统计字段
     count = len(data)
     expected_expenditure_sum = sum(item.expected_expenditure for item in data)
     actual_expenditure_sum = sum(item.actual_expenditure for item in data)
 
-    data = [record.dict() for record in data]  # 将TotalRecordListYyfs对象转换为字典
+    data = [record.dict() for record in data]  # 将TotalRecordYyfs对象转换为字典
     return SuccessExtra(data=data, total=total, page=page, page_size=page_size, count=count, expected_expenditure_sum=expected_expenditure_sum, actual_expenditure_sum=actual_expenditure_sum)
 
 @router.get("/get", summary="查看单条总表数据")
