@@ -115,7 +115,7 @@ const columns = [
           NPopconfirm,
           {
             onPositiveClick: () => handleDelete({ id: row.id }, false),
-            onNegativeClick: () => {},
+            onNegativeClick: () => { },
           },
           {
             trigger: () =>
@@ -140,20 +140,12 @@ const columns = [
   <CommonPage show-footer title="勤务人员管理">
     <template #action>
       <div>
-        <NButton
-          v-permission="'post/api/v1/duty_staff/create'"
-          class="float-right mr-15"
-          type="primary"
-          @click="handleAdd"
-        >
+        <NButton v-permission="'post/api/v1/duty_staff/create'" class="float-right mr-15" type="primary"
+          @click="handleAdd">
           <TheIcon icon="material-symbols:add" :size="18" class="mr-5" />新建勤务人员
         </NButton>
-        <NButton
-          v-permission="'post/api/v1/duty_staff/refresh'"
-          class="float-right mr-15"
-          type="warning"
-          @click="handleRefreshApi"
-        >
+        <NButton v-permission="'post/api/v1/duty_staff/refresh'" class="float-right mr-15" type="warning"
+          @click="handleRefreshApi">
           <TheIcon icon="material-symbols:refresh" :size="18" class="mr-5" />刷新记录
         </NButton>
         <NButton type="success" class="float-right mr-15" @click="exportToExcel">
@@ -164,57 +156,32 @@ const columns = [
     </template>
 
     <!-- 表格展示 -->
-    <CrudTable
-      ref="$table"
-      v-model:query-items="queryItems"
-      :columns="columns"
-      :get-data="api.getDutyStaffList"
-    >
+    <CrudTable ref="$table" v-model:query-items="queryItems" :columns="columns" :get-data="api.getDutyStaffList">
       <template #queryBar>
         <QueryBarItem label="人员名称" :label-width="70">
-          <NInput
-            v-model:value="queryItems.name"
-            clearable
-            placeholder="请输入人员名称"
-            @keypress.enter="$table?.handleSearch()"
-          />
+          <NInput v-model:value="queryItems.name" clearable placeholder="请输入人员名称"
+            @keypress.enter="$table?.handleSearch()" />
         </QueryBarItem>
         <QueryBarItem label="人员类型" :label-width="70">
-          <NSelect
-            v-model:value="queryItems.type"
-            placeholder="请选择人员类型"
-            :options="[
-              { label: '内勤人员', value: '内勤人员' },
-              { label: '外勤人员', value: '外勤人员' },
-            ]"
-            @update:value="$table?.handleSearch()"
-            style="width: 200px;"
-          />
+          <NSelect v-model:value="queryItems.type" placeholder="请选择人员类型" :options="[
+            { label: '内勤人员', value: '内勤人员' },
+            { label: '外勤人员', value: '外勤人员' },
+          ]" @update:value="$table?.handleSearch()" style="width: 200px;" />
         </QueryBarItem>
       </template>
     </CrudTable>
 
     <!-- 新增/编辑 弹窗 -->
-    <CrudModal
-      v-model:visible="modalVisible"
-      :title="modalTitle"
-      :loading="modalLoading"
-      @save="handleSave"
-    >
+    <CrudModal v-model:visible="modalVisible" :title="modalTitle" :loading="modalLoading" @save="handleSave">
       <NForm ref="modalFormRef" :model="modalForm" :rules="addAPIRules">
         <NFormItem label="人员名称" path="name">
           <NInput v-model:value="modalForm.name" clearable placeholder="请输入人员名称" />
         </NFormItem>
         <NFormItem label="人员类型" path="type">
-          <NSelect
-            v-model:value="modalForm.type"
-            clearable
-            placeholder="请选择人员类型"
-            :options="[
-              { label: '内勤人员', value: '内勤人员' },
-              { label: '外勤人员', value: '外勤人员' },
-            ]"
-          />
+          <NSelect v-model:value="modalForm.type" clearable placeholder="请选择人员类型" :options="[
+            { label: '内勤人员', value: '内勤人员' },
+            { label: '外勤人员', value: '外勤人员' },
+          ]" />
         </NFormItem>
       </NForm>
     </CrudModal>

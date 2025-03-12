@@ -6,5 +6,7 @@ class TotalRecordController(CRUDBase[TotalRecord, TotalRecordCreate, TotalRecord
     def __init__(self):
         super().__init__(model=TotalRecord)
 
+
+
 total_record_controller = TotalRecordController()
 

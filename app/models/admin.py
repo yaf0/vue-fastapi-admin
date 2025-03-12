@@ -88,6 +88,7 @@ class AuditLog(BaseModel, TimestampMixin):
     request_args = fields.JSONField(null=True, description="请求参数")
     response_body = fields.JSONField(null=True, description="返回数据")
 
+
 class TransactionRecord(BaseModel, TimestampMixin):
     payment_time = fields.DatetimeField(description="支付时间", index=True)
     payment_amount = fields.DecimalField(max_digits=10, decimal_places=2, description="支付金额", index=True)
@@ -95,6 +96,7 @@ class TransactionRecord(BaseModel, TimestampMixin):
 
     class Meta:
         table = "transaction_record"
+
 
 class TotalRecord(BaseModel, TimestampMixin):
     # ID 字段由 BaseModel 中的 pk 自动生成
@@ -117,10 +119,11 @@ class TotalRecord(BaseModel, TimestampMixin):
     class Meta:
         table = "total_record"
 
+
 class FieldWorkRecord(BaseModel, TimestampMixin):
     # ID 字段由 BaseModel 中的 pk 自动生成
     name = fields.CharField(max_length=50, description="外勤名称", index=True)
-    number  = fields.IntField(description="台数", index=True)
+    number = fields.IntField(description="台数", index=True)
     expected_expenditure = fields.IntField(description="预期支出", index=True)
     actual_expenditure = fields.IntField(description="实际支出", index=True)
     difference = fields.IntField(description="差额", index=True)
@@ -129,11 +132,12 @@ class FieldWorkRecord(BaseModel, TimestampMixin):
 
     class Meta:
         table = "field_work_record"
- 
+
+
 class DutyStaff(BaseModel, TimestampMixin):
     name = fields.CharField(max_length=255, unique=True, description="人员名称")
     type = fields.CharField(max_length=50, description="人员类型", index=True)
     created_at = fields.DatetimeField(auto_now_add=True)
-    
+
     class Meta:
         table = "duty_staff"

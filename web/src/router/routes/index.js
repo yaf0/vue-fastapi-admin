@@ -129,7 +129,17 @@ export const basicRoutes = [
         component: () => import('@/views/business/total/index.vue'),
         name: `totaldata`,
         meta: {
-          title: 'YY网页',
+          title: 'YY数据',
+          icon: 'icon-park-outline:workbench',
+          affix: true,
+        },
+      },
+      {
+        path: '',
+        component: () => import('@/views/business/yyfs/index.vue'),
+        name: `yyfsdata`,
+        meta: {
+          title: 'YY外勤',
           icon: 'icon-park-outline:workbench',
           affix: true,
         },

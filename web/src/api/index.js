@@ -1,4 +1,5 @@
 import { request } from '@/utils'
+import { update } from 'lodash-es'
 
 export default {
   login: (data) => request.post('/base/access_token', data, { noNeedToken: true }),
@@ -47,8 +48,11 @@ export default {
   deleteTransaction: (params = {}) => request.delete('/transactions/delete', { params }),
   // total
   getTotalList: (params = {}) => request.get('/total/list', { params }),
+  getTotalById: (params = {}) => request.get('/total/get', { params }),
+  getTotalListYyfs: (params = {}) => request.get('/total/list/yyfs', { params }),
   createTotal: (data = {}) => request.post('/total/create', data),
   updateTotal: (data = {}) => request.post('/total/update', data),
+  updateTotalYyfs: (data = {}) => request.post('/total/update/yyfs', data),
   deleteTotal: (params = {}) => request.delete('/total/delete', { params }),
   // field_work
   getFieldWorkList: (params = {}) => request.get('/field_work/list', { params }),
