@@ -31,7 +31,7 @@ class UserCreate(BaseModel):
 
 class UserUpdate(BaseModel):
     id: int
-    email: EmailStr
+    email: Optional[str]
     username: str
     is_active: Optional[bool] = True
     is_superuser: Optional[bool] = False

@@ -151,7 +151,7 @@ export const basicRoutes = [
     name: 'FieldWorkManagement',
     meta: { title: '外勤管理'},
     component: Layout,
-    isHidden: true,
+    isHidden: false,
     children: [
       {
         path: '',

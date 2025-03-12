@@ -1,6 +1,6 @@
 <script setup>
 import { h, onMounted, ref, resolveDirective, withDirectives, watch } from 'vue'
-import { NButton, NForm, NFormItem, NInput, NPopconfirm, NInputNumber, NSwitch, NSelect, NStatistic } from 'naive-ui'
+import { NButton, NForm, NFormItem, NInput, NPopconfirm, NInputNumber, NSwitch, NSelect, NStatistic} from 'naive-ui'
 import * as XLSX from 'xlsx'
 
 import CommonPage from '@/components/page/CommonPage.vue'
@@ -12,6 +12,8 @@ import TheIcon from '@/components/icon/TheIcon.vue'
 import { renderIcon } from '@/utils'
 import { useCRUD } from '@/composables'
 import api from '@/api'
+import { onClickOutside } from '@vueuse/core'
+import { value } from 'lodash-es'
 
 defineOptions({ name: 'YY外勤' })
 
@@ -47,8 +49,15 @@ const {
     expected_expenditure: 0,
     actual_expenditure: 0,
   },
-  doUpdate: api.updateTotalYyfs,
-  refresh: () => $table.value?.handleSearch(),
+  refresh: async () => {
+    const response = await api.getTotalListYyfs(queryItems.value)
+    if (response) {
+      statistics.value.count = response.count
+      statistics.value.expected_expenditure_sum = response.expected_expenditure_sum
+      statistics.value.actual_expenditure_sum = response.actual_expenditure_sum
+    }
+    $table.value?.handleSearch()
+  },
 })
 
 const fieldStaffOptions = ref([])
@@ -90,12 +99,23 @@ const exportToExcel = async () => {
 }
 
 async function handleRefreshApi() {
-  const response = await $table.value?.handleSearch()
-  if (response && response.extra) {
-    statistics.value.count = response.extra.count
-    statistics.value.expected_expenditure_sum = response.extra.expected_expenditure_sum
-    statistics.value.actual_expenditure_sum = response.extra.actual_expenditure_sum
+  const response = await api.getTotalListYyfs(queryItems.value)
+  if (response) {
+    statistics.value.count = response.count
+    statistics.value.expected_expenditure_sum = response.expected_expenditure_sum
+    statistics.value.actual_expenditure_sum = response.actual_expenditure_sum
   }
+  $table.value?.handleSearch()
+}
+
+const handleUpdateExpenditure = async (value, row) => {
+  if (isNaN(value) || value === '' || value === null || value === undefined) {
+    window.$message?.warning('实际支出必须是数字且不能为空')
+    return
+  }
+  row.actual_expenditure = value
+  await api.updateTotalYyfs({ id: row.id, actual_expenditure: value })
+  window.$message?.success('实际支出更新成功')
 }
 
 // 表格列配置，增加外勤、预期支出、实际支出列
@@ -109,10 +129,8 @@ const columns = [
     render(row) {
       return h(NInputNumber, {
         value: row.actual_expenditure,
-        onUpdateValue: async (value) => {
-          row.actual_expenditure = value
-          await api.updateTotalYyfs({ id: row.id, actual_expenditure: value })
-          window.$message?.success('实际支出更新成功')
+        onUpdateValue: (value) => {
+          handleUpdateExpenditure(value, row)
         },
         placeholder: '请输入实际支出',
       })
@@ -123,6 +141,40 @@ const columns = [
 
 <template>
   <CommonPage show-footer title="外勤数据展示">
+    <div flex flex-wrap>
+      <n-card
+        class="mb-10 mt-10 w-300"
+        hover:card-shadow
+        title="外勤人员"
+        size="small"
+      >
+        <p op-60>{{ queryItems.field_staff }} </p>
+      </n-card>
+      <n-card
+        class="mb-10 mt-10 w-300"
+        hover:card-shadow
+        title="台数"
+        size="small"
+      >
+        <p op-60>{{ statistics.count }}</p> 
+      </n-card>
+      <n-card
+        class="mb-10 mt-10 w-300"
+        hover:card-shadow
+        title="应支出总计"
+        size="small"
+      >
+        <p op-60>{{ statistics.expected_expenditure_sum }}</p> 
+      </n-card>
+      <n-card
+        class="mb-10 mt-10 w-300"
+        hover:card-shadow
+        title="实际支出总计"
+        size="small"
+      >
+        <p op-60>{{ statistics.actual_expenditure_sum }}</p> 
+      </n-card>
+    </div>
     <template #action>
       <div>
         <NButton type="success" class="float-right mr-15" @click="exportToExcel">
@@ -147,17 +199,12 @@ const columns = [
             placeholder="请选择外勤人员"
             :options="fieldStaffOptions"
             filterable
-            @update="$table?.handleSearch()"
+            @update="handleRefreshApi"
+            
           />
         </QueryBarItem>
       </template>
     </CrudTable>
-    <!-- 统计数据展示 -->
-    <div class="statistics">
-      <NStatistic label="台数" :value="statistics.count" />
-      <NStatistic label="预期支出总计" :value="statistics.expected_expenditure_sum" />
-      <NStatistic label="实际支出总计" :value="statistics.actual_expenditure_sum" />
-    </div>
   </CommonPage>
 </template>
 

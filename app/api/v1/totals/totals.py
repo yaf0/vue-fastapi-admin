@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Query
 from tortoise.expressions import Q
-from app.controllers.total import total_record_controller
+from app.controllers.total import total_record_controller, total_record_yyfs_controller
 from app.schemas import Success, SuccessExtra
-from app.schemas.total import TotalRecordCreate, TotalRecordUpdate, TotalRecordUpdateActualExpenditure, TotalRecordYyfs
+from app.schemas.total import TotalRecordCreate, TotalRecordUpdate, TotalRecordYyfsUpdate
 
 router = APIRouter()
 
@@ -40,15 +40,14 @@ async def list_totals_yyfs(
     if field_staff:
         q &= Q(field_staff__contains=field_staff)
 
-    total, total_objs = await total_record_controller.list(page=page, page_size=page_size, search=q)
-    data = [TotalRecordYyfs(**await obj.to_dict()) for obj in total_objs]
+    total, total_objs = await total_record_yyfs_controller.list(page=page, page_size=page_size, search=q)
+    data = [await obj.to_dict() for obj in total_objs]
 
     # 统计字段
     count = len(data)
-    expected_expenditure_sum = sum(item.expected_expenditure for item in data)
-    actual_expenditure_sum = sum(item.actual_expenditure for item in data)
+    expected_expenditure_sum = sum(item['expected_expenditure'] for item in data)
+    actual_expenditure_sum = sum(item['actual_expenditure'] for item in data)
 
-    data = [record.dict() for record in data]  # 将TotalRecordYyfs对象转换为字典
     return SuccessExtra(data=data, total=total, page=page, page_size=page_size, count=count, expected_expenditure_sum=expected_expenditure_sum, actual_expenditure_sum=actual_expenditure_sum)
 
 @router.get("/get", summary="查看单条总表数据")
@@ -71,10 +70,8 @@ async def update_total(total_in: TotalRecordUpdate):
 
 
 @router.post("/update/yyfs", summary="更新总表数据实际支出")
-async def update_total_actual_expenditure(total_in: TotalRecordUpdateActualExpenditure):
-    await total_record_controller.update_actual_expenditure(
-        id=total_in.id, actual_expenditure=total_in.actual_expenditure
-    )
+async def update_total_actual_expenditure(total_in: TotalRecordYyfsUpdate):
+    await total_record_controller.update(id=total_in.id, obj_in=total_in)
     return Success(msg="Updated Successfully")
 
 
