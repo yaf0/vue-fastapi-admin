@@ -1,6 +1,6 @@
 <script setup>
 import { h, onMounted, ref, resolveDirective, withDirectives, watch } from 'vue'
-import { NButton, NForm, NFormItem, NInput, NPopconfirm, NInputNumber, NSwitch, NSelect } from 'naive-ui'
+import { NButton, NForm, NFormItem, NInput, NPopconfirm, NInputNumber, NSwitch, NSelect, NStatistic } from 'naive-ui'
 import * as XLSX from 'xlsx'
 
 import CommonPage from '@/components/page/CommonPage.vue'
@@ -17,6 +17,11 @@ defineOptions({ name: 'YY外勤' })
 
 const $table = ref(null)
 const queryItems = ref({})
+const statistics = ref({
+  count: 0,
+  expected_expenditure_sum: 0,
+  actual_expenditure_sum: 0,
+})
 
 // 获取权限指令（如果有）
 const vPermission = resolveDirective('permission')
@@ -85,7 +90,12 @@ const exportToExcel = async () => {
 }
 
 async function handleRefreshApi() {
-  $table.value?.handleSearch()
+  const response = await $table.value?.handleSearch()
+  if (response && response.extra) {
+    statistics.value.count = response.extra.count
+    statistics.value.expected_expenditure_sum = response.extra.expected_expenditure_sum
+    statistics.value.actual_expenditure_sum = response.extra.actual_expenditure_sum
+  }
 }
 
 // 表格列配置，增加外勤、预期支出、实际支出列
@@ -101,7 +111,7 @@ const columns = [
         value: row.actual_expenditure,
         onUpdateValue: async (value) => {
           row.actual_expenditure = value
-          await doUpdate({ id: row.id, actual_expenditure: value })
+          await api.updateTotalYyfs({ id: row.id, actual_expenditure: value })
           window.$message?.success('实际支出更新成功')
         },
         placeholder: '请输入实际支出',
@@ -127,6 +137,7 @@ const columns = [
       v-model:query-items="queryItems"
       :columns="columns"
       :get-data="api.getTotalListYyfs"
+      @update:query-items="handleRefreshApi"
     >
       <template #queryBar>
         <QueryBarItem label="外勤人员" :label-width="70">
@@ -141,6 +152,12 @@ const columns = [
         </QueryBarItem>
       </template>
     </CrudTable>
+    <!-- 统计数据展示 -->
+    <div class="statistics">
+      <NStatistic label="台数" :value="statistics.count" />
+      <NStatistic label="预期支出总计" :value="statistics.expected_expenditure_sum" />
+      <NStatistic label="实际支出总计" :value="statistics.actual_expenditure_sum" />
+    </div>
   </CommonPage>
 </template>
 
