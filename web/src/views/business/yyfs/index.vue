@@ -40,7 +40,7 @@ const {
     business: '',
     field_staff: '',      // 外勤
     expected_expenditure: 0,
-    actural_expenditure: 0,
+    actual_expenditure: 0,
   },
   doUpdate: api.updateTotalYyfs,
   refresh: () => $table.value?.handleSearch(),
@@ -72,7 +72,7 @@ const exportToExcel = async () => {
       '业务': row.business,
       '外勤': row.field_staff,
       '预期支出': row.expected_expenditure,
-      '实际支出': row.actural_expenditure,
+      '实际支出': row.actual_expenditure,
     }))
     const ws = XLSX.utils.json_to_sheet(data)
     const wb = XLSX.utils.book_new()
@@ -95,13 +95,13 @@ const columns = [
   { title: '外勤', key: 'field_staff', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '预期支出', key: 'expected_expenditure', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { 
-    title: '实际支出', key: 'actural_expenditure', width: 'auto', align: 'center', ellipsis: { tooltip: true },
+    title: '实际支出', key: 'actual_expenditure', width: 'auto', align: 'center', ellipsis: { tooltip: true },
     render(row) {
       return h(NInputNumber, {
-        value: row.actural_expenditure,
+        value: row.actual_expenditure,
         onUpdateValue: async (value) => {
-          row.actural_expenditure = value
-          await doUpdate({ id: row.id, actural_expenditure: value })
+          row.actual_expenditure = value
+          await doUpdate({ id: row.id, actual_expenditure: value })
           window.$message?.success('实际支出更新成功')
         },
         placeholder: '请输入实际支出',
@@ -112,17 +112,9 @@ const columns = [
 </script>
 
 <template>
-  <CommonPage show-footer title="数据展示">
+  <CommonPage show-footer title="外勤数据展示">
     <template #action>
       <div>
-        <NButton
-          v-permission="'post/api/v1/total/refresh'"
-          class="float-right mr-15"
-          type="warning"
-          @click="handleRefreshApi"
-        >
-          <TheIcon icon="material-symbols:refresh" :size="18" class="mr-5" />刷新记录
-        </NButton>
         <NButton type="success" class="float-right mr-15" @click="exportToExcel">
           <TheIcon icon="material-symbols:download" :size="18" class="mr-5" />
           导出Excel

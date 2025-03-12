@@ -118,14 +118,14 @@ export const basicRoutes = [
     },
   },
   {
-    path: '/business/total',
+    path: '/business',
     name: 'TotalManagement',
     meta: { title: 'YY网页'},
     isHidden: false,
     component: Layout,
     children: [
       {
-        path: '',
+        path: 'total',
         component: () => import('@/views/business/total/index.vue'),
         name: `totaldata`,
         meta: {
@@ -135,7 +135,7 @@ export const basicRoutes = [
         },
       },
       {
-        path: '',
+        path: 'yyfs',
         component: () => import('@/views/business/yyfs/index.vue'),
         name: `yyfsdata`,
         meta: {

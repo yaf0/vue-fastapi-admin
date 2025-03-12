@@ -25,7 +25,7 @@ class TotalRecordCreate(TotalRecordBase):
 class TotalRecordUpdate(TotalRecordBase):
     id: int = Field(..., description="记录ID")
 
-class TotalRecordUpdateActuralExpenditure(BaseModel):
+class TotalRecordUpdateActualExpenditure(BaseModel):
     id: int = Field(..., description="记录ID")
     actual_expenditure: int = Field(..., description="实际支出")
     
