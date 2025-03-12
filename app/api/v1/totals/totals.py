@@ -48,6 +48,7 @@ async def list_totals_yyfs(
     expected_expenditure_sum = sum(item.expected_expenditure for item in data)
     actual_expenditure_sum = sum(item.actual_expenditure for item in data)
 
+    data = [record.dict() for record in data]  # 将TotalRecordListYyfs对象转换为字典
     return SuccessExtra(data=data, total=total, page=page, page_size=page_size, count=count, expected_expenditure_sum=expected_expenditure_sum, actual_expenditure_sum=actual_expenditure_sum)
 
 @router.get("/get", summary="查看单条总表数据")
