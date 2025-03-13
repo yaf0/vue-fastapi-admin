@@ -15,16 +15,14 @@ import api from '@/api'
 import { onClickOutside } from '@vueuse/core'
 import { value } from 'lodash-es'
 
-defineOptions({ name: '业务员管理' })
+defineOptions({ name: '业务员数据展示' })
 
 const $table = ref(null)
 const queryItems = ref({})
 const statistics = ref({
   count: 0,
   expected_expenditure_sum: 0,
-  actual_expenditure_sum: 0,
   income_sum: 0,
-  // 利润总计
   profit_sum: 0,
 })
 
@@ -46,36 +44,32 @@ const {
   name: '总表数据',
   // 初始化表单数据，字段与后端保持一致
   initForm: {
-    plate: '',
     business: '',
-    field_staff: '',      // 外勤
+    count: 0,
     expected_expenditure: 0,
-    actual_expenditure: 0,
     income: 0,
     profit: 0,
   },
   refresh: async () => {
-    const response = await api.getTotalListYyfs(queryItems.value)
+    const response = await api.getTotalListBs(queryItems.value)
     if (response) {
       statistics.value.count = response.count
       statistics.value.expected_expenditure_sum = response.expected_expenditure_sum
-      statistics.value.actual_expenditure_sum = response.actual_expenditure_sum
       statistics.value.income_sum = response.income_sum
-      statistics.value.profit_sum = response.profit_sum
     }
     $table.value?.handleSearch()
   },
 })
 
-const fieldStaffOptions = ref([])
+const businessUserOptions = ref([])
 
-const fetchDutyStaffOptions = async (type) => {
-  const response = await api.getDutyStaffList({ type })
-  return response.data.map(staff => ({ label: staff.name, value: staff.name }))
+const fetchBusinessUserOptions = async () => {
+  const response = await api.getUserList({ dept_id: 5 })
+  return response.data.map(user => ({ label: user.username, value: user.username }))
 }
 
 onMounted(async () => {
-  fieldStaffOptions.value = await fetchDutyStaffOptions('外勤人员')
+  businessUserOptions.value = await fetchBusinessUserOptions()
   // $table.value?.handleSearch()
   handleRefreshApi()
 })
@@ -84,20 +78,23 @@ onMounted(async () => {
 const exportToExcel = async () => {
   try {
     const queryParams = { ...queryItems.value, page: 1, per_page: 99999 }
-    const response = await api.getTotalListYyfs(queryParams)
+    const response = await api.getTotalListBs(queryParams)
     if (!response || !response.data || response.data.length === 0) {
       window.$message?.warning('无数据可导出')
       return
     }
     const data = response.data.map(row => ({
       '业务': row.business,
+      '台数': statistics.count,
       '预期支出': row.expected_expenditure,
+      '收入': row.income,
+      '利润': row.income - row.expected_expenditure,
       
     }))
     const ws = XLSX.utils.json_to_sheet(data)
     const wb = XLSX.utils.book_new()
-    XLSX.utils.book_append_sheet(wb, ws, '总表数据')
-    XLSX.writeFile(wb, `总表数据_${new Date().toISOString().slice(0, 10)}.xlsx`)
+    XLSX.utils.book_append_sheet(wb, ws, '业务为度统计')
+    XLSX.writeFile(wb, `业务为度统计_${new Date().toISOString().slice(0, 10)}.xlsx`)
   } catch (error) {
     console.error('导出 Excel 失败:', error)
     window.$message?.error('导出失败，请检查网络或稍后重试')
@@ -105,7 +102,7 @@ const exportToExcel = async () => {
 }
 
 async function handleRefreshApi() {
-  const response = await api.getTotalListYyfs(queryItems.value)
+  const response = await api.getTotalListBs(queryItems.value)
   if (response) {
     statistics.value.count = response.count
     statistics.value.expected_expenditure_sum = response.expected_expenditure_sum
@@ -114,50 +111,55 @@ async function handleRefreshApi() {
   $table.value?.handleSearch()
 }
 
-const handleUpdateExpenditure = async (value, row) => {
-  if (isNaN(value) || value === '' || value === null || value === undefined) {
-    window.$message?.warning('实际支出必须是数字且不能为空')
-    return
-  }
-  row.actual_expenditure = value
-  await api.updateTotalYyfs({ id: row.id, actual_expenditure: value })
-  window.$message?.success('实际支出更新成功')
-}
-
 // 表格列配置，增加外勤、预期支出、实际支出列
 const columns = [
-  { title: '车牌', key: 'plate', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
-  { title: '业务', key: 'business', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
-  { title: '外勤', key: 'field_staff', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
-  { title: '预期支出', key: 'expected_expenditure', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
-  { 
-    title: '实际支出', key: 'actual_expenditure', width: 'auto', align: 'center', ellipsis: { tooltip: true },
+  {
+    title: '业务',
+    key: 'business',
+    align: 'center',
+  },
+  {
+    title: '台数',
+    key: 'statistic.count',
+    align: 'center',
+    render() {
+      return statistics.value.count
+    },
+  },
+  {
+    title: '预期支出',
+    key: 'expected_expenditure',
+    align: 'center',
+  },
+  {
+    title: '收入',
+    key: 'income',
+    align: 'center',
+  },
+  {
+    title: '利润',
+    key: 'profit',
+    align: 'center',
     render(row) {
-      return h(NInputNumber, {
-        value: row.actual_expenditure,
-        onUpdateValue: (value) => {
-          handleUpdateExpenditure(value, row)
-        },
-        placeholder: '请输入实际支出',
-      })
-    }
+      return row.income - row.expected_expenditure
+    },
   },
 ]
 </script>
 
 <template>
-  <CommonPage show-footer title="外勤数据展示">
+  <CommonPage show-footer title="业务维度数据">
     <div flex flex-wrap>
       <n-card
-        class="mb-10 mt-10 w-300"
+        class="mb-10 mt-10 w-200"
         hover:card-shadow
-        title="外勤人员"
+        title="业务"
         size="small"
       >
-        <p op-60>{{ queryItems.field_staff || '所有' }} </p>
+        <p op-60>{{ queryItems.business_user || '所有' }} </p>
       </n-card>
       <n-card
-        class="mb-10 mt-10 w-300"
+        class="mb-10 mt-10 w-200"
         hover:card-shadow
         title="台数"
         size="small"
@@ -165,7 +167,7 @@ const columns = [
         <p op-60>{{ statistics.count }}</p> 
       </n-card>
       <n-card
-        class="mb-10 mt-10 w-300"
+        class="mb-10 mt-10 w-200"
         hover:card-shadow
         title="应支出总计"
         size="small"
@@ -173,12 +175,20 @@ const columns = [
         <p op-60>{{ statistics.expected_expenditure_sum }}</p> 
       </n-card>
       <n-card
-        class="mb-10 mt-10 w-300"
+        class="mb-10 mt-10 w-200"
         hover:card-shadow
-        title="实际支出总计"
+        title="收入总计"
         size="small"
       >
-        <p op-60>{{ statistics.actual_expenditure_sum }}</p> 
+        <p op-60>{{ statistics.income_sum }}</p> 
+      </n-card>
+      <n-card
+        class="mb-10 mt-10 w-200"
+        hover:card-shadow
+        title="利润总计"
+        size="small"
+      >
+        <p op-60>{{ statistics.income_sum - statistics.expected_expenditure_sum }}</p>
       </n-card>
     </div>
     <template #action>
@@ -194,16 +204,16 @@ const columns = [
       ref="$table"
       v-model:query-items="queryItems"
       :columns="columns"
-      :get-data="api.getTotalListYyfs"
+      :get-data="api.getTotalListBs"
       @update:query-items="handleRefreshApi"
     >
       <template #queryBar>
-        <QueryBarItem label="外勤人员" :label-width="70">
+        <QueryBarItem label="业务" :label-width="70">
           <NSelect
-            v-model:value="queryItems.field_staff"
+            v-model:value="queryItems.business_user"
             clearable
-            placeholder="请选择外勤人员"
-            :options="fieldStaffOptions"
+            placeholder="输入或选择业务"
+            :options="businessUserOptions"
             filterable
             @update:value="handleRefreshApi"
             

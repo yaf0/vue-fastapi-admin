@@ -1,8 +1,9 @@
 from fastapi import APIRouter, Query
 from tortoise.expressions import Q
-from app.controllers.total import total_record_controller, total_record_yyfs_controller
+from app.controllers.total import total_record_controller, total_record_yyfs_controller, total_record_controller_bs
+from app.controllers.user import user_controller
 from app.schemas import Success, SuccessExtra
-from app.schemas.total import TotalRecordCreate, TotalRecordUpdate, TotalRecordYyfsUpdate
+from app.schemas.total import TotalRecordCreate, TotalRecordUpdate
 
 router = APIRouter()
 
@@ -48,6 +49,46 @@ async def list_totals_yyfs(
     expected_expenditure_sum = sum(item['expected_expenditure'] for item in data)
 
     return SuccessExtra(data=data, total=total, page=page, page_size=page_size, count=count, expected_expenditure_sum=expected_expenditure_sum)
+
+@router.get("/list/bs", summary="查看业务员维度数据列表")
+async def list_totals_bs(
+    page: int = Query(1, description="页码"),
+    page_size: int = Query(10, description="每页数量"),
+    business: str = Query(None, description="业务"),
+):
+    q = Q()
+    if business:
+        q &= Q(business__contains=business)
+
+        total, total_objs = await total_record_controller_bs.list(page=page, page_size=page_size, search=q)
+        data = [await obj.to_dict() for obj in total_objs]
+
+        # 统计字段
+        count = len(data)
+        expected_expenditure_sum = sum(item['expected_expenditure'] for item in data)
+        income_sum = sum(item['income'] for item in data)
+        
+    else:
+        # 获取所有业务员
+        total_business = await user_controller.list(page=1, page_size=1000)
+        print(total_business)
+        business_list = [item.username for item in total_business[1] if item.dept_id == 5]
+        data = []
+        count = 0
+        expected_expenditure_sum = 0
+        income_sum = 0
+
+        # 递归调用if的另一个分支，获取所有业务员的data，算出总体的count、expected_expenditure_sum、income_sum
+        for business in business_list:
+            q &= Q(business=business)
+            _, total_objs = await total_record_controller_bs.list(page=page, page_size=page_size, search=q)
+            business_data = [await obj.to_dict() for obj in total_objs]
+            data.extend(business_data)
+            count += len(business_data)
+            expected_expenditure_sum += sum(item['expected_expenditure'] for item in business_data)
+            income_sum += sum(item['income'] for item in business_data)
+
+    return SuccessExtra(data=data, total=len(data), page=page, page_size=page_size, count=count, expected_expenditure_sum=expected_expenditure_sum, income_sum=income_sum)
 
 @router.get("/get", summary="查看单条总表数据")
 async def get_total(id: int = Query(..., description="记录ID")):

@@ -40,3 +40,18 @@ class TotalRecordYyfsUpdate(BaseModel):
     plate: Optional[str] = None
     business: Optional[str] = None
     expected_expenditure: Optional[float] = None
+
+class TotalRecordBs(BaseModel):
+    id: int = Field(..., description="记录ID")
+    business: str = Field(..., description="业务")
+    expected_expenditure: int = Field(..., description="预期支出")
+    income: int = Field(..., description="收入")
+    
+class TotalRecordBsCreate(TotalRecordBs):
+    pass
+
+class TotalRecordBsUpdate(BaseModel):
+    id: int
+    business: Optional[str] = None
+    expected_expenditure: Optional[int] = None
+    income: Optional[int] = None

@@ -50,6 +50,7 @@ export default {
   getTotalList: (params = {}) => request.get('/total/list', { params }),
   getTotalById: (params = {}) => request.get('/total/get', { params }),
   getTotalListYyfs: (params = {}) => request.get('/total/list/yyfs', { params }),
+  getTotalListBs: (params = {}) => request.get('/total/list/bs', { params }),
   createTotal: (data = {}) => request.post('/total/create', data),
   updateTotal: (data = {}) => request.post('/total/update', data),
   updateTotalYyfs: (data = {}) => request.post('/total/update/yyfs', data),

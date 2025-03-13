@@ -151,7 +151,7 @@ export const basicRoutes = [
     name: 'FieldWorkManagement',
     meta: { title: '外勤管理'},
     component: Layout,
-    isHidden: false,
+    isHidden: true,
     children: [
       {
         path: '',
@@ -178,6 +178,25 @@ export const basicRoutes = [
         name: `duty_staff_data`,
         meta: {
           title: '勤务管理',
+          icon: 'icon-park-outline:workbench',
+          affix: true,
+        },
+      },
+    ],
+  },
+  {
+    path: '/business/manage_business',
+    name: 'ManageBusinessStatics',
+    meta: { title: '业务统计'},
+    component: Layout,
+    isHidden: false,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/business/manage_business/index.vue'),
+        name: `business`,
+        meta: {
+          title: '业务统计',
           icon: 'icon-park-outline:workbench',
           affix: true,
         },
