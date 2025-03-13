@@ -15,7 +15,7 @@ import api from '@/api'
 import { onClickOutside } from '@vueuse/core'
 import { value } from 'lodash-es'
 
-defineOptions({ name: 'YY外勤' })
+defineOptions({ name: '业务员管理' })
 
 const $table = ref(null)
 const queryItems = ref({})
@@ -23,6 +23,9 @@ const statistics = ref({
   count: 0,
   expected_expenditure_sum: 0,
   actual_expenditure_sum: 0,
+  income_sum: 0,
+  // 利润总计
+  profit_sum: 0,
 })
 
 // 获取权限指令（如果有）
@@ -48,6 +51,8 @@ const {
     field_staff: '',      // 外勤
     expected_expenditure: 0,
     actual_expenditure: 0,
+    income: 0,
+    profit: 0,
   },
   refresh: async () => {
     const response = await api.getTotalListYyfs(queryItems.value)
@@ -55,6 +60,8 @@ const {
       statistics.value.count = response.count
       statistics.value.expected_expenditure_sum = response.expected_expenditure_sum
       statistics.value.actual_expenditure_sum = response.actual_expenditure_sum
+      statistics.value.income_sum = response.income_sum
+      statistics.value.profit_sum = response.profit_sum
     }
     $table.value?.handleSearch()
   },
@@ -83,11 +90,9 @@ const exportToExcel = async () => {
       return
     }
     const data = response.data.map(row => ({
-      '车牌': row.plate,
       '业务': row.business,
-      '外勤': row.field_staff,
       '预期支出': row.expected_expenditure,
-      '实际支出': row.actual_expenditure,
+      
     }))
     const ws = XLSX.utils.json_to_sheet(data)
     const wb = XLSX.utils.book_new()
