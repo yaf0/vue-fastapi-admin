@@ -23,19 +23,48 @@ async def list_duty_staffs(
     total, duty_staff_objs = await duty_staff_controller.list(page=page, page_size=page_size, search=q)
     data = [await obj.to_dict() for obj in duty_staff_objs]
 
-    # 获取每个外勤的台数总计和预期支出总计
-    for item in data:
-        if item.get('type') == '外勤人员':
-            field_staff = item.get('name')
-            if field_staff:
-                q_yyfs = Q(field_staff__contains=field_staff)
-                _, total_objs_yyfs = await total_record_yyfs_controller.list(page=1, page_size=100000, search=q_yyfs)
-                yyfs_data = [await obj.to_dict() for obj in total_objs_yyfs]
-                item['count'] = len(yyfs_data)
-                item['expected_expenditure_sum'] = sum(yyfs_item['expected_expenditure'] for yyfs_item in yyfs_data)
-
     return SuccessExtra(data=data, total=total, page=page, page_size=page_size)
 
+@router.get("/list_fs", summary="查看勤务人员列表")
+async def list_duty_staffs(
+    page: int = Query(1, description="页码"),
+    page_size: int = Query(10, description="每页数量"),
+    field_staff: str = Query(None, description="人员名称"),
+):
+    q = Q()
+    if field_staff:
+        q &= Q(name__contains=field_staff)  # 确保这是一个查询条件
+    # 固定type为"外勤人员"
+    q &= Q(type="外勤人员")  # 确保这是一个查询条件
+    total, duty_staff_objs = await duty_staff_controller.list(page=page, page_size=page_size, search=q)
+    data = [await obj.to_dict() for obj in duty_staff_objs]
+
+    total_count = 0
+    total_expected_expenditure_sum = 0
+    total_actual_expenditure = 0
+
+    # 获取每个外勤的台数总计和预期支出总计
+    for item in data:
+        field_staff = item.get('name')
+        if field_staff:
+            q_yyfs = Q(field_staff__contains=field_staff)
+            _, total_objs_yyfs = await total_record_yyfs_controller.list(page=1, page_size=100000, search=q_yyfs)
+            yyfs_data = [await obj.to_dict() for obj in total_objs_yyfs]
+            count = len(yyfs_data)
+            expected_expenditure_sum = sum(yyfs_item['expected_expenditure'] for yyfs_item in yyfs_data)
+            actual_expenditure = item.get('actual_expenditure', 0)
+
+            item['count'] = count
+            item['expected_expenditure_sum'] = expected_expenditure_sum
+
+            total_count += count
+            total_expected_expenditure_sum += expected_expenditure_sum
+            total_actual_expenditure += actual_expenditure
+
+    return SuccessExtra(data=data, total=total, page=page, page_size=page_size, 
+                        total_count=total_count, 
+                        total_expected_expenditure_sum=total_expected_expenditure_sum, 
+                        total_actual_expenditure=total_actual_expenditure)
 
 @router.get("/get", summary="查看单个勤务人员")
 async def get_duty_staff_api(id: int = Query(..., description="勤务人员ID")):

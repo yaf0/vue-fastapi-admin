@@ -135,7 +135,7 @@ class FieldWorkRecord(BaseModel, TimestampMixin):
 class DutyStaff(BaseModel, TimestampMixin):
     name = fields.CharField(max_length=255, unique=True, description="人员名称")
     type = fields.CharField(max_length=50, description="人员类型", index=True)
-    actual_expenditure = fields.IntField(description="实际支出", null=True, default=0)
+    actual_expenditure = fields.IntField(description="实际支出", default=0)
     created_at = fields.DatetimeField(auto_now_add=True)
 
     class Meta:

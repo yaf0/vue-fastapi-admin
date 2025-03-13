@@ -20,9 +20,9 @@ defineOptions({ name: 'YY外勤' })
 const $table = ref(null)
 const queryItems = ref({})
 const statistics = ref({
-  count: 0,
-  expected_expenditure_sum: 0,
-  actual_expenditure_sum: 0,
+  total_count: 0,
+  total_expected_expenditure_sum: 0,
+  total_actual_expenditure: 0,
 })
 
 // 获取权限指令（如果有）
@@ -50,11 +50,11 @@ const {
     actual_expenditure: 0,
   },
   refresh: async () => {
-    const response = await api.getTotalListYyfs(queryItems.value)
+    const response = await api.getDutyStaffListfs(queryItems.value)
     if (response) {
-      statistics.value.count = response.count
-      statistics.value.expected_expenditure_sum = response.expected_expenditure_sum
-      statistics.value.actual_expenditure_sum = response.actual_expenditure_sum
+      statistics.value.total_count = response.total_count
+      statistics.value.total_expected_expenditure_sum = response.total_expected_expenditure_sum
+      statistics.value.total_actual_expenditure = response.total_actual_expenditure
     }
     $table.value?.handleSearch()
   },
@@ -69,7 +69,6 @@ const fetchDutyStaffOptions = async (type) => {
 
 onMounted(async () => {
   fieldStaffOptions.value = await fetchDutyStaffOptions('外勤人员')
-  // $table.value?.handleSearch()
   handleRefreshApi()
 })
 
@@ -77,16 +76,15 @@ onMounted(async () => {
 const exportToExcel = async () => {
   try {
     const queryParams = { ...queryItems.value, page: 1, per_page: 99999 }
-    const response = await api.getTotalListYyfs(queryParams)
+    const response = await api.getDutyStaffListfs(queryParams)
     if (!response || !response.data || response.data.length === 0) {
       window.$message?.warning('无数据可导出')
       return
     }
     const data = response.data.map(row => ({
-      '车牌': row.plate,
-      '业务': row.business,
-      '外勤': row.field_staff,
-      '预期支出': row.expected_expenditure,
+      '外勤': row.name,
+      '台数': row.count,
+      '预期支出总计': row.expected_expenditure_sum,
       '实际支出': row.actual_expenditure,
     }))
     const ws = XLSX.utils.json_to_sheet(data)
@@ -100,11 +98,11 @@ const exportToExcel = async () => {
 }
 
 async function handleRefreshApi() {
-  const response = await api.getTotalListYyfs(queryItems.value)
+  const response = await api.getDutyStaffListfs(queryItems.value)
   if (response) {
-    statistics.value.count = response.count
-    statistics.value.expected_expenditure_sum = response.expected_expenditure_sum
-    statistics.value.actual_expenditure_sum = response.actual_expenditure_sum
+    statistics.value.total_count = response.total_count
+    statistics.value.total_expected_expenditure_sum = response.total_expected_expenditure_sum
+    statistics.value.total_actual_expenditure = response.total_actual_expenditure
   }
   $table.value?.handleSearch()
 }
@@ -115,18 +113,22 @@ const handleUpdateExpenditure = async (value, row) => {
     return
   }
   row.actual_expenditure = value
-  await api.updateTotalYyfs({ id: row.id, actual_expenditure: value })
+  await api.updateDutyStaff({
+    id: row.id,
+    name: row.name,
+    type: row.type,
+    actual_expenditure: value
+  })
   window.$message?.success('实际支出更新成功')
 }
 
 // 表格列配置，增加外勤、预期支出、实际支出列
 const columns = [
-  { title: '车牌', key: 'plate', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
-  { title: '业务', key: 'business', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
-  { title: '外勤', key: 'field_staff', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
-  { title: '预期支出', key: 'expected_expenditure', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
-  { 
-    title: '实际支出', key: 'actual_expenditure', width: 'auto', align: 'center', ellipsis: { tooltip: true },
+  { title: '外勤', key: 'name', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
+  { title: '台数', key: 'count', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
+  { title: '预期支出', key: 'expected_expenditure_sum', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
+  { title: '实际支出', key: 'actual_expenditure', width: 'auto', align: 'center', ellipsis: { tooltip: true },
+
     render(row) {
       return h(NInputNumber, {
         value: row.actual_expenditure,
@@ -135,6 +137,11 @@ const columns = [
         },
         placeholder: '请输入实际支出',
       })
+    }
+  },
+  { title: '差额', key: 'difference', width: 'auto', align: 'center', ellipsis: { tooltip: true },
+    render(row) {
+      return row.expected_expenditure_sum - row.actual_expenditure
     }
   },
 ]
@@ -157,7 +164,7 @@ const columns = [
         title="台数"
         size="small"
       >
-        <p op-60>{{ statistics.count }}</p> 
+        <p op-60>{{ statistics.total_count }}</p> 
       </n-card>
       <n-card
         class="mb-10 mt-10 w-300"
@@ -165,7 +172,7 @@ const columns = [
         title="应支出总计"
         size="small"
       >
-        <p op-60>{{ statistics.expected_expenditure_sum }}</p> 
+        <p op-60>{{ statistics.total_expected_expenditure_sum }}</p> 
       </n-card>
       <n-card
         class="mb-10 mt-10 w-300"
@@ -173,7 +180,7 @@ const columns = [
         title="实际支出总计"
         size="small"
       >
-        <p op-60>{{ statistics.actual_expenditure_sum }}</p> 
+        <p op-60>{{ statistics.total_actual_expenditure }}</p> 
       </n-card>
     </div>
     <template #action>
@@ -189,7 +196,7 @@ const columns = [
       ref="$table"
       v-model:query-items="queryItems"
       :columns="columns"
-      :get-data="api.getTotalListYyfs"
+      :get-data="api.getDutyStaffListfs"
       @update:query-items="handleRefreshApi"
     >
       <template #queryBar>
@@ -197,7 +204,7 @@ const columns = [
           <NSelect
             v-model:value="queryItems.field_staff"
             clearable
-            placeholder="请选择外勤人员"
+            placeholder="输入或选择外勤人员"
             :options="fieldStaffOptions"
             filterable
             @update:value="handleRefreshApi"

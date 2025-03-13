@@ -1,5 +1,5 @@
 import { request } from '@/utils'
-import { update } from 'lodash-es'
+import { get, update } from 'lodash-es'
 
 export default {
   login: (data) => request.post('/base/access_token', data, { noNeedToken: true }),
@@ -62,6 +62,7 @@ export default {
   deleteFieldWork: (params = {}) => request.delete('/field_work/delete', { params }),
   // duty_staff
   getDutyStaffList: (params = {}) => request.get('/duty_staff/list', { params }),
+  getDutyStaffListfs: (params = {}) => request.get('/duty_staff/list_fs', { params }),
   getDutyStaffById: (params = {}) => request.get('/duty_staff/get', { params }),
   createDutyStaff: (data = {}) => request.post('/duty_staff/create', data),
   updateDutyStaff: (data = {}) => request.post('/duty_staff/update', data),

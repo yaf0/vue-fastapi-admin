@@ -10,4 +10,6 @@ class DutyStaffCreate(DutyStaffBase):
 
 class DutyStaffUpdate(DutyStaffBase):
     id: int = Field(..., description="勤务人员ID")
+    actual_expenditure: int = Field(..., description="实际支出")
+
 
