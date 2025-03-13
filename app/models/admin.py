@@ -109,7 +109,6 @@ class TotalRecord(BaseModel, TimestampMixin):
     platform = fields.CharField(max_length=50, description="平台")
     business = fields.CharField(max_length=50, description="业务", index=True)
     expected_expenditure = fields.IntField(description="预期支出")
-    actual_expenditure = fields.IntField(description="实际支出")
     income = fields.IntField(description="收入")
     destination = fields.CharField(max_length=100, description="去向")
     remark = fields.TextField(null=True, description="备注")
@@ -125,7 +124,6 @@ class FieldWorkRecord(BaseModel, TimestampMixin):
     name = fields.CharField(max_length=50, description="外勤名称", index=True)
     number = fields.IntField(description="台数", index=True)
     expected_expenditure = fields.IntField(description="预期支出", index=True)
-    actual_expenditure = fields.IntField(description="实际支出", index=True)
     difference = fields.IntField(description="差额", index=True)
     remark = fields.TextField(null=True, description="备注")
     date = fields.DatetimeField(null=True, description="日期", index=True)
@@ -137,6 +135,7 @@ class FieldWorkRecord(BaseModel, TimestampMixin):
 class DutyStaff(BaseModel, TimestampMixin):
     name = fields.CharField(max_length=255, unique=True, description="人员名称")
     type = fields.CharField(max_length=50, description="人员类型", index=True)
+    actual_expenditure = fields.IntField(description="实际支出", null=True, default=0)
     created_at = fields.DatetimeField(auto_now_add=True)
 
     class Meta:

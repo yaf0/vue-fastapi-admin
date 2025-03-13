@@ -45,7 +45,6 @@ const {
     platform: '',         // 平台
     business: '',
     expected_expenditure: 0,
-    actual_expenditure: 0,
     income: 0,
     destination: '',
     remark: '',
@@ -98,7 +97,6 @@ const exportToExcel = async () => {
       '平台': row.platform,
       '业务': row.business,
       '预期支出': row.expected_expenditure,
-      '实际支出': row.actual_expenditure,
       '收入': row.income,
       '去向': row.destination,
       '备注': row.remark,
@@ -148,9 +146,6 @@ const addAPIRules = {
   expected_expenditure: [
     { required: true, message: '请输入预期支出', trigger: ['input', 'blur', 'change'], type: 'number' },
   ],
-  actual_expenditure: [
-    { required: true, message: '请输入实际支出', trigger: ['input', 'blur', 'change'], type: 'number' },
-  ],
   income: [
     { required: true, message: '请输入收入', trigger: ['input', 'blur', 'change'], type: 'number' },
   ],
@@ -173,7 +168,6 @@ const columns = [
   { title: '平台', key: 'platform', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '业务', key: 'business', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '预期支出', key: 'expected_expenditure', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
-  { title: '实际支出', key: 'actual_expenditure', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '收入', key: 'income', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '去向', key: 'destination', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '备注', key: 'remark', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
@@ -349,9 +343,6 @@ const columns = [
         </NFormItem>
         <NFormItem label="预期支出" path="expected_expenditure">
           <NInputNumber v-model:value="modalForm.expected_expenditure" placeholder="请输入预期支出"/>
-        </NFormItem>
-        <NFormItem label="实际支出" path="actual_expenditure">
-          <NInputNumber v-model:value="modalForm.actual_expenditure" placeholder="请输入实际支出"/>
         </NFormItem>
         <NFormItem label="收入" path="income">
           <NInputNumber v-model:value="modalForm.income" placeholder="请输入收入">

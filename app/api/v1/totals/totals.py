@@ -46,9 +46,8 @@ async def list_totals_yyfs(
     # 统计字段
     count = len(data)
     expected_expenditure_sum = sum(item['expected_expenditure'] for item in data)
-    actual_expenditure_sum = sum(item['actual_expenditure'] for item in data)
 
-    return SuccessExtra(data=data, total=total, page=page, page_size=page_size, count=count, expected_expenditure_sum=expected_expenditure_sum, actual_expenditure_sum=actual_expenditure_sum)
+    return SuccessExtra(data=data, total=total, page=page, page_size=page_size, count=count, expected_expenditure_sum=expected_expenditure_sum)
 
 @router.get("/get", summary="查看单条总表数据")
 async def get_total(id: int = Query(..., description="记录ID")):
@@ -67,13 +66,6 @@ async def create_total(total_in: TotalRecordCreate):
 async def update_total(total_in: TotalRecordUpdate):
     await total_record_controller.update(id=total_in.id, obj_in=total_in)
     return Success(msg="Updated Successfully")
-
-
-@router.post("/update/yyfs", summary="更新总表数据实际支出")
-async def update_total_actual_expenditure(total_in: TotalRecordYyfsUpdate):
-    await total_record_controller.update(id=total_in.id, obj_in=total_in)
-    return Success(msg="Updated Successfully")
-
 
 @router.delete("/delete", summary="删除总表数据")
 async def delete_total(id: int = Query(..., description="记录ID")):

@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Query
 from tortoise.expressions import Q
 from app.controllers.duty_staff import duty_staff_controller
+from app.controllers.total import total_record_yyfs_controller
 from app.schemas import Success, SuccessExtra
 from app.schemas.duty_staff import DutyStaffCreate, DutyStaffUpdate
 
@@ -21,6 +22,18 @@ async def list_duty_staffs(
         q &= Q(type__contains=type)
     total, duty_staff_objs = await duty_staff_controller.list(page=page, page_size=page_size, search=q)
     data = [await obj.to_dict() for obj in duty_staff_objs]
+
+    # 获取每个外勤的台数总计和预期支出总计
+    for item in data:
+        if item.get('type') == '外勤人员':
+            field_staff = item.get('name')
+            if field_staff:
+                q_yyfs = Q(field_staff__contains=field_staff)
+                _, total_objs_yyfs = await total_record_yyfs_controller.list(page=1, page_size=100000, search=q_yyfs)
+                yyfs_data = [await obj.to_dict() for obj in total_objs_yyfs]
+                item['count'] = len(yyfs_data)
+                item['expected_expenditure_sum'] = sum(yyfs_item['expected_expenditure'] for yyfs_item in yyfs_data)
+
     return SuccessExtra(data=data, total=total, page=page, page_size=page_size)
 
 
