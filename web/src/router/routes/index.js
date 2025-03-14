@@ -49,7 +49,7 @@ export const basicRoutes = [
   {
     name: 'ErrorPage',
     path: '/error-page',
-    isHidden: false,
+    isHidden: true,
     component: Layout,
     redirect: '/error-page/404',
     meta: {
@@ -118,9 +118,9 @@ export const basicRoutes = [
     },
   },
   {
-    path: '/business',
+    path: '/business/total',
     name: 'TotalManagement',
-    meta: { title: 'YY网页'},
+    meta: { title: '总表数据'},
     isHidden: false,
     component: Layout,
     children: [
@@ -129,11 +129,39 @@ export const basicRoutes = [
         component: () => import('@/views/business/total/index.vue'),
         name: `totaldata`,
         meta: {
-          title: 'YY数据',
+          title: '总表数据',
           icon: 'icon-park-outline:workbench',
           affix: true,
         },
       },
+    ],
+  },
+  {
+    path: '/business/own_business',
+    name: 'own_business',
+    meta: { title: '我的数据'},
+    isHidden: false,
+    component: Layout,
+    children: [
+      {
+        path: 'total',
+        component: () => import('@/views/business/own_business/index.vue'),
+        name: `owndata`,
+        meta: {
+          title: '我的数据',
+          icon: 'icon-park-outline:workbench',
+          affix: true,
+        },
+      },
+    ],
+  },
+  {
+    path: '/business/yyfs',
+    name: 'YY外勤',
+    meta: { title: 'YY外勤'},
+    isHidden: false,
+    component: Layout,
+    children: [
       {
         path: 'yyfs',
         component: () => import('@/views/business/yyfs/index.vue'),
@@ -149,7 +177,7 @@ export const basicRoutes = [
   {
     path: '/business/field_work',
     name: 'FieldWorkManagement',
-    meta: { title: '外勤管理'},
+    meta: { title: '外勤人员'},
     component: Layout,
     isHidden: true,
     children: [
@@ -158,7 +186,7 @@ export const basicRoutes = [
         component: () => import('@/views/business/field_work/index.vue'),
         name: `field_work_data`,
         meta: {
-          title: '外勤管理',
+          title: '外勤人员',
           icon: 'icon-park-outline:workbench',
           affix: true,
         },

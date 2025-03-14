@@ -48,6 +48,7 @@ const {
     income: 0,
     destination: '',
     remark: '',
+    docking_time: null,
     handover_time: null,
     is_completed: false,
   },
@@ -100,6 +101,7 @@ const exportToExcel = async () => {
       '收入': row.income,
       '去向': row.destination,
       '备注': row.remark,
+      '对接时间': row.docking_time,
       '交接时间': row.handover_time,
       '是否完成': row.is_completed ? '是' : '否',
     }))
@@ -152,6 +154,9 @@ const addAPIRules = {
   destination: [
     { required: true, message: '请输入去向', trigger: ['input', 'blur', 'change'] },
   ],
+  docking_time: [
+    { required: true, message: '请输入对接时间', trigger: ['input', 'blur', 'change'] },
+  ],
   handover_time: [
     { required: true, message: '请输入交接时间', trigger: ['input', 'blur', 'change'] },
   ],
@@ -171,6 +176,7 @@ const columns = [
   { title: '收入', key: 'income', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '去向', key: 'destination', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '备注', key: 'remark', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
+  { title: '对接时间', key: 'docking_time', width: 180, align: 'center', ellipsis: { tooltip: true } },
   { title: '交接时间', key: 'handover_time', width: 180, align: 'center', ellipsis: { tooltip: true } },
   { 
     title: '是否完成', key: 'is_completed', width: 'auto', align: 'center',
@@ -356,6 +362,9 @@ const columns = [
         </NFormItem>
         <NFormItem label="备注" path="remark">
           <NInput v-model:value="modalForm.remark" clearable placeholder="请输入备注" />
+        </NFormItem>
+        <NFormItem label="对接时间" path="docking_time">
+          <n-date-picker v-model:formatted-value="modalForm.docking_time" type="datetime" clearable value-format="yyyy-MM-dd HH:mm:ss"/>
         </NFormItem>
         <NFormItem label="交接时间" path="handover_time">
           <n-date-picker v-model:formatted-value="modalForm.handover_time" type="datetime" clearable value-format="yyyy-MM-dd HH:mm:ss"/>

@@ -15,6 +15,7 @@ class TotalRecordBase(BaseModel):
     income: int = Field(..., description="收入")
     destination: str = Field(..., description="去向")
     remark: Optional[str] = Field(None, description="备注")
+    docking_time: datetime = Field(..., description="对接时间")
     handover_time: datetime = Field(..., description="交接时间")
     is_completed: bool = Field(..., description="是否完成")
 
@@ -35,6 +36,7 @@ class TotalRecordUpdate(BaseModel):
     income: Optional[int] = Field(None, description="收入")
     destination: Optional[str] = Field(None, description="去向")
     remark: Optional[str] = Field(None, description="备注")
+    docking_time: Optional[datetime] = Field(None, description="对接时间")
     handover_time: Optional[datetime] = Field(None, description="交接时间")
     is_completed: Optional[bool] = Field(None, description="是否完成")
 

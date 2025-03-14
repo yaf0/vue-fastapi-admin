@@ -113,6 +113,7 @@ class TotalRecord(BaseModel, TimestampMixin):
     destination = fields.CharField(max_length=100, description="去向")
     remark = fields.TextField(null=True, description="备注")
     handover_time = fields.DatetimeField(null=True, description="交接时间", index=True)
+    docking_time = fields.DatetimeField(null=True, description="对接时间", index=True)
     is_completed = fields.BooleanField(default=False, description="是否完成", index=True)
 
     class Meta:

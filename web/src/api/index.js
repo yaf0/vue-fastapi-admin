@@ -53,6 +53,8 @@ export default {
   getTotalListBs: (params = {}) => request.get('/total/list/bs', { params }),
   createTotal: (data = {}) => request.post('/total/create', data),
   updateTotal: (data = {}) => request.post('/total/update', data),
+  getTotalListOb: (params = {}) => request.get('/total/list/ob', { params }),
+  updateTotalOb: (data = {}) => request.post('/total/update/ob', data),
   updateTotalYyfs: (data = {}) => request.post('/total/update/yyfs', data),
   deleteTotal: (params = {}) => request.delete('/total/delete', { params }),
   // field_work
