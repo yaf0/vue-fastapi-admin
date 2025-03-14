@@ -49,7 +49,7 @@ export const basicRoutes = [
   {
     name: 'ErrorPage',
     path: '/error-page',
-    isHidden: true,
+    isHidden: false,
     component: Layout,
     redirect: '/error-page/404',
     meta: {

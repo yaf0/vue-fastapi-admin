@@ -56,39 +56,47 @@ async def list_totals_bs(
     page_size: int = Query(10, description="每页数量"),
     business: str = Query(None, description="业务"),
 ):
+    total_count = 0
+    total_expected_expenditure_sum = 0
+    total_income_sum = 0
+
     q = Q()
     if business:
         q &= Q(business__contains=business)
 
         total, total_objs = await total_record_controller_bs.list(page=page, page_size=page_size, search=q)
-        data = [await obj.to_dict() for obj in total_objs]
+        data = [{
+            'business': business,
+            'count': total,
+            'expected_expenditure': sum(item['expected_expenditure'] for item in total_objs),
+            'income': sum(item['income'] for item in total_objs),
+        }]
 
-        # 统计字段
-        count = len(data)
-        expected_expenditure_sum = sum(item['expected_expenditure'] for item in data)
-        income_sum = sum(item['income'] for item in data)
+        total_count = data[0]['count']
+        total_expected_expenditure_sum = data[0]['expected_expenditure']
+        total_income_sum = data[0]['income']
         
     else:
-        # 获取所有业务员
-        total_business = await user_controller.list(page=1, page_size=1000)
-        print(total_business)
+        total_business = await user_controller.list(page=page, page_size=page_size)
         business_list = [item.username for item in total_business[1] if item.dept_id == 5]
         data = []
-        count = 0
-        expected_expenditure_sum = 0
-        income_sum = 0
 
-        # 递归调用if的另一个分支，获取所有业务员的data，算出总体的count、expected_expenditure_sum、income_sum
         for business in business_list:
-            q &= Q(business=business)
-            _, total_objs = await total_record_controller_bs.list(page=page, page_size=page_size, search=q)
+            q = Q(business=business)
+            _, total_objs = await total_record_controller_bs.list(page=1, page_size=1000, search=q)
             business_data = [await obj.to_dict() for obj in total_objs]
-            data.extend(business_data)
-            count += len(business_data)
-            expected_expenditure_sum += sum(item['expected_expenditure'] for item in business_data)
-            income_sum += sum(item['income'] for item in business_data)
+            data.append({
+                'business': business,
+                'count': len(business_data),
+                'expected_expenditure': sum(item['expected_expenditure'] for item in business_data),
+                'income': sum(item['income'] for item in business_data),
+            })
 
-    return SuccessExtra(data=data, total=len(data), page=page, page_size=page_size, count=count, expected_expenditure_sum=expected_expenditure_sum, income_sum=income_sum)
+        total_count = sum(item['count'] for item in data)
+        total_expected_expenditure_sum = sum(item['expected_expenditure'] for item in data)
+        total_income_sum = sum(item['income'] for item in data)
+
+    return SuccessExtra(data=data, total=len(data), page=page, page_size=page_size, count_sum=total_count, expected_expenditure_sum=total_expected_expenditure_sum, income_sum=total_income_sum)
 
 @router.get("/get", summary="查看单条总表数据")
 async def get_total(id: int = Query(..., description="记录ID")):

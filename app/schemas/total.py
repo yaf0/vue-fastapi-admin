@@ -21,9 +21,23 @@ class TotalRecordBase(BaseModel):
 class TotalRecordCreate(TotalRecordBase):
     pass
 
-class TotalRecordUpdate(TotalRecordBase):
+class TotalRecordUpdate(BaseModel):
     id: int = Field(..., description="记录ID")
- 
+    date: Optional[datetime] = Field(None, description="日期")
+    plate: Optional[str] = Field(None, description="车牌")
+    region: Optional[str] = Field(None, description="区域")
+    company: Optional[str] = Field(None, description="公司")
+    field_staff: Optional[str] = Field(None, description="外勤")
+    internal_staff: Optional[str] = Field(None, description="内勤")
+    platform: Optional[str] = Field(None, description="平台")
+    business: Optional[str] = Field(None, description="业务")
+    expected_expenditure: Optional[int] = Field(None, description="预期支出")
+    income: Optional[int] = Field(None, description="收入")
+    destination: Optional[str] = Field(None, description="去向")
+    remark: Optional[str] = Field(None, description="备注")
+    handover_time: Optional[datetime] = Field(None, description="交接时间")
+    is_completed: Optional[bool] = Field(None, description="是否完成")
+
 class TotalRecordYyfs(BaseModel):
     id: int = Field(..., description="记录ID")
     field_staff: str = Field(..., description="外勤")

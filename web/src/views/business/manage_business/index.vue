@@ -85,16 +85,15 @@ const exportToExcel = async () => {
     }
     const data = response.data.map(row => ({
       '业务': row.business,
-      '台数': statistics.count,
+      '台数': row.count,
       '预期支出': row.expected_expenditure,
       '收入': row.income,
       '利润': row.income - row.expected_expenditure,
-      
     }))
     const ws = XLSX.utils.json_to_sheet(data)
     const wb = XLSX.utils.book_new()
-    XLSX.utils.book_append_sheet(wb, ws, '业务为度统计')
-    XLSX.writeFile(wb, `业务为度统计_${new Date().toISOString().slice(0, 10)}.xlsx`)
+    XLSX.utils.book_append_sheet(wb, ws, '业务维度统计')
+    XLSX.writeFile(wb, `业务维度统计_${new Date().toISOString().slice(0, 10)}.xlsx`)
   } catch (error) {
     console.error('导出 Excel 失败:', error)
     window.$message?.error('导出失败，请检查网络或稍后重试')
@@ -104,9 +103,9 @@ const exportToExcel = async () => {
 async function handleRefreshApi() {
   const response = await api.getTotalListBs(queryItems.value)
   if (response) {
-    statistics.value.count = response.count
+    statistics.value.count_sum = response.count_sum
     statistics.value.expected_expenditure_sum = response.expected_expenditure_sum
-    statistics.value.actual_expenditure_sum = response.actual_expenditure_sum
+    statistics.value.income_sum = response.income_sum
   }
   $table.value?.handleSearch()
 }
@@ -120,11 +119,8 @@ const columns = [
   },
   {
     title: '台数',
-    key: 'statistic.count',
+    key: 'count',
     align: 'center',
-    render() {
-      return statistics.value.count
-    },
   },
   {
     title: '预期支出',
@@ -164,7 +160,7 @@ const columns = [
         title="台数"
         size="small"
       >
-        <p op-60>{{ statistics.count }}</p> 
+        <p op-60>{{ statistics.count_sum }}</p> 
       </n-card>
       <n-card
         class="mb-10 mt-10 w-200"
