@@ -109,7 +109,7 @@ const columns = [
             },
             { default: () => '编辑', icon: renderIcon('material-symbols:edit', { size: 16 }) }
           ),
-          [[vPermission, 'put/api/v1/duty_staff/update']]
+          [[vPermission, 'post/api/v1/duty_staff/update']]
         ),
         h(
           NPopconfirm,
@@ -143,10 +143,6 @@ const columns = [
         <NButton v-permission="'post/api/v1/duty_staff/create'" class="float-right mr-15" type="primary"
           @click="handleAdd">
           <TheIcon icon="material-symbols:add" :size="18" class="mr-5" />新建勤务人员
-        </NButton>
-        <NButton v-permission="'post/api/v1/duty_staff/refresh'" class="float-right mr-15" type="warning"
-          @click="handleRefreshApi">
-          <TheIcon icon="material-symbols:refresh" :size="18" class="mr-5" />刷新记录
         </NButton>
         <NButton type="success" class="float-right mr-15" @click="exportToExcel">
           <TheIcon icon="material-symbols:download" :size="18" class="mr-5" />

@@ -119,6 +119,7 @@ const handleUpdateExpenditure = async (value, row) => {
     type: row.type,
     actual_expenditure: value
   })
+  handleRefreshApi()
   window.$message?.success('实际支出更新成功')
 }
 
@@ -181,6 +182,14 @@ const columns = [
         size="small"
       >
         <p op-60>{{ statistics.total_actual_expenditure }}</p> 
+      </n-card>
+      <n-card
+        class="mb-10 mt-10 w-300"
+        hover:card-shadow
+        title="差额总计"
+        size="small"
+      >
+        <p op-60>{{ statistics.total_expected_expenditure_sum - statistics.total_actual_expenditure }}</p>
       </n-card>
     </div>
     <template #action>

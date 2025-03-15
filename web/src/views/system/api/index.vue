@@ -132,7 +132,6 @@ const columns = [
               style: 'margin-right: 8px;',
               onClick: () => {
                 handleEdit(row)
-                modalForm.value.roles = row.roles.map((e) => (e = e.id))
               },
             },
             {

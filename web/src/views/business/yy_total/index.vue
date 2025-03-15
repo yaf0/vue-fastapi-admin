@@ -47,7 +47,6 @@ const {
     password: '',         // 密码
     business: '',
     expected_expenditure: 0,
-    income: 0,
     destination: '',
     remark: '',
     docking_time: null,
@@ -102,7 +101,6 @@ const exportToExcel = async () => {
       '密码': row.password,
       '业务': row.business,
       '预期支出': row.expected_expenditure,
-      '收入': row.income,
       '去向': row.destination,
       '备注': row.remark,
       '对接时间': row.docking_time,
@@ -158,9 +156,6 @@ const addAPIRules = {
   expected_expenditure: [
     { required: true, message: '请输入预期支出', trigger: ['input', 'blur', 'change'], type: 'number' },
   ],
-  income: [
-    { required: true, message: '请输入收入', trigger: ['input', 'blur', 'change'], type: 'number' },
-  ],
   destination: [
     { required: false, message: '请输入去向', trigger: ['input', 'blur', 'change'] },
   ],
@@ -185,7 +180,6 @@ const columns = [
   { title: '密码', key: 'password', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '业务', key: 'business', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '预期支出', key: 'expected_expenditure', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
-  { title: '收入', key: 'income', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '去向', key: 'destination', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '备注', key: 'remark', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '对接时间', key: 'docking_time', width: 180, align: 'center', ellipsis: { tooltip: true } },
@@ -258,7 +252,7 @@ const columns = [
       </div>
     </template>
     <!-- 表格展示 -->
-    <CrudTable ref="$table" v-model:query-items="queryItems" :columns="columns" :get-data="api.getTotalList">
+    <CrudTable ref="$table" v-model:query-items="queryItems" :columns="columns" :get-data="api.getTotalListYy">
       <template #queryBar>
         <QueryBarItem label="日期" :label-width="70">
           <n-date-picker v-model:formatted-value="queryItems.date" type="date" clearable placeholder="请选择日期"
@@ -314,13 +308,6 @@ const columns = [
         </NFormItem>
         <NFormItem label="预期支出" path="expected_expenditure">
           <NInputNumber v-model:value="modalForm.expected_expenditure" placeholder="请输入预期支出">
-            <template #prefix>
-              ￥
-            </template>
-          </NInputNumber>
-        </NFormItem>
-        <NFormItem label="收入" path="income">
-          <NInputNumber v-model:value="modalForm.income" placeholder="请输入收入">
             <template #prefix>
               ￥
             </template>

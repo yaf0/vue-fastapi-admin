@@ -81,11 +81,10 @@ async def init_superuser():
 async def init_dept():
     ''' 
     初始化部门
-    管理层  系统管理人员
-            YY管理人员
+    管理层  系统管理
+            YY管理
     业务层  业务人员
-            内勤
-            外勤
+            业务部
     '''
     dept = await dept_controller.model.exists()
     if not dept:
@@ -99,16 +98,16 @@ async def init_dept():
         )
         await dept_controller.create_dept(
             DeptCreate(
-                name="系统管理人员",
-                desc="系统管理人员",
+                name="系统管理",
+                desc="系统管理",
                 order=0,
                 parent_id=1,
             )
         )
         await dept_controller.create_dept(
             DeptCreate(
-                name="YY管理人员",
-                desc="YY管理人员",
+                name="YY管理",
+                desc="YY管理",
                 order=0,
                 parent_id=1,
             )
@@ -116,7 +115,7 @@ async def init_dept():
         await dept_controller.create_dept(
             DeptCreate(
                 name="业务层",
-                desc="",
+                desc="业务人员",
                 order=0,
                 parent_id=0,
             )
@@ -214,18 +213,131 @@ async def init_menus():
             ),
         ]
         await Menu.bulk_create(children_menu)
-        await Menu.create(
-            menu_type=MenuType.MENU,
-            name="一级菜单",
-            path="/top-menu",
+
+        manage_menu = await Menu.create(
+            menu_type=MenuType.CATALOG,
+            name="管理菜单",
+            path="/business",
             order=2,
             parent_id=0,
-            icon="material-symbols:featured-play-list-outline",
+            icon="material-symbols:settings-outline",
             is_hidden=False,
-            component="/top-menu",
+            component="Layout",
             keepalive=False,
-            redirect="",
+            redirect="/business/total",
         )
+        manage_children_menu = [
+            Menu(
+                menu_type=MenuType.MENU,
+                name="总表数据",
+                path="total",
+                order=1,
+                parent_id=manage_menu.id,
+                icon="material-symbols:featured-play-list-outline",
+                is_hidden=False,
+                component="/business/total",
+                keepalive=False,
+            ),
+            Menu(
+                menu_type=MenuType.MENU,
+                name="管理数据",
+                path="manage_total",
+                order=2,
+                parent_id=manage_menu.id,
+                icon="material-symbols:featured-play-list-outline",
+                is_hidden=False,
+                component="/business/manage_total",
+                keepalive=False,
+            ),
+            Menu(
+                menu_type=MenuType.MENU,
+                name="业务统计",
+                path="manage_business",
+                order=3,
+                parent_id=manage_menu.id,
+                icon="material-symbols:featured-play-list-outline",
+                is_hidden=False,
+                component="/business/manage_business",
+                keepalive=False,
+            ),
+        ]
+        await Menu.bulk_create(manage_children_menu)
+
+        yy_menu = await Menu.create(
+            menu_type=MenuType.CATALOG,
+            name="YY菜单",
+            path="/business",
+            order=3,
+            parent_id=0,
+            icon="material-symbols:folder-outline",
+            is_hidden=False,
+            component="Layout",
+            keepalive=False,
+            redirect="/business/yy_total",
+        )
+        yy_children_menu = [
+            Menu(
+                menu_type=MenuType.MENU,
+                name="YY数据",
+                path="yy_total",
+                order=1,
+                parent_id=yy_menu.id,
+                icon="material-symbols:featured-play-list-outline",
+                is_hidden=False,
+                component="/business/yy_total",
+                keepalive=False,
+            ),
+            Menu(
+                menu_type=MenuType.MENU,
+                name="YY外勤",
+                path="yyfs",
+                order=2,
+                parent_id=yy_menu.id,
+                icon="material-symbols:featured-play-list-outline",
+                is_hidden=False,
+                component="/business/yyfs",
+                keepalive=False,
+            ),
+            Menu(
+                menu_type=MenuType.MENU,
+                name="勤务管理",
+                path="duty_staff",
+                order=3,
+                parent_id=yy_menu.id,
+                icon="material-symbols:featured-play-list-outline",
+                is_hidden=False,
+                component="/business/duty_staff",
+                keepalive=False,
+            ),
+        ]
+        await Menu.bulk_create(yy_children_menu)
+        
+        my_menu = await Menu.create(
+            menu_type=MenuType.CATALOG,
+            name="我的数据",
+            path="/business",
+            order=4,
+            parent_id=0,
+            icon="material-symbols:folder-outline",
+            is_hidden=False,
+            component="Layout",
+            keepalive=False,
+            redirect="/business/own_business",
+        )
+        my_children_menu = [
+            Menu(
+                menu_type=MenuType.MENU,
+                name="我的数据",
+                path="own_business",
+                order=1,
+                parent_id=my_menu.id,
+                icon="material-symbols:featured-play-list-outline",
+                is_hidden=False,
+                component="/business/own_business",
+                keepalive=False,
+            ),
+        ]
+        await Menu.bulk_create(my_children_menu)
 
 
 async def init_apis():
@@ -259,9 +371,13 @@ async def init_roles():
             name="管理员",
             desc="管理员角色",
         )
-        user_role = await Role.create(
-            name="普通用户",
-            desc="普通用户角色",
+        yy_role = await Role.create(
+            name="YY用户",
+            desc="YY用户角色",
+        )
+        business_role = await Role.create(
+            name="业务员",
+            desc="业务员角色",
         )
 
         # 分配所有API给管理员角色
@@ -270,11 +386,11 @@ async def init_roles():
         # 分配所有菜单给管理员和普通用户
         all_menus = await Menu.all()
         await admin_role.menus.add(*all_menus)
-        await user_role.menus.add(*all_menus)
+        # await user_role.menus.add(*all_menus)
 
         # 为普通用户分配基本API
-        basic_apis = await Api.filter(Q(method__in=["GET"]) | Q(tags="基础模块"))
-        await user_role.apis.add(*basic_apis)
+        # basic_apis = await Api.filter(Q(method__in=["GET"]) | Q(tags="基础模块"))
+        # await user_role.apis.add(*basic_apis)
 
 
 async def init_data():

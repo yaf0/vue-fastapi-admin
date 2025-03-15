@@ -31,24 +31,54 @@ async def list_totals(
     data = [await obj.to_dict() for obj in total_objs]
     return SuccessExtra(data=data, total=total, page=page, page_size=page_size)
 
-@router.get("/list/yyfs", summary="查看外勤数据列表")
-async def list_totals_yyfs(
+@router.get("/list/yy", summary="查看总表数据列表-yy专用")
+async def list_totals(
     page: int = Query(1, description="页码"),
     page_size: int = Query(10, description="每页数量"),
+    date: str = Query(None, description="日期"),
+    plate: str = Query(None, description="车牌"),
+    business: str = Query(None, description="业务"),
     field_staff: str = Query(None, description="外勤"),
 ):
     q = Q()
+    if date:
+        q &= Q(date__contains=date)
+    if plate:
+        q &= Q(plate__contains=plate)
+    if business:
+        q &= Q(business__contains=business)
     if field_staff:
         q &= Q(field_staff__contains=field_staff)
 
-    total, total_objs = await total_record_yyfs_controller.list(page=page, page_size=page_size, search=q)
-    data = [await obj.to_dict() for obj in total_objs]
+    total, total_objs = await total_record_controller.list(page=page, page_size=page_size, search=q)
+    data = [
+        {
+            key: obj[key]
+            for key in obj.keys()
+            if key != "income"
+        }
+        for obj in [await obj.to_dict() for obj in total_objs]
+    ]
+    return SuccessExtra(data=data, total=total, page=page, page_size=page_size)
 
-    # 统计字段
-    count = len(data)
-    expected_expenditure_sum = sum(item['expected_expenditure'] for item in data)
+# @router.get("/list/yyfs", summary="查看外勤数据列表yy外勤")
+# async def list_totals_yyfs(
+#     page: int = Query(1, description="页码"),
+#     page_size: int = Query(10, description="每页数量"),
+#     field_staff: str = Query(None, description="外勤"),
+# ):
+#     q = Q()
+#     if field_staff:
+#         q &= Q(field_staff__contains=field_staff)
 
-    return SuccessExtra(data=data, total=total, page=page, page_size=page_size, count=count, expected_expenditure_sum=expected_expenditure_sum)
+#     total, total_objs = await total_record_yyfs_controller.list(page=page, page_size=page_size, search=q)
+#     data = [await obj.to_dict() for obj in total_objs]
+
+#     # 统计字段
+#     count = len(data)
+#     expected_expenditure_sum = sum(item['expected_expenditure'] for item in data)
+
+#     return SuccessExtra(data=data, total=total, page=page, page_size=page_size, count=count, expected_expenditure_sum=expected_expenditure_sum)
 
 @router.get("/list/bs", summary="查看业务员维度数据列表")
 async def list_totals_bs(
@@ -64,12 +94,13 @@ async def list_totals_bs(
     if business:
         q &= Q(business__contains=business)
 
-        total, total_objs = await total_record_controller_bs.list(page=page, page_size=page_size, search=q)
+        total, total_objs = await total_record_controller_bs.list(page=1, page_size=9999, search=q)
+        business_data = [await obj.to_dict() for obj in total_objs]
         data = [{
             'business': business,
             'count': total,
-            'expected_expenditure': sum(item['expected_expenditure'] for item in total_objs),
-            'income': sum(item['income'] for item in total_objs),
+            'expected_expenditure': sum(item['expected_expenditure'] for item in business_data),
+            'income': sum(item['income'] for item in business_data),
         }]
 
         total_count = data[0]['count']
@@ -83,7 +114,7 @@ async def list_totals_bs(
 
         for business in business_list:
             q = Q(business=business)
-            _, total_objs = await total_record_controller_bs.list(page=1, page_size=1000, search=q)
+            _, total_objs = await total_record_controller_bs.list(page=1, page_size=9999, search=q)
             business_data = [await obj.to_dict() for obj in total_objs]
             data.append({
                 'business': business,
@@ -121,7 +152,7 @@ async def delete_total(id: int = Query(..., description="记录ID")):
     await total_record_controller.remove(id=id)
     return Success(msg="Deleted Successfully")
 
-@router.get("/list/ob", summary="查看总表数据列表")
+@router.get("/list/ob", summary="查看我的数据列表")
 async def list_totals(
     page: int = Query(1, description="页码"),
     page_size: int = Query(10, description="每页数量"),
@@ -144,10 +175,24 @@ async def list_totals(
         q &= Q(is_completed=is_completed)
 
     total, total_objs = await total_record_controller.list(page=page, page_size=page_size, search=q)
-    data = [await obj.to_dict() for obj in total_objs]
+    data = [
+        {
+            "date": obj["date"],
+            "plate": obj["plate"],
+            "region": obj["region"],
+            "company": obj["company"],
+            "business": obj["business"],
+            "income": obj["income"],
+            "remark": obj["remark"],
+            "docking_time": obj["docking_time"],
+            "handover_time": obj["handover_time"],
+            "is_completed": obj["is_completed"],
+        }
+        for obj in [await obj.to_dict() for obj in total_objs]
+    ]
     return SuccessExtra(data=data, total=total, page=page, page_size=page_size)
 
-@router.post("/update/ob", summary="更新总表数据")
+@router.post("/update/ob", summary="更新我的数据")
 async def update_total(total_in: TotalRecordUpdate):
     await total_record_controller.update(id=total_in.id, obj_in=total_in)
     return Success(msg="Updated Successfully")

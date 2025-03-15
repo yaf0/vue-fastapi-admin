@@ -152,7 +152,7 @@ const columns = [
         title="业务"
         size="small"
       >
-        <p op-60>{{ queryItems.business_user || '所有' }} </p>
+        <p op-60>{{ queryItems.business || '所有' }} </p>
       </n-card>
       <n-card
         class="mb-10 mt-10 w-200"
@@ -206,7 +206,7 @@ const columns = [
       <template #queryBar>
         <QueryBarItem label="业务" :label-width="70">
           <NSelect
-            v-model:value="queryItems.business_user"
+            v-model:value="queryItems.business"
             clearable
             placeholder="输入或选择业务"
             :options="businessUserOptions"

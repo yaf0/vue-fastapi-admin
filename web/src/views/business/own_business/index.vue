@@ -73,6 +73,7 @@ const exportToExcel = async () => {
       '区域': row.region,
       '公司': row.company,
       '业务': row.business,
+      '收入': row.income,
       '备注': row.remark,
       '对接时间': row.docking_time,
       '交接时间': row.handover_time,
@@ -107,6 +108,7 @@ const columns = [
   { title: '区域', key: 'region', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '公司', key: 'company', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '业务', key: 'business', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
+  { title: '收入', key: 'income', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '备注', key: 'remark', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '对接时间', key: 'docking_time', width: 180, align: 'center', ellipsis: { tooltip: true } },
   { title: '交接时间', key: 'handover_time', width: 180, align: 'center', ellipsis: { tooltip: true } },
@@ -133,7 +135,8 @@ const columns = [
             },
             { default: () => '编辑', icon: renderIcon('material-symbols:edit', { size: 16 }) }
           ),
-          [[vPermission, 'put/api/v1/total/update/ob']]
+          [[vPermission, 'post/api/v1/total/update/ob']]
+          
         ),
       ]
     },

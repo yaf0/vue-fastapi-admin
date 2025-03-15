@@ -42,10 +42,6 @@ const {
     company: '',
     field_staff: '',      // 外勤
     internal_staff: '',   // 内勤
-    platform: '',         // 平台
-    account: '',          // 账号
-    password: '',         // 密码
-    business: '',
     expected_expenditure: 0,
     income: 0,
     destination: '',
@@ -97,10 +93,6 @@ const exportToExcel = async () => {
       '公司': row.company,
       '外勤': row.field_staff,
       '内勤': row.internal_staff,
-      '平台': row.platform,
-      '账号': row.account,
-      '密码': row.password,
-      '业务': row.business,
       '预期支出': row.expected_expenditure,
       '收入': row.income,
       '去向': row.destination,
@@ -143,18 +135,6 @@ const addAPIRules = {
   internal_staff: [
     { required: true, message: '请选择内勤人员', trigger: ['input', 'blur', 'change'] },
   ],
-  platform: [
-    { required: true, message: '请输入平台', trigger: ['input', 'blur', 'change'] },
-  ],
-  account: [
-    { required: true, message: '请输入账号', trigger: ['input', 'blur', 'change'] },
-  ],
-  password: [
-    { required: true, message: '请输入密码', trigger: ['input', 'blur', 'change'] },
-  ],
-  business: [
-    { required: true, message: '请选择业务名称', trigger: ['input', 'blur', 'change'] },
-  ],
   expected_expenditure: [
     { required: true, message: '请输入预期支出', trigger: ['input', 'blur', 'change'], type: 'number' },
   ],
@@ -180,10 +160,6 @@ const columns = [
   { title: '公司', key: 'company', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '外勤', key: 'field_staff', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '内勤', key: 'internal_staff', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
-  { title: '平台', key: 'platform', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
-  { title: '账号', key: 'account', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
-  { title: '密码', key: 'password', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
-  { title: '业务', key: 'business', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '预期支出', key: 'expected_expenditure', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '收入', key: 'income', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '去向', key: 'destination', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
@@ -244,9 +220,6 @@ const columns = [
   <CommonPage show-footer title="数据展示">
     <template #action>
       <div>
-        <NButton v-permission="'post/api/v1/total/create'" class="float-right mr-15" type="primary" @click="handleAdd">
-          <TheIcon icon="material-symbols:add" :size="18" class="mr-5" />新建记录
-        </NButton>
         <NButton v-permission="'post/api/v1/total/refresh'" class="float-right mr-15" type="warning"
           @click="handleRefreshApi">
           <TheIcon icon="material-symbols:refresh" :size="18" class="mr-5" />刷新记录
@@ -298,19 +271,6 @@ const columns = [
         <NFormItem label="内勤" path="internal_staff">
           <NSelect v-model:value="modalForm.internal_staff" clearable placeholder="请选择内勤人员"
             :options="internalStaffOptions" filterable />
-        </NFormItem>
-        <NFormItem label="平台" path="platform">
-          <NInput v-model:value="modalForm.platform" clearable placeholder="请输入平台" />
-        </NFormItem>
-        <NFormItem label="账号" path="account">
-          <NInput v-model:value="modalForm.account" clearable placeholder="请输入账号" />
-        </NFormItem>
-        <NFormItem label="密码" path="password">
-          <NInput v-model:value="modalForm.password" clearable placeholder="请输入密码" />
-        </NFormItem>
-        <NFormItem label="业务" path="business">
-          <NSelect v-model:value="modalForm.business" clearable placeholder="请选择业务名称" :options="businessUserOptions"
-            filterable />
         </NFormItem>
         <NFormItem label="预期支出" path="expected_expenditure">
           <NInputNumber v-model:value="modalForm.expected_expenditure" placeholder="请输入预期支出">

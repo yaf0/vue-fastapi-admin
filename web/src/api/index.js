@@ -49,8 +49,9 @@ export default {
   // total
   getTotalList: (params = {}) => request.get('/total/list', { params }),
   getTotalById: (params = {}) => request.get('/total/get', { params }),
-  getTotalListYyfs: (params = {}) => request.get('/total/list/yyfs', { params }),
+  // getTotalListYyfs: (params = {}) => request.get('/total/list/yyfs', { params }),
   getTotalListBs: (params = {}) => request.get('/total/list/bs', { params }),
+  getTotalListYy: (params = {}) => request.get('/total/list/yy', { params }),
   createTotal: (data = {}) => request.post('/total/create', data),
   updateTotal: (data = {}) => request.post('/total/update', data),
   getTotalListOb: (params = {}) => request.get('/total/list/ob', { params }),
