@@ -1,6 +1,6 @@
 {
   "lang": "中文",
-  "app_name": "Vue FastAPI Admin",
+  "app_name": "业务管理系统",
   "header": {
     "label_profile": "个人信息",
     "label_logout": "退出登录",
@@ -30,12 +30,12 @@
       "label_modify_information": "修改信息",
       "label_change_password": "修改密码",
       "label_avatar": "头像",
-      "label_username": "用户姓名",
+      "label_username": "用户名",
       "label_email": "邮箱",
       "label_old_password": "旧密码",
       "label_new_password": "新密码",
       "label_confirm_password": "确认密码",
-      "placeholder_username": "请填写姓名",
+      "placeholder_username": "请填写用户名",
       "placeholder_email": "请填写邮箱",
       "placeholder_old_password": "请输入旧密码",
       "placeholder_new_password": "请输入新密码",

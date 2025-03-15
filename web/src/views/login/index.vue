@@ -18,7 +18,7 @@
             v-model:value="loginInfo.username"
             autofocus
             class="h-50 items-center pl-10 text-16"
-            placeholder="admin"
+            placeholder="请输入用户名"
             :maxlength="20"
           />
         </div>
@@ -28,7 +28,7 @@
             class="h-50 items-center pl-10 text-16"
             type="password"
             show-password-on="mousedown"
-            placeholder="123456"
+            placeholder="请输入密码"
             :maxlength="20"
             @keypress.enter="handleLogin"
           />

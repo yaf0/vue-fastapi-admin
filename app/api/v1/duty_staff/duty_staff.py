@@ -25,7 +25,7 @@ async def list_duty_staffs(
 
     return SuccessExtra(data=data, total=total, page=page, page_size=page_size)
 
-@router.get("/list_fs", summary="查看勤务人员列表")
+@router.get("/list_fs", summary="查看勤务人员列表-含统计")
 async def list_duty_staffs(
     page: int = Query(1, description="页码"),
     page_size: int = Query(10, description="每页数量"),

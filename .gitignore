@@ -11,6 +11,7 @@ nohup.out
 web/*.log
 *.log
 
+app/settings/config.py
 db.sqlite3
 db.sqlite3-journal
 db.sqlite3-shm
