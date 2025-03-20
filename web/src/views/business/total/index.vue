@@ -65,12 +65,14 @@ const fieldStaffOptions = ref([])
 const businessUserOptions = ref([])
 
 const fetchDutyStaffOptions = async (type) => {
-  const response = await api.getDutyStaffList({ type })
+  const queryParams = { type, page: 1, page_size: 99999 }
+  const response = await api.getDutyStaffList(queryParams)
   return response.data.map(staff => ({ label: staff.name, value: staff.name }))
 }
 
 const fetchBusinessUserOptions = async () => {
-  const response = await api.getUserList({ dept_id: 5 })
+  const queryParams = { dept_id: 5, page: 1, page_size: 99999 }
+  const response = await api.getUserList(queryParams)
   return response.data.map(user => ({ label: user.username, value: user.username }))
 }
 
