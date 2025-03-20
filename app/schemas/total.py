@@ -14,7 +14,7 @@ class TotalRecordBase(BaseModel):
     password: str = Field(..., description="密码")
     business: str = Field(..., description="业务")
     expected_expenditure: int = Field(..., description="预期支出")
-    income: Optional[int] = Field(None, description="收入")
+    income: Optional[int] = Field(0, description="收入")
     destination: str = Field(..., description="去向")
     remark: Optional[str] = Field(None, description="备注")
     docking_time: Optional[datetime] = Field(None, description="对接时间")

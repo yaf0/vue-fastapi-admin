@@ -111,7 +111,7 @@ class TotalRecord(BaseModel, TimestampMixin):
     password = fields.CharField(max_length=50, description="密码", default="")
     business = fields.CharField(max_length=50, description="业务", index=True)
     expected_expenditure = fields.IntField(description="预期支出")
-    income = fields.IntField(null=True, description="收入")
+    income = fields.IntField(default=0, description="收入")
     destination = fields.CharField(max_length=100, description="去向")
     remark = fields.TextField(null=True, description="备注")
     handover_time = fields.DatetimeField(null=True, description="交接时间", index=True)

@@ -39,11 +39,28 @@ async def list_duty_staffs(
     total, duty_staff_objs = await duty_staff_controller.list(page=page, page_size=page_size, search=q)
     data = [await obj.to_dict() for obj in duty_staff_objs]
 
+    total_np, duty_staff_objs_np = await duty_staff_controller.list(page=1, page_size=99999, search=q)
+    data_np = [await obj.to_dict() for obj in duty_staff_objs_np] 
+
     total_count = 0
     total_expected_expenditure_sum = 0
     total_actual_expenditure = 0
 
     # 获取每个外勤的台数总计和预期支出总计
+    for item in data_np:
+        field_staff = item.get('name')
+        if field_staff:
+            q_yyfs = Q(field_staff__contains=field_staff)
+            _, total_objs_yyfs = await total_record_yyfs_controller.list(page=1, page_size=100000, search=q_yyfs)
+            yyfs_data = [await obj.to_dict() for obj in total_objs_yyfs]
+            count = len(yyfs_data)
+            expected_expenditure_sum = sum(yyfs_item['expected_expenditure'] for yyfs_item in yyfs_data)
+            actual_expenditure = item.get('actual_expenditure', 0)
+
+            total_count += count
+            total_expected_expenditure_sum += expected_expenditure_sum
+            total_actual_expenditure += actual_expenditure
+
     for item in data:
         field_staff = item.get('name')
         if field_staff:
@@ -56,10 +73,6 @@ async def list_duty_staffs(
 
             item['count'] = count
             item['expected_expenditure_sum'] = expected_expenditure_sum
-
-            total_count += count
-            total_expected_expenditure_sum += expected_expenditure_sum
-            total_actual_expenditure += actual_expenditure
 
     return SuccessExtra(data=data, total=total, page=page, page_size=page_size, 
                         total_count=total_count, 

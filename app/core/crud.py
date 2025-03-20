@@ -18,6 +18,10 @@ class CRUDBase(Generic[ModelType, CreateSchemaType, UpdateSchemaType]):
         return await self.model.get(id=id)
 
     async def list(self, page: int, page_size: int, search: Q = Q(), order: list = []) -> Tuple[Total, List[ModelType]]:
+        if order is None:
+            order = ["-created_at"]  # 默认按 created_at 降序排序
+        elif not any("created_at" in field for field in order):
+            order.append("-created_at")  # 如果 order 里没有 created_at，则追加默认排序
         query = self.model.filter(search)
         return await query.count(), await query.offset((page - 1) * page_size).limit(page_size).order_by(*order)
 

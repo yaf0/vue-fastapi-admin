@@ -2,6 +2,7 @@
 import { h, onMounted, ref, resolveDirective, withDirectives, watch } from 'vue'
 import { NButton, NForm, NFormItem, NInput, NPopconfirm, NInputNumber, NSwitch, NSelect, NStatistic} from 'naive-ui'
 import * as XLSX from 'xlsx'
+import debounce from 'lodash.debounce';
 
 import CommonPage from '@/components/page/CommonPage.vue'
 import QueryBarItem from '@/components/query-bar/QueryBarItem.vue'
@@ -108,21 +109,39 @@ async function handleRefreshApi() {
   $table.value?.handleSearch()
 }
 
-const handleUpdateExpenditure = async (value, row) => {
+// const handleUpdateExpenditure = async (value, row) => {
+//   if (isNaN(value) || value === '' || value === null || value === undefined) {
+//     window.$message?.warning('实际支出必须是数字且不能为空')
+//     return
+//   }
+//   row.actual_expenditure = value
+//   await api.updateDutyStaff({
+//     id: row.id,
+//     name: row.name,
+//     type: row.type,
+//     actual_expenditure: value
+//   })
+//   handleRefreshApi()
+//   // window.$message?.success('实际支出更新成功')
+// }
+
+// 防抖处理，避免频繁提交
+const handleUpdateExpenditure = debounce(async (value, row) => {
   if (isNaN(value) || value === '' || value === null || value === undefined) {
-    window.$message?.warning('实际支出必须是数字且不能为空')
-    return
+    window.$message?.warning('实际支出必须是数字且不能为空');
+    return;
   }
-  row.actual_expenditure = value
+  row.actual_expenditure = value;
   await api.updateDutyStaff({
     id: row.id,
     name: row.name,
     type: row.type,
-    actual_expenditure: value
-  })
-  handleRefreshApi()
-  window.$message?.success('实际支出更新成功')
-}
+    actual_expenditure: value,
+  });
+  handleRefreshApi();
+    window.$message?.success('实际支出更新成功');
+}, 600); // 500ms 防抖 
+
 
 // 表格列配置，增加外勤、预期支出、实际支出列
 const columns = [
