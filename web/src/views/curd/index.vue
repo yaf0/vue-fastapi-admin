@@ -46,7 +46,7 @@ onMounted(() => {
 const exportToExcel = async () => {
   try {
     // 获取当前查询条件
-    const queryParams = { ...queryItems.value, page: 1, per_page: 99999 }; // 设定一个足够大的 per_page 确保获取所有数据
+    const queryParams = { ...queryItems.value, page: 1, page_size: 99999 }; // 设定一个足够大的 page_size 确保获取所有数据
 
     // 请求 API 获取所有符合条件的数据
     const response = await api.getTransactionsList(queryParams);

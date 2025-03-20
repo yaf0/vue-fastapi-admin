@@ -14,12 +14,12 @@ class TotalRecordBase(BaseModel):
     password: str = Field(..., description="密码")
     business: str = Field(..., description="业务")
     expected_expenditure: int = Field(..., description="预期支出")
-    income: int = Field(..., description="收入")
+    income: Optional[int] = Field(None, description="收入")
     destination: str = Field(..., description="去向")
     remark: Optional[str] = Field(None, description="备注")
-    docking_time: datetime = Field(..., description="对接时间")
-    handover_time: datetime = Field(..., description="交接时间")
-    is_completed: bool = Field(..., description="是否完成")
+    docking_time: Optional[datetime] = Field(None, description="对接时间")
+    handover_time: Optional[datetime] = Field(None, description="交接时间") 
+    is_completed: Optional[bool] = Field(None, description="是否完成")
 
 class TotalRecordCreate(TotalRecordBase):
     pass

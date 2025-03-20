@@ -61,7 +61,7 @@ watch(
 const exportToExcel = async () => {
   try {
     queryItems.value.business = userStore.name
-    const queryParams = { ...queryItems.value, business: userStore.name, page: 1, per_page: 99999 }
+    const queryParams = { ...queryItems.value, business: userStore.name, page: 1, page_size: 99999 }
     const response = await api.getTotalListOb(queryParams)
     if (!response || !response.data || response.data.length === 0) {
       window.$message?.warning('无数据可导出')

@@ -54,7 +54,7 @@ onMounted(() => {
 // XLSX 导出方法，导出时包含所有字段
 const exportToExcel = async () => {
   try {
-    const queryParams = { ...queryItems.value, page: 1, per_page: 99999 }
+    const queryParams = { ...queryItems.value, page: 1, page_size: 99999 }
     const response = await api.getDutyStaffList(queryParams)
     if (!response || !response.data || response.data.length === 0) {
       window.$message?.warning('无数据可导出')

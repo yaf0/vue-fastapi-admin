@@ -177,6 +177,7 @@ async def list_totals(
     total, total_objs = await total_record_controller.list(page=page, page_size=page_size, search=q)
     data = [
         {
+            "id": obj["id"],
             "date": obj["date"],
             "plate": obj["plate"],
             "region": obj["region"],
