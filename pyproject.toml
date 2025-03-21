@@ -74,6 +74,7 @@ dependencies = [
     "pyproject-toml>=0.1.0",
     "uvloop==0.21.0 ; sys_platform != 'win32'",
     "cryptography>=44.0.2",
+    "gunicorn>=23.0.0",
 ]
 
 [tool.black]
