@@ -33,7 +33,7 @@ async def list_duty_staffs(
 ):
     q = Q()
     if field_staff:
-        q &= Q(name__contains=field_staff)  # 确保这是一个查询条件
+        q &= Q(name=field_staff)  # 确保这是一个查询条件
     # 固定type为"外勤人员"
     q &= Q(type="外勤人员")  # 确保这是一个查询条件
     total, duty_staff_objs = await duty_staff_controller.list(page=page, page_size=page_size, search=q)
@@ -50,7 +50,7 @@ async def list_duty_staffs(
     for item in data_np:
         field_staff = item.get('name')
         if field_staff:
-            q_yyfs = Q(field_staff__contains=field_staff)
+            q_yyfs = Q(field_staff=field_staff)
             _, total_objs_yyfs = await total_record_yyfs_controller.list(page=1, page_size=100000, search=q_yyfs)
             yyfs_data = [await obj.to_dict() for obj in total_objs_yyfs]
             count = len(yyfs_data)
@@ -64,7 +64,7 @@ async def list_duty_staffs(
     for item in data:
         field_staff = item.get('name')
         if field_staff:
-            q_yyfs = Q(field_staff__contains=field_staff)
+            q_yyfs = Q(field_staff=field_staff)
             _, total_objs_yyfs = await total_record_yyfs_controller.list(page=1, page_size=100000, search=q_yyfs)
             yyfs_data = [await obj.to_dict() for obj in total_objs_yyfs]
             count = len(yyfs_data)

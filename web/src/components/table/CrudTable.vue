@@ -79,8 +79,8 @@ const initQuery = { ...props.queryItems }
 const tableData = ref([])
 const pagination = reactive({
   page: 1,
-  page_size: 10,
-  pageSizes: [10, 20, 50, 100],
+  page_size: 50,
+  pageSizes: [50, 10, 20, 200],
   showSizePicker: true,
   prefix({ itemCount }) {
     return `共 ${itemCount} 条`
