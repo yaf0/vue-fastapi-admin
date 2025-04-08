@@ -16,6 +16,7 @@ async def list_totals(
     plate: str = Query(None, description="车牌"),
     business: str = Query(None, description="业务"),
     field_staff: str = Query(None, description="外勤"),
+    company: str = Query(None, description="公司"),
 ):
     q = Q()
     if date:
@@ -26,7 +27,8 @@ async def list_totals(
         q &= Q(business__contains=business)
     if field_staff:
         q &= Q(field_staff__contains=field_staff)
-
+    if company:
+        q &= Q(company__contains=company)
     total, total_objs = await total_record_controller.list(page=page, page_size=page_size, search=q)
     data = [await obj.to_dict() for obj in total_objs]
     return SuccessExtra(data=data, total=total, page=page, page_size=page_size)
@@ -39,6 +41,7 @@ async def list_totals(
     plate: str = Query(None, description="车牌"),
     business: str = Query(None, description="业务"),
     field_staff: str = Query(None, description="外勤"),
+    company: str = Query(None, description="公司"),
 ):
     q = Q()
     if date:
@@ -49,6 +52,8 @@ async def list_totals(
         q &= Q(business__contains=business)
     if field_staff:
         q &= Q(field_staff__contains=field_staff)
+    if company:
+        q &= Q(company__contains=company)
 
     total, total_objs = await total_record_controller.list(page=page, page_size=page_size, search=q)
     data = [

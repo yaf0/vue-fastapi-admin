@@ -245,6 +245,10 @@ const columns = [
           <NInput v-model:value="queryItems.business" clearable placeholder="请输入业务名称"
             @keypress.enter="$table?.handleSearch()" />
         </QueryBarItem>
+        <QueryBarItem label="公司" :label-width="70">
+          <NInput v-model:value="queryItems.company" clearable placeholder="请输入公司名称"
+            @keypress.enter="$table?.handleSearch()" />
+        </QueryBarItem>
       </template>
     </CrudTable>
 
