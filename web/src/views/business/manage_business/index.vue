@@ -204,7 +204,7 @@ const columns = [
       @update:query-items="handleRefreshApi"
     >
       <template #queryBar>
-        <QueryBarItem label="业务" :label-width="70">
+        <QueryBarItem label="业务" :label-width="40">
           <NSelect
             v-model:value="queryItems.business"
             clearable

@@ -166,6 +166,7 @@ async def list_totals(
     business: str = Query(None, description="业务"),
     docking_time_not_null: bool = Query(False, description="是否对接"),
     is_completed: bool = Query(None, description="是否完成"),
+    company: str = Query(None, description="公司"),
 ):
     q = Q()
     if date:
@@ -174,6 +175,8 @@ async def list_totals(
         q &= Q(plate__contains=plate)
     if business:
         q &= Q(business__contains=business)
+    if company:
+        q &= Q(company__contains=company)
     if docking_time_not_null:
         q &= Q(docking_time__not_isnull=True)
     if is_completed is not None:

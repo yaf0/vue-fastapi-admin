@@ -154,11 +154,11 @@ const columns = [
     <!-- 表格展示 -->
     <CrudTable ref="$table" v-model:query-items="queryItems" :columns="columns" :get-data="api.getDutyStaffList">
       <template #queryBar>
-        <QueryBarItem label="人员名称" :label-width="70">
+        <QueryBarItem label="人员名称" :label-width="40">
           <NInput v-model:value="queryItems.name" clearable placeholder="请输入人员名称"
             @keypress.enter="$table?.handleSearch()" />
         </QueryBarItem>
-        <QueryBarItem label="人员类型" :label-width="70">
+        <QueryBarItem label="人员类型" :label-width="40">
           <NSelect v-model:value="queryItems.type" placeholder="请选择人员类型" :options="[
             { label: '内勤人员', value: '内勤人员' },
             { label: '外勤人员', value: '外勤人员' },

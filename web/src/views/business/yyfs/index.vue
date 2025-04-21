@@ -229,7 +229,7 @@ const columns = [
       @update:query-items="handleRefreshApi"
     >
       <template #queryBar>
-        <QueryBarItem label="外勤人员" :label-width="70">
+        <QueryBarItem label="外勤人员" :label-width="40">
           <NSelect
             v-model:value="queryItems.field_staff"
             clearable

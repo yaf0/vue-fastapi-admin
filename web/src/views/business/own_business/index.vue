@@ -171,7 +171,7 @@ const columns = [
       :get-data-params="{ business: userStore.name }"
     >
       <template #queryBar>
-        <QueryBarItem label="日期" :label-width="70">
+        <QueryBarItem label="日期" :label-width="40">
           <n-date-picker
             v-model:formatted-value="queryItems.date"
             type="date"
@@ -180,7 +180,7 @@ const columns = [
             @update="$table?.handleSearch()"
           />
         </QueryBarItem>
-        <QueryBarItem label="车牌" :label-width="70">
+        <QueryBarItem label="车牌" :label-width="40">
           <NInput
             v-model:value="queryItems.plate"
             clearable
@@ -188,7 +188,11 @@ const columns = [
             @keypress.enter="$table?.handleSearch()"
           />
         </QueryBarItem>
-        <QueryBarItem label="是否对接" :label-width="70">
+        <QueryBarItem label="公司" :label-width="40">
+          <NInput v-model:value="queryItems.company" clearable placeholder="请输入公司名称"
+            @keypress.enter="$table?.handleSearch()" />
+        </QueryBarItem>
+        <QueryBarItem label="是否对接" :label-width="40">
           <NSelect
             v-model:value="queryItems.docking_time_not_null"
             clearable
@@ -200,7 +204,7 @@ const columns = [
             @update:value="$table?.handleSearch()" style="width: 200px;"
           />
         </QueryBarItem>
-        <QueryBarItem label="是否完成" :label-width="70">
+        <QueryBarItem label="是否完成" :label-width="40">
           <NSelect
             v-model:value="queryItems.is_completed"
             clearable

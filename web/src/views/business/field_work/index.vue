@@ -241,7 +241,7 @@ watch(
       :get-data="api.getFieldWorkList"
     >
       <template #queryBar>
-        <QueryBarItem label="外勤名称" :label-width="70">
+        <QueryBarItem label="外勤名称" :label-width="40">
           <NInput
             v-model:value="queryItems.name"
             clearable
@@ -249,7 +249,7 @@ watch(
             @keypress.enter="$table?.handleSearch()"
           />
         </QueryBarItem>
-        <QueryBarItem label="日期" :label-width="70">
+        <QueryBarItem label="日期" :label-width="40">
           <n-date-picker
             v-model:formatted-value="queryItems.date"
             type="date"

@@ -176,7 +176,7 @@ const addAPIRules = {
 
 // 表格列配置，增加内勤、平台、支出列
 const columns = [
-  { title: '日期', key: 'date', width: 110, align: 'center', ellipsis: { tooltip: true } },
+  { title: '日期', key: 'date', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '车牌', key: 'plate', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '区域', key: 'region', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '公司', key: 'company', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
@@ -190,8 +190,8 @@ const columns = [
   { title: '收入', key: 'income', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '去向', key: 'destination', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   { title: '备注', key: 'remark', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
-  { title: '对接时间', key: 'docking_time', width: 180, align: 'center', ellipsis: { tooltip: true } },
-  { title: '交接时间', key: 'handover_time', width: 180, align: 'center', ellipsis: { tooltip: true } },
+  { title: '对接时间', key: 'docking_time', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
+  { title: '交接时间', key: 'handover_time', width: 'auto', align: 'center', ellipsis: { tooltip: true } },
   {
     title: '是否完成', key: 'is_completed', width: 'auto', align: 'center',
     render(row) { return row.is_completed ? '是' : '否' }
@@ -262,19 +262,19 @@ const columns = [
     <!-- 表格展示 -->
     <CrudTable ref="$table" v-model:query-items="queryItems" :columns="columns" :get-data="api.getTotalList">
       <template #queryBar>
-        <QueryBarItem label="日期" :label-width="70">
+        <QueryBarItem label="日期" :label-width="40">
           <n-date-picker v-model:formatted-value="queryItems.date" type="date" clearable placeholder="请选择日期"
             @update="$table?.handleSearch()" />
         </QueryBarItem>
-        <QueryBarItem label="车牌" :label-width="70">
+        <QueryBarItem label="车牌" :label-width="40">
           <NInput v-model:value="queryItems.plate" clearable placeholder="请输入车牌"
             @keypress.enter="$table?.handleSearch()" />
         </QueryBarItem>
-        <QueryBarItem label="业务" :label-width="70">
+        <QueryBarItem label="业务" :label-width="40">
           <NInput v-model:value="queryItems.business" clearable placeholder="请输入业务名称"
             @keypress.enter="$table?.handleSearch()" />
         </QueryBarItem>
-        <QueryBarItem label="公司" :label-width="70">
+        <QueryBarItem label="公司" :label-width="40">
           <NInput v-model:value="queryItems.company" clearable placeholder="请输入公司名称"
             @keypress.enter="$table?.handleSearch()" />
         </QueryBarItem>

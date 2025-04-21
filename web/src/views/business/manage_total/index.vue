@@ -233,19 +233,19 @@ const columns = [
     <!-- 表格展示 -->
     <CrudTable ref="$table" v-model:query-items="queryItems" :columns="columns" :get-data="api.getTotalList">
       <template #queryBar>
-        <QueryBarItem label="日期" :label-width="70">
+        <QueryBarItem label="日期" :label-width="40">
           <n-date-picker v-model:formatted-value="queryItems.date" type="date" clearable placeholder="请选择日期"
             @update="$table?.handleSearch()" />
         </QueryBarItem>
-        <QueryBarItem label="车牌" :label-width="70">
+        <QueryBarItem label="车牌" :label-width="40">
           <NInput v-model:value="queryItems.plate" clearable placeholder="请输入车牌"
             @keypress.enter="$table?.handleSearch()" />
         </QueryBarItem>
-        <QueryBarItem label="业务" :label-width="70">
+        <QueryBarItem label="业务" :label-width="40">
           <NInput v-model:value="queryItems.business" clearable placeholder="请输入业务名称"
             @keypress.enter="$table?.handleSearch()" />
         </QueryBarItem>
-        <QueryBarItem label="公司" :label-width="70">
+        <QueryBarItem label="公司" :label-width="40">
           <NInput v-model:value="queryItems.company" clearable placeholder="请输入公司名称"
             @keypress.enter="$table?.handleSearch()" />
         </QueryBarItem>
