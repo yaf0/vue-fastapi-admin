@@ -347,7 +347,7 @@ const columns = [
             value-format="yyyy-MM-dd HH:mm:ss" />
         </NFormItem>
         <NFormItem label="是否完成" path="is_completed">
-          <NSwitch v-model:value="modalForm.is_completed" checked-value="true" unchecked-value="false" />
+          <NSwitch v-model:value="modalForm.is_completed" :checked-value="true" :unchecked-value="false" />
         </NFormItem>
       </NForm>
     </CrudModal>
