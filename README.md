@@ -103,7 +103,14 @@ source .venv/bin/activate  # Linux/Mac
 
 3. 安装依赖
 ```sh
-uv add pyproject.toml
+# uv add pyproject.toml
+uv sync
+```
+
+tips
+```
+#如果遇到 async编译失败是因为编译器参数问题，输入一下命令，重新执行uv sync即可
+export CFLAGS="-std=c99"
 ```
 
 4. 启动服务
